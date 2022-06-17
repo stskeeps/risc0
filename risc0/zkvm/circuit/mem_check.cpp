@@ -36,16 +36,18 @@ void MemCheck::set(StepState& state) {
     MemCheck prev(prevAlloc);
     Value addr = memIO.address.get();
     Value prevAddr = prev.memIO.address.get();
-    BYZ_NONDET { sameAddr.set(1 - nonzero(addr - prevAddr)); }
+    BYZ_NONDET {
+      sameAddr.set(1 - nonzero(addr - prevAddr));
+    }
     BYZ_IF(sameAddr.get()) {
       equate(addr, prevAddr);
       BYZ_IF(1 - memIO.isWrite.get()) {
         equate(memIO.value.low(), prev.memIO.value.low());
         equate(memIO.value.high(), prev.memIO.value.high());
       }
-      memDiff.setPartExact(cycle.get() - prev.cycle.get() - 1, 0, 20);
+      memDiff.setPartExact(cycle.get() - prev.cycle.get() - 1, 0, kMaxCyclesPo2);
     }
-    BYZ_IF(1 - sameAddr.get()) { memDiff.setPartExact(addr - prevAddr - 1, 0, 20); }
+    BYZ_IF(1 - sameAddr.get()) { memDiff.setPartExact(addr - prevAddr - 1, 0, kMaxCyclesPo2); }
   }
 }
 
