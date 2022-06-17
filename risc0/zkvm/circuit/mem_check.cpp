@@ -36,9 +36,7 @@ void MemCheck::set(StepState& state) {
     MemCheck prev(prevAlloc);
     Value addr = memIO.address.get();
     Value prevAddr = prev.memIO.address.get();
-    BYZ_NONDET {
-      sameAddr.set(1 - nonzero(addr - prevAddr));
-    }
+    BYZ_NONDET { sameAddr.set(1 - nonzero(addr - prevAddr)); }
     BYZ_IF(sameAddr.get()) {
       equate(addr, prevAddr);
       BYZ_IF(1 - memIO.isWrite.get()) {

@@ -33,14 +33,14 @@ constexpr size_t k1MB = 0x00100000;
 // clang-format off
 MEM_REGION(Stack,  0x00000000, 9 * k1MB)
 MEM_REGION(Data,   0x00900000, k1MB)
-MEM_REGION(Heap,   0x00a00000, 20 * k1MB)
-MEM_REGION(Input,  0x01e00000, k1MB)
-MEM_REGION(GPIO,   0x01f00000, k1MB)
+MEM_REGION(Heap,   0x00A00000, 20 * k1MB)
+MEM_REGION(Input,  0x01E00000, k1MB)
+MEM_REGION(GPIO,   0x01F00000, k1MB)
 MEM_REGION(Prog,   0x02000000, 10 * k1MB)
-MEM_REGION(SHA,    0x02a00000, k1MB)
-MEM_REGION(WOM,    0x02b00000, 21 * k1MB)
-MEM_REGION(Output, 0x02b00000, 20 * k1MB)
-MEM_REGION(Commit, 0x03f00000, k1MB)
+MEM_REGION(SHA,    0x02A00000, k1MB)
+MEM_REGION(WOM,    0x02B00000, 21 * k1MB)
+MEM_REGION(Output, 0x02B00000, 20 * k1MB)
+MEM_REGION(Commit, 0x03F00000, k1MB)
 // clang-format on
 
 #define PTR_TO(type, name) reinterpret_cast<type*>(kMem##name##Start);

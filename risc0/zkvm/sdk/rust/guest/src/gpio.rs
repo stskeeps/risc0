@@ -12,15 +12,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-pub(crate) const GPIO_SHA: *mut *const SHADescriptor = 0x001C_0000 as _;
-pub(crate) const GPIO_WRITE: *mut *const IoDescriptor = 0x001C_0004 as _;
-pub(crate) const GPIO_COMMIT: *mut *const IoDescriptor = 0x001C_0008 as _;
-pub(crate) const GPIO_FAULT: *mut *const FaultDescriptor = 0x001C_000C as _;
-pub(crate) const GPIO_LOG: *mut *const LogDescriptor = 0x001C_0010 as _;
+pub(crate) const GPIO_SHA: *mut *const SHADescriptor = 0x01F0_0000 as _;
+pub(crate) const GPIO_WRITE: *mut *const IoDescriptor = 0x01F0_0004 as _;
+pub(crate) const GPIO_COMMIT: *mut *const IoDescriptor = 0x01F0_0008 as _;
+pub(crate) const GPIO_FAULT: *mut *const FaultDescriptor = 0x01F0_000C as _;
+pub(crate) const GPIO_LOG: *mut *const LogDescriptor = 0x01F0_0010 as _;
 
-pub(crate) const GPIO_DESC_IO: *mut IoDescriptor = 0x001D_0000 as _;
-pub(crate) const GPIO_DESC_LOG: *mut LogDescriptor = 0x001D_0000 as _;
-pub(crate) const GPIO_DESC_FAULT: *mut FaultDescriptor = 0x001D_0000 as _;
+pub(crate) const GPIO_DESC_IO: *mut IoDescriptor = 0x01F1_0000 as _;
+pub(crate) const GPIO_DESC_LOG: *mut LogDescriptor = 0x01F1_0000 as _;
+pub(crate) const GPIO_DESC_FAULT: *mut FaultDescriptor = 0x01F1_0000 as _;
 
 #[repr(C)]
 pub(crate) struct IoDescriptor {

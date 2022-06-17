@@ -9,37 +9,36 @@ on:
   # Allows running this workflow manually from the Actions tab
   workflow_dispatch:
 
-jobs:
-  build:
-    runs-on: [self-hosted, "${{ matrix.os }}"]
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [Linux, macOS, Windows]
-        include:
-          - os: Linux
-            config: --config=ci
+# jobs:
+#   build:
+#     runs-on: [self-hosted, "${{ matrix.os }}"]
+#     strategy:
+#       fail-fast: false
+#       matrix:
+#         os: [Linux, macOS, Windows]
+#         include:
+#           - os: Linux
+#             config: --config=ci
 
-    steps:
-      - uses: actions/checkout@v2
-      - uses: suyash/actions-bazelisk@v1
-      - name: Build & test
-        env:
-          CONFIG: ${{ matrix.config }}
-        run: bazelisk test //... $CONFIG --config=cpu
+#     steps:
+#       - uses: actions/checkout@v2
+#       - uses: suyash/actions-bazelisk@v1
+#       - name: Build & test
+#         env:
+#           CONFIG: ${{ matrix.config }}
+#         run: bazelisk test //... $CONFIG --config=cpu
 
-  cargo:
-    runs-on: [self-hosted, "${{ matrix.os }}"]
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [Linux, macOS]
+#   cargo:
+#     runs-on: [self-hosted, "${{ matrix.os }}"]
+#     strategy:
+#       fail-fast: false
+#       matrix:
+#         os: [Linux, macOS]
 
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-      - run: cargo test --release
-      - run: cargo fmt --all -- --check
-
+#     steps:
+#       - uses: actions/checkout@v2
+#       - uses: actions-rs/toolchain@v1
+#         with:
+#           toolchain: stable
+#       - run: cargo test --release
+#       - run: cargo fmt --all -- --check

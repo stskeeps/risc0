@@ -23,12 +23,12 @@ EXTERN(__start)
 MEMORY {
   stack        : ORIGIN = 0x00000000, LENGTH =   9M
   data    (RW) : ORIGIN = 0x00900000, LENGTH =   1M
-  heap         : ORIGIN = 0x00a00000, LENGTH =  20M
-  input        : ORIGIN = 0x01e00000, LENGTH =   1M
-  gpio         : ORIGIN = 0x01f00000, LENGTH =   1M
+  heap         : ORIGIN = 0x00A00000, LENGTH =  20M
+  input        : ORIGIN = 0x01E00000, LENGTH =   1M
+  gpio         : ORIGIN = 0x01F00000, LENGTH =   1M
   prog    (X)  : ORIGIN = 0x02000000, LENGTH =  10M
-  sha          : ORIGIN = 0x02a00000, LENGTH =   1M
-  wom          : ORIGIN = 0x02b00000, LENGTH =  21M
+  sha          : ORIGIN = 0x02A00000, LENGTH =   1M
+  wom          : ORIGIN = 0x02B00000, LENGTH =  21M
 }
 
 SECTIONS {
