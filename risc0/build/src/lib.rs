@@ -77,7 +77,7 @@ impl Risc0Method {
         }
 
         println!("Computing MethodID for {} ({:})!", self.name, elf_sha_hex);
-        let method_id = make_method_id_from_elf(&self.elf_path.to_str().unwrap()).unwrap();
+        let method_id = make_method_id_from_elf(&elf_contents).unwrap();
         std::fs::write(method_id_path, method_id).unwrap();
         std::fs::write(elf_sha_path, elf_sha).unwrap();
         method_id

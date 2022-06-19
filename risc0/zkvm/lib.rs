@@ -13,7 +13,6 @@
 // limitations under the License.
 
 use anyhow::Result;
-use cxx::let_cxx_string;
 
 pub const METHOD_ID_LEN: usize = 384; // https://github.com/dtolnay/cxx/issues/1051
 pub type MethodId = [u8; METHOD_ID_LEN];
@@ -23,12 +22,16 @@ pub mod ffi {
     unsafe extern "C++" {
         include!("risc0/zkvm/prove/method_id.h");
 
-        #[cxx_name = "makeMethodId"]
-        fn make_method_id_from_elf(path: &CxxString) -> Result<[u8; 384]>;
+	// Unfortunately cxx::bridge doesn't seem to let us reference METHOD_ID_LEN here. :(
+        unsafe fn methodIdBytesFromElf(elf_contents: *const u8, len: usize) -> Result<[u8; 384]>;
     }
 }
 
-pub fn make_method_id_from_elf(path: &str) -> Result<MethodId> {
-    let_cxx_string!(cxx_path = path);
-    Ok(ffi::make_method_id_from_elf(&cxx_path)?)
+pub fn make_method_id_from_elf(elf_contents: &[u8]) -> Result<MethodId> {
+    unsafe {
+        Ok(ffi::methodIdBytesFromElf(
+            elf_contents.as_ptr(),
+            elf_contents.len(),
+        )?)
+    }
 }

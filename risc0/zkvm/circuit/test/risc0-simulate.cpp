@@ -30,7 +30,8 @@ int main(int argc, char* argv[]) {
   }
   LOG(1, "File = " << argv[1]);
   try {
-    ExecState state(argv[1]);
+    std::vector<uint8_t> elfContents = loadFile(argv[1]);
+    ExecState state(elfContents.data(), elfContents.size());
     MemoryHandler io;
     state.run(1 << 20, io);
   } catch (const std::runtime_error& err) {

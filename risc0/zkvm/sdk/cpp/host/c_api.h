@@ -60,7 +60,8 @@ void risc0_init();
 //
 
 risc0_prover* risc0_prover_new(risc0_error* err,
-                               const char* elf_path,
+                               const uint8_t* elf_bytes,
+                               const size_t elf_len,
                                const uint8_t* method_id_buf,
                                const size_t method_id_len);
 

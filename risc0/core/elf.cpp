@@ -15,6 +15,8 @@
 #include "risc0/core/elf.h"
 
 #include <fstream>
+#include <iostream>
+#include <iterator>
 #include <set>
 #include <sstream>
 #include <vector>
@@ -57,15 +59,36 @@ struct ProgHeader {
 
 } // namespace
 
-uint32_t loadElf(const std::string& name, uint32_t maxMem, std::map<uint32_t, uint32_t>& memOut) {
+std::vector<uint8_t> loadFile(const std::string& path) {
+  std::ifstream is(path, std::ios::binary);
+  auto check_err = [&](const char* msg) {
+    if (is.fail() || is.bad()) {
+      std::stringstream ss;
+      ss << "Could not " << msg << " ELF: " << path;
+      throw std::runtime_error(ss.str());
+    }
+  };
+  check_err("open");
+  is.seekg(0, std::ios::end);
+  check_err("seek to end of");
+  size_t nbytes = is.tellg();
+  check_err("tell size of");
+  is.seekg(0, std::ios::beg);
+  check_err("seek to beginning of");
+  std::vector<uint8_t> elfContents(nbytes, 0);
+  is.read(reinterpret_cast<char*>(elfContents.data()), nbytes);
+  check_err("read");
+  is.close();
+  return elfContents;
+}
+
+uint32_t
+loadElf(const uint8_t* bytes, size_t len, uint32_t maxMem, std::map<uint32_t, uint32_t>& memOut) {
   using namespace std;
-  ifstream is;
-  is.open(name, ios::binary);
-  if (is.fail() || is.bad()) {
-    std::stringstream ss;
-    ss << "Could not load ELF: " << name;
-    throw std::runtime_error(ss.str());
-  }
+  // TODO(nils): Avoid this extra copy here.  Perhaps using basic_spanbuf once we support C++23?
+  std::string contents(reinterpret_cast<const char*>(bytes),
+                       reinterpret_cast<const char*>(bytes + len));
+  std::istringstream is(contents);
   ElfHeader elfHeader;
   vector<ProgHeader> progHeaders;
   // Load the main ELF header

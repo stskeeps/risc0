@@ -24,28 +24,9 @@
 
 namespace risc0 {
 
-MethodId makeMethodId(const MethodDigest& digest) {
-  MethodId id;
-  std::memcpy(&id, &digest, sizeof(MethodId));
-  return id;
-}
-
-MethodId makeMethodId(const uint8_t* bytes, const size_t len) {
-  if (len != sizeof(MethodId)) {
-    throw std::length_error("Got buffer of invalid size!");
-  }
-  MethodId id;
-  std::memcpy(&id, bytes, sizeof(MethodId));
-  return id;
-}
-
-MethodId makeMethodId(const std::string& elfPath) {
-  return makeMethodId(makeMethodDigest(elfPath));
-}
-
-MethodDigest makeMethodDigest(const std::string& elfPath) {
+MethodId MethodId::fromElf(const uint8_t* bytes, const size_t len) {
   std::map<uint32_t, uint32_t> image;
-  uint32_t startAddr = loadElf(elfPath, kMemSize, image);
+  uint32_t startAddr = loadElf(bytes, len, kMemSize, image);
 
   // Start with an empty return value
   MethodDigest digest;
@@ -70,13 +51,36 @@ MethodDigest makeMethodDigest(const std::string& elfPath) {
     PolyGroup codeGroup(coeffs, kCodeSize, cycles);
     digest[i] = codeGroup.getMerkle().getRoot();
   }
-  return digest;
+  return fromDigest(digest);
 }
 
-MethodDigest makeMethodDigest(const MethodId& id) {
-  MethodDigest digest;
-  std::memcpy(&digest, &id, sizeof(MethodId));
-  return digest;
+MethodId MethodId::fromElfFile(const std::string& elfPath) {
+  std::vector<uint8_t> contents = loadFile(elfPath);
+  return fromElf(contents.data(), contents.size());
+}
+
+MethodId MethodId::fromDigest(const MethodDigest& digest) {
+  MethodId result;
+  static_assert(sizeof(result.methodId) == sizeof(digest));
+  memcpy(&result.methodId, &digest, sizeof(digest));
+  return result;
+}
+
+MethodId MethodId::fromIdBytes(const uint8_t* bytes, size_t len) {
+  MethodId result;
+  if (len != sizeof(result.methodId)) {
+    throw(std::runtime_error("Bad number of bytes in a method id"));
+  }
+  memcpy(&result.methodId, bytes, sizeof(result.methodId));
+  return result;
+}
+
+std::array<uint8_t, sizeof(MethodId)> methodIdBytesFromElf(const uint8_t* bytes, const size_t len) {
+  MethodId id = MethodId::fromElf(bytes, len);
+  std::array<uint8_t, sizeof(MethodId)> idbytes;
+  static_assert(sizeof(idbytes) == sizeof(id));
+  memcpy(&idbytes, &id, sizeof(MethodId));
+  return idbytes;
 }
 
 } // namespace risc0

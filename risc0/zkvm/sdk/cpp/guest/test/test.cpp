@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+#include "risc0/core/elf.h"
 #include "risc0/core/log.h"
 #include "risc0/zkp/accel/accel.h"
 #include "risc0/zkp/core/sha256.h"
@@ -31,7 +32,7 @@ struct TestParam {
 class CoreTests : public testing::TestWithParam<TestParam> {
 protected:
   ShaDigest testSHA(const std::string& str) {
-    MethodId methodId = makeMethodId(GetParam().prefix + "test_sha");
+    MethodId methodId = risc0::MethodId::fromElfFile(GetParam().prefix + "test_sha");
     Prover prover(GetParam().prefix + "test_sha", methodId);
     prover.writeInput(static_cast<uint32_t>(str.size()));
     prover.writeInput(str.data(), str.size());
@@ -42,7 +43,7 @@ protected:
   }
 
   void testMemIO(const std::vector<std::pair<uint32_t, uint32_t>>& in) {
-    MethodId methodId = makeMethodId(GetParam().prefix + "test_mem");
+    MethodId methodId = risc0::MethodId::fromElfFile(GetParam().prefix + "test_mem");
     Prover prover(GetParam().prefix + "test_mem", methodId);
     prover.writeInput(static_cast<uint32_t>(in.size()));
     for (auto pair : in) {
@@ -137,12 +138,14 @@ TEST_P(CoreTests, Fail) {
   std::string elfPath = GetParam().prefix + "test_fail";
 
   // Check that a compliant host will fault.
-  Prover prover(elfPath, makeMethodId(elfPath));
+  Prover prover(elfPath, risc0::MethodId::fromElfFile(elfPath));
   EXPECT_THROW(prover.run(), std::runtime_error);
 
   // Check that a host that does not implement onFault will still fault.
   MemoryHandler handler;
-  std::unique_ptr<ProveCircuit> circuit = getRiscVProveCircuit(elfPath, handler);
+  std::vector<uint8_t> elfContents = risc0::loadFile(elfPath);
+  std::unique_ptr<ProveCircuit> circuit =
+      getRiscVProveCircuit(elfContents.data(), elfContents.size(), handler);
   EXPECT_THROW(prove(*circuit), std::runtime_error);
 }
 
@@ -161,7 +164,7 @@ void doMemcpyTest(uint32_t srcOffset, uint32_t destOffset, uint32_t size) {
     }
   }
   // Make an prover and have it do a memcpy
-  MethodId methodId = makeMethodId("risc0/zkvm/sdk/cpp/guest/test/test_memcpy");
+  MethodId methodId = risc0::MethodId::fromElfFile("risc0/zkvm/sdk/cpp/guest/test/test_memcpy");
   Prover prover("risc0/zkvm/sdk/cpp/guest/test/test_memcpy", methodId);
   prover.writeInput(srcBuf.data(), 1024);
   prover.writeInput(destBuf.data(), 1024);
@@ -204,7 +207,7 @@ TEST(CoreTests, Memset) {
 }
 
 TEST(CoreTests, SHAAccel) {
-  MethodId methodId = makeMethodId("risc0/zkvm/sdk/rust/methods/test_sha_accel");
+  MethodId methodId = risc0::MethodId::fromElfFile("risc0/zkvm/sdk/rust/methods/test_sha_accel");
   Prover prover("risc0/zkvm/sdk/rust/methods/test_sha_accel", methodId);
   Receipt receipt = prover.run();
   receipt.verify(methodId);

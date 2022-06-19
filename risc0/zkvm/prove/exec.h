@@ -22,7 +22,7 @@
 namespace risc0 {
 
 struct ExecState {
-  ExecState(const std::string& elfFile);
+  ExecState(const uint8_t* bytes, size_t len);
   // A helper function to call init, step*, fini
   void run(size_t maxSteps, MemoryHandler& io);
 

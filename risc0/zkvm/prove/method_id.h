@@ -17,6 +17,7 @@
 #include <array>
 #include <memory>
 
+#include "risc0/core/archive.h"
 #include "risc0/core/util.h"
 #include "risc0/zkp/core/sha256.h"
 #include "risc0/zkvm/circuit/constants.h"
@@ -25,17 +26,34 @@ namespace risc0 {
 
 static constexpr size_t kCodeDigestCount = log2Ceil(kMaxCycles / kMinCycles) + 1;
 
-// These types are likely to change relatively soon. But, for now:
 // A MethodDigest is intended for internal use in verification
 // A MethodId is an intentionally opaque version of a MethodDigest for use in APIs
 using MethodDigest = std::array<ShaDigest, kCodeDigestCount>;
-using MethodId = std::array<uint8_t, sizeof(MethodDigest)>;
 
-MethodId makeMethodId(const std::string& elfPath);
-MethodId makeMethodId(const uint8_t* bytes, const size_t len);
-MethodId makeMethodId(const MethodDigest& digest);
+class MethodId {
+public:
+  MethodId() = default;
 
-MethodDigest makeMethodDigest(const std::string& elfPath);
-MethodDigest makeMethodDigest(const MethodId& id);
+  static MethodId fromElf(const uint8_t* bytes, const size_t len);
+  static MethodId fromDigest(const MethodDigest& digest);
+  static MethodId fromElfFile(const std::string& elfPath);
+  static MethodId fromIdBytes(const uint8_t* bytes, size_t len);
+
+  MethodDigest asDigest() const {
+    MethodDigest digest;
+    static_assert(sizeof(methodId) == sizeof(digest));
+    memcpy(&digest, &methodId, sizeof(digest));
+    return digest;
+  }
+
+  template <typename Archive> void transfer(Archive& ar) { ar.transfer(methodId); }
+
+private:
+  std::array<uint8_t, sizeof(MethodDigest)> methodId;
+};
+
+// Convert an in-memory elf to bytes representing a method id all in one go;
+// useful for FFIs.
+std::array<uint8_t, sizeof(MethodId)> methodIdBytesFromElf(const uint8_t* bytes, const size_t len);
 
 } // namespace risc0

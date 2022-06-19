@@ -21,8 +21,8 @@
 
 namespace risc0 {
 
-ExecState::ExecState(const std::string& elfFile) {
-  startAddr = loadElf(elfFile, kMemSize, image);
+ExecState::ExecState(const uint8_t* bytes, size_t len) {
+  startAddr = loadElf(bytes, len, kMemSize, image);
 }
 
 void ExecState::run(size_t maxSteps, MemoryHandler& io) {

@@ -14,6 +14,7 @@
 
 #include "risc0/zkvm/sdk/cpp/host/receipt.h"
 
+#include "risc0/core/elf.h"
 #include "risc0/core/log.h"
 #include "risc0/zkp/core/sha256_cpu.h"
 #include "risc0/zkp/prove/prove.h"
@@ -24,11 +25,12 @@
 
 #include <fstream>
 #include <sstream>
+#include <vector>
 
 namespace risc0 {
 
 void Receipt::verify(const MethodId& methodId) const {
-  std::unique_ptr<VerifyCircuit> circuit = getRiscVVerifyCircuit(makeMethodDigest(methodId));
+  std::unique_ptr<VerifyCircuit> circuit = getRiscVVerifyCircuit(methodId.asDigest());
   risc0::verify(*circuit, seal.data(), seal.size());
   if (journal.size() != seal[8]) {
     std::stringstream ss;
@@ -49,8 +51,8 @@ void Receipt::verify(const MethodId& methodId) const {
 }
 
 struct Prover::Impl : public IoHandler {
-  Impl(const std::string& elfPath, const MethodId& methodId)
-      : elfPath(elfPath)
+  Impl(std::vector<uint8_t> elfContents, const MethodId& methodId)
+      : elfContents(elfContents)
       , methodId(methodId)
       , outputStream(outputBuffer)
       , commitStream(commitBuffer)
@@ -85,7 +87,7 @@ struct Prover::Impl : public IoHandler {
 
   KeyStore& getKeyStore() override { return keyStore; }
 
-  std::string elfPath;
+  std::vector<uint8_t> elfContents;
   MethodId methodId;
   KeyStore keyStore;
   BufferU8 outputBuffer;
@@ -126,8 +128,14 @@ void CheckedStreamReader::read_buffer(void* buf, size_t len) {
   cursor = end_cursor;
 }
 
+Prover::Prover(const uint8_t* bytes, size_t len, const MethodId& methodId)
+    : Prover(std::vector<uint8_t>(bytes, bytes + len), methodId) {}
+
+Prover::Prover(std::vector<uint8_t> elfContents, const MethodId& methodId)
+    : impl(new Impl(std::move(elfContents), methodId)) {}
+
 Prover::Prover(const std::string& elfPath, const MethodId& methodId)
-    : impl(new Impl(elfPath, methodId)) {}
+    : Prover(loadFile(elfPath), methodId) {}
 
 Prover::~Prover() = default;
 
@@ -188,7 +196,8 @@ Receipt Prover::run() {
   // Set the memory handlers to call back to the impl
   MemoryHandler handler(impl.get());
   // Make the circuit
-  std::unique_ptr<ProveCircuit> circuit = getRiscVProveCircuit(impl->elfPath.c_str(), handler);
+  std::unique_ptr<ProveCircuit> circuit =
+      getRiscVProveCircuit(impl->elfContents.data(), impl->elfContents.size(), handler);
   BufferU32 seal = prove(*circuit);
   // Attach the full version of the output journal + construct receipt object
   Receipt receipt{getCommit(), seal};

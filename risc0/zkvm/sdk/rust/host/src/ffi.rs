@@ -60,7 +60,8 @@ extern "C" {
 
     pub(crate) fn risc0_prover_new(
         err: *mut RawError,
-        elf_path: *const i8,
+        elf_bytes: *const u8,
+        elf_len: usize,
         method_id: *const u8,
         method_id_len: usize,
     ) -> *mut RawProver;
