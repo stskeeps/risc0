@@ -34,7 +34,10 @@ pub mod sha;
 #[cfg(feature = "pure-prove")]
 pub mod sha_insecure;
 
-use core::{arch::asm, mem, ptr};
+use core::{arch::asm, arch::global_asm, mem, ptr};
+
+global_asm!(include_str!("memset.s"));
+global_asm!(include_str!("memcpy.s"));
 
 extern "C" {
     fn _fault() -> !;
