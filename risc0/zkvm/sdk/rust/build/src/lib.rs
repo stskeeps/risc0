@@ -120,8 +120,8 @@ struct ZipMapEntry {
 // Sources for standard library, and where they should be mapped to.
 const RUST_LIB_MAP : &[ZipMapEntry] = &[
     ZipMapEntry {
-        zip_url: "https://github.com/risc0/rust/archive/3c7914f106c899500d633feb3f713e3d22ba16e5.zip",
-        src_prefix: "rust-3c7914f106c899500d633feb3f713e3d22ba16e5/library",
+        zip_url: "https://github.com/risc0/rust/archive/e71b3831f9f17129502d0f218e8dda5a0ddb6d44.zip",
+        src_prefix: "rust-e71b3831f9f17129502d0f218e8dda5a0ddb6d44/library",
         dst_prefix: "library"
     },
     ZipMapEntry {
