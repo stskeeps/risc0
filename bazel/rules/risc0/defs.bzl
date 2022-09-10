@@ -2,7 +2,7 @@ load("@rules_rust//rust:defs.bzl", "rust_library")
 load("//bazel/rules/rust:defs.bzl", "risc0_rust_binary")
 load("//bazel/toolchain/risc0:defs.bzl", "risc0_cc_binary")
 
-DEFAULT_METHOD_ID_LIMIT = 12
+DEFAULT_METHOD_ID_LIMIT = 16
 
 def _impl(ctx):
     out = ctx.actions.declare_file(ctx.attr.name)

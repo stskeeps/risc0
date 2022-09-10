@@ -31,7 +31,7 @@ use ffi as prove;
 pub use prove::{MethodId, Prover, Receipt};
 
 /// The default digest count when generating a MethodId.
-pub const DEFAULT_METHOD_ID_LIMIT: u32 = 12;
+pub const DEFAULT_METHOD_ID_LIMIT: u32 = 16;
 
 /// A Result specialized for [Exception].
 pub type Result<T> = std::result::Result<T, Exception>;

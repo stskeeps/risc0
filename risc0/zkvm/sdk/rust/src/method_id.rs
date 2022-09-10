@@ -24,7 +24,7 @@ use risc0_zkp::{
 };
 
 /// The default digest count when generating a MethodId.
-pub const DEFAULT_METHOD_ID_LIMIT: u32 = 12;
+pub const DEFAULT_METHOD_ID_LIMIT: u32 = 16;
 
 pub const MAX_CODE_DIGEST_COUNT: u32 = (log2_ceil(MAX_CYCLES / MIN_CYCLES) + 1) as _;
 
