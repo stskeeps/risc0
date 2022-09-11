@@ -359,7 +359,7 @@ fn build_guest_package<P>(
 
     let mut cmd = Command::new(cargo);
     let mut child = cmd
-        .env("CARGO_ENCODED_RUSTFLAGS", "-C\x1fpasses=loweratomic")
+        .env("CARGO_ENCODED_RUSTFLAGS", "-C\x1fpasses=loweratomic reg2mem")
         .env("__CARGO_TESTS_ONLY_SRC_ROOT", risc0_standard_lib)
         .args(args)
         .stderr(Stdio::piped())
