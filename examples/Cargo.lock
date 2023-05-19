@@ -2194,6 +2194,7 @@ dependencies = [
  "autocfg",
  "num-integer",
  "num-traits",
+ "rand",
 ]
 
 [[package]]
@@ -3043,6 +3044,7 @@ dependencies = [
  "hex",
  "lazy-regex",
  "log",
+ "num-bigint 0.4.3",
  "num-derive",
  "num-traits",
  "rand",

@@ -128,6 +128,7 @@ impl KernelBuild {
             .flag_if_supported("-fno-var-tracking")
             .flag_if_supported("-fno-var-tracking-assignments")
             .flag_if_supported("-g0")
+            .flag_if_supported("-O2")
             // .cargo_metadata(false)
             // .out_dir(out_dir)
             .compile(output);

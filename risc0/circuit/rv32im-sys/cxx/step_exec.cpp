@@ -20,6 +20,7 @@
 #include <array>
 #include <cassert>
 #include <stdexcept>
+#include <cstdlib>
 
 // clang-format off
 namespace risc0::circuit::rv32im {
@@ -315,19 +316,19 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/components/bytes.cpp":48:7)
       auto x113 = x109 * x112;
       // loc("cirgen/components/bytes.cpp":48:7)
-      if (x113 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
+      if (x113 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
       // loc("cirgen/components/bytes.cpp":51:19)
       auto x114 = x111 + x93;
       // loc("cirgen/components/bytes.cpp":51:7)
       auto x115 = x109 * x114;
       // loc("cirgen/components/bytes.cpp":51:7)
-      if (x115 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
+      if (x115 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
       // loc("cirgen/components/bytes.cpp":54:25)
       auto x116 = x111 - x92;
       // loc("cirgen/components/bytes.cpp":54:7)
       auto x117 = x112 * x116;
       // loc("cirgen/components/bytes.cpp":54:7)
-      if (x117 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
+      if (x117 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
     }
     // loc("Top/mux(Mux)/bytes_setup(BytesSetupStep)/BytesSetup/PlonkBody/BytesPlonkElement/Reg"("./cirgen/compiler/edsl/component.h":154:27))
     auto x118 = args[2][3 * steps + ((cycle - 0) & mask)];
@@ -390,19 +391,19 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
     // loc("cirgen/components/bytes.cpp":48:7)
     auto x130 = x126 * x129;
     // loc("cirgen/components/bytes.cpp":48:7)
-    if (x130 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
+    if (x130 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
     // loc("cirgen/components/bytes.cpp":51:19)
     auto x131 = x128 + x93;
     // loc("cirgen/components/bytes.cpp":51:7)
     auto x132 = x126 * x131;
     // loc("cirgen/components/bytes.cpp":51:7)
-    if (x132 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
+    if (x132 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
     // loc("cirgen/components/bytes.cpp":54:25)
     auto x133 = x128 - x92;
     // loc("cirgen/components/bytes.cpp":54:7)
     auto x134 = x129 * x133;
     // loc("cirgen/components/bytes.cpp":54:7)
-    if (x134 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
+    if (x134 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
     {
       // loc("cirgen/components/bytes.cpp":34:20)
       auto x135 = x127 - x93;
@@ -458,19 +459,19 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
     // loc("cirgen/components/bytes.cpp":48:7)
     auto x145 = x141 * x144;
     // loc("cirgen/components/bytes.cpp":48:7)
-    if (x145 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
+    if (x145 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
     // loc("cirgen/components/bytes.cpp":51:19)
     auto x146 = x143 + x93;
     // loc("cirgen/components/bytes.cpp":51:7)
     auto x147 = x141 * x146;
     // loc("cirgen/components/bytes.cpp":51:7)
-    if (x147 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
+    if (x147 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
     // loc("cirgen/components/bytes.cpp":54:25)
     auto x148 = x143 - x92;
     // loc("cirgen/components/bytes.cpp":54:7)
     auto x149 = x144 * x148;
     // loc("cirgen/components/bytes.cpp":54:7)
-    if (x149 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
+    if (x149 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
     {
       // loc("cirgen/components/bytes.cpp":34:20)
       auto x150 = x142 - x93;
@@ -526,19 +527,19 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
     // loc("cirgen/components/bytes.cpp":48:7)
     auto x160 = x156 * x159;
     // loc("cirgen/components/bytes.cpp":48:7)
-    if (x160 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
+    if (x160 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
     // loc("cirgen/components/bytes.cpp":51:19)
     auto x161 = x158 + x93;
     // loc("cirgen/components/bytes.cpp":51:7)
     auto x162 = x156 * x161;
     // loc("cirgen/components/bytes.cpp":51:7)
-    if (x162 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
+    if (x162 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
     // loc("cirgen/components/bytes.cpp":54:25)
     auto x163 = x158 - x92;
     // loc("cirgen/components/bytes.cpp":54:7)
     auto x164 = x159 * x163;
     // loc("cirgen/components/bytes.cpp":54:7)
-    if (x164 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
+    if (x164 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
     {
       // loc("cirgen/components/bytes.cpp":34:20)
       auto x165 = x157 - x93;
@@ -594,19 +595,19 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
     // loc("cirgen/components/bytes.cpp":48:7)
     auto x175 = x171 * x174;
     // loc("cirgen/components/bytes.cpp":48:7)
-    if (x175 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
+    if (x175 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
     // loc("cirgen/components/bytes.cpp":51:19)
     auto x176 = x173 + x93;
     // loc("cirgen/components/bytes.cpp":51:7)
     auto x177 = x171 * x176;
     // loc("cirgen/components/bytes.cpp":51:7)
-    if (x177 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
+    if (x177 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
     // loc("cirgen/components/bytes.cpp":54:25)
     auto x178 = x173 - x92;
     // loc("cirgen/components/bytes.cpp":54:7)
     auto x179 = x174 * x178;
     // loc("cirgen/components/bytes.cpp":54:7)
-    if (x179 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
+    if (x179 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
     {
       // loc("cirgen/components/bytes.cpp":34:20)
       auto x180 = x172 - x93;
@@ -662,19 +663,19 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
     // loc("cirgen/components/bytes.cpp":48:7)
     auto x190 = x186 * x189;
     // loc("cirgen/components/bytes.cpp":48:7)
-    if (x190 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
+    if (x190 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
     // loc("cirgen/components/bytes.cpp":51:19)
     auto x191 = x188 + x93;
     // loc("cirgen/components/bytes.cpp":51:7)
     auto x192 = x186 * x191;
     // loc("cirgen/components/bytes.cpp":51:7)
-    if (x192 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
+    if (x192 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
     // loc("cirgen/components/bytes.cpp":54:25)
     auto x193 = x188 - x92;
     // loc("cirgen/components/bytes.cpp":54:7)
     auto x194 = x189 * x193;
     // loc("cirgen/components/bytes.cpp":54:7)
-    if (x194 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
+    if (x194 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
     {
       // loc("cirgen/components/bytes.cpp":34:20)
       auto x195 = x187 - x93;
@@ -730,19 +731,19 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
     // loc("cirgen/components/bytes.cpp":48:7)
     auto x205 = x201 * x204;
     // loc("cirgen/components/bytes.cpp":48:7)
-    if (x205 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
+    if (x205 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
     // loc("cirgen/components/bytes.cpp":51:19)
     auto x206 = x203 + x93;
     // loc("cirgen/components/bytes.cpp":51:7)
     auto x207 = x201 * x206;
     // loc("cirgen/components/bytes.cpp":51:7)
-    if (x207 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
+    if (x207 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
     // loc("cirgen/components/bytes.cpp":54:25)
     auto x208 = x203 - x92;
     // loc("cirgen/components/bytes.cpp":54:7)
     auto x209 = x204 * x208;
     // loc("cirgen/components/bytes.cpp":54:7)
-    if (x209 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
+    if (x209 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
     {
       // loc("cirgen/components/bytes.cpp":34:20)
       auto x210 = x202 - x93;
@@ -798,19 +799,19 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
     // loc("cirgen/components/bytes.cpp":48:7)
     auto x220 = x216 * x219;
     // loc("cirgen/components/bytes.cpp":48:7)
-    if (x220 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
+    if (x220 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
     // loc("cirgen/components/bytes.cpp":51:19)
     auto x221 = x218 + x93;
     // loc("cirgen/components/bytes.cpp":51:7)
     auto x222 = x216 * x221;
     // loc("cirgen/components/bytes.cpp":51:7)
-    if (x222 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
+    if (x222 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
     // loc("cirgen/components/bytes.cpp":54:25)
     auto x223 = x218 - x92;
     // loc("cirgen/components/bytes.cpp":54:7)
     auto x224 = x219 * x223;
     // loc("cirgen/components/bytes.cpp":54:7)
-    if (x224 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
+    if (x224 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
     if (x99 != 0) {
       // loc("cirgen/components/bytes.cpp":126:7)
       {
@@ -1027,19 +1028,19 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/components/bytes.cpp":48:7)
       auto x236 = x232 * x235;
       // loc("cirgen/components/bytes.cpp":48:7)
-      if (x236 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
+      if (x236 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
       // loc("cirgen/components/bytes.cpp":51:19)
       auto x237 = x234 + x93;
       // loc("cirgen/components/bytes.cpp":51:7)
       auto x238 = x232 * x237;
       // loc("cirgen/components/bytes.cpp":51:7)
-      if (x238 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
+      if (x238 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
       // loc("cirgen/components/bytes.cpp":54:25)
       auto x239 = x234 - x92;
       // loc("cirgen/components/bytes.cpp":54:7)
       auto x240 = x235 * x239;
       // loc("cirgen/components/bytes.cpp":54:7)
-      if (x240 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
+      if (x240 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
       {
         // loc("cirgen/components/bytes.cpp":34:20)
         auto x241 = x233 - x93;
@@ -1095,19 +1096,19 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/components/bytes.cpp":48:7)
       auto x251 = x247 * x250;
       // loc("cirgen/components/bytes.cpp":48:7)
-      if (x251 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
+      if (x251 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
       // loc("cirgen/components/bytes.cpp":51:19)
       auto x252 = x249 + x93;
       // loc("cirgen/components/bytes.cpp":51:7)
       auto x253 = x247 * x252;
       // loc("cirgen/components/bytes.cpp":51:7)
-      if (x253 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
+      if (x253 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
       // loc("cirgen/components/bytes.cpp":54:25)
       auto x254 = x249 - x92;
       // loc("cirgen/components/bytes.cpp":54:7)
       auto x255 = x250 * x254;
       // loc("cirgen/components/bytes.cpp":54:7)
-      if (x255 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
+      if (x255 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
       {
         // loc("cirgen/components/bytes.cpp":34:20)
         auto x256 = x248 - x93;
@@ -1163,19 +1164,19 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/components/bytes.cpp":48:7)
       auto x266 = x262 * x265;
       // loc("cirgen/components/bytes.cpp":48:7)
-      if (x266 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
+      if (x266 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
       // loc("cirgen/components/bytes.cpp":51:19)
       auto x267 = x264 + x93;
       // loc("cirgen/components/bytes.cpp":51:7)
       auto x268 = x262 * x267;
       // loc("cirgen/components/bytes.cpp":51:7)
-      if (x268 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
+      if (x268 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
       // loc("cirgen/components/bytes.cpp":54:25)
       auto x269 = x264 - x92;
       // loc("cirgen/components/bytes.cpp":54:7)
       auto x270 = x265 * x269;
       // loc("cirgen/components/bytes.cpp":54:7)
-      if (x270 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
+      if (x270 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
       {
         // loc("cirgen/components/bytes.cpp":34:20)
         auto x271 = x263 - x93;
@@ -1231,19 +1232,19 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/components/bytes.cpp":48:7)
       auto x281 = x277 * x280;
       // loc("cirgen/components/bytes.cpp":48:7)
-      if (x281 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
+      if (x281 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
       // loc("cirgen/components/bytes.cpp":51:19)
       auto x282 = x279 + x93;
       // loc("cirgen/components/bytes.cpp":51:7)
       auto x283 = x277 * x282;
       // loc("cirgen/components/bytes.cpp":51:7)
-      if (x283 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
+      if (x283 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
       // loc("cirgen/components/bytes.cpp":54:25)
       auto x284 = x279 - x92;
       // loc("cirgen/components/bytes.cpp":54:7)
       auto x285 = x280 * x284;
       // loc("cirgen/components/bytes.cpp":54:7)
-      if (x285 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
+      if (x285 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
       {
         // loc("cirgen/components/bytes.cpp":34:20)
         auto x286 = x278 - x93;
@@ -1299,19 +1300,19 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/components/bytes.cpp":48:7)
       auto x296 = x292 * x295;
       // loc("cirgen/components/bytes.cpp":48:7)
-      if (x296 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
+      if (x296 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
       // loc("cirgen/components/bytes.cpp":51:19)
       auto x297 = x294 + x93;
       // loc("cirgen/components/bytes.cpp":51:7)
       auto x298 = x292 * x297;
       // loc("cirgen/components/bytes.cpp":51:7)
-      if (x298 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
+      if (x298 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
       // loc("cirgen/components/bytes.cpp":54:25)
       auto x299 = x294 - x92;
       // loc("cirgen/components/bytes.cpp":54:7)
       auto x300 = x295 * x299;
       // loc("cirgen/components/bytes.cpp":54:7)
-      if (x300 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
+      if (x300 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
       {
         // loc("cirgen/components/bytes.cpp":34:20)
         auto x301 = x293 - x93;
@@ -1367,19 +1368,19 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/components/bytes.cpp":48:7)
       auto x311 = x307 * x310;
       // loc("cirgen/components/bytes.cpp":48:7)
-      if (x311 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
+      if (x311 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
       // loc("cirgen/components/bytes.cpp":51:19)
       auto x312 = x309 + x93;
       // loc("cirgen/components/bytes.cpp":51:7)
       auto x313 = x307 * x312;
       // loc("cirgen/components/bytes.cpp":51:7)
-      if (x313 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
+      if (x313 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
       // loc("cirgen/components/bytes.cpp":54:25)
       auto x314 = x309 - x92;
       // loc("cirgen/components/bytes.cpp":54:7)
       auto x315 = x310 * x314;
       // loc("cirgen/components/bytes.cpp":54:7)
-      if (x315 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
+      if (x315 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
       {
         // loc("cirgen/components/bytes.cpp":34:20)
         auto x316 = x308 - x93;
@@ -1435,19 +1436,19 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/components/bytes.cpp":48:7)
       auto x326 = x322 * x325;
       // loc("cirgen/components/bytes.cpp":48:7)
-      if (x326 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
+      if (x326 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
       // loc("cirgen/components/bytes.cpp":51:19)
       auto x327 = x324 + x93;
       // loc("cirgen/components/bytes.cpp":51:7)
       auto x328 = x322 * x327;
       // loc("cirgen/components/bytes.cpp":51:7)
-      if (x328 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
+      if (x328 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
       // loc("cirgen/components/bytes.cpp":54:25)
       auto x329 = x324 - x92;
       // loc("cirgen/components/bytes.cpp":54:7)
       auto x330 = x325 * x329;
       // loc("cirgen/components/bytes.cpp":54:7)
-      if (x330 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
+      if (x330 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
       {
         // loc("cirgen/components/bytes.cpp":34:20)
         auto x331 = x323 - x93;
@@ -1503,19 +1504,19 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/components/bytes.cpp":48:7)
       auto x341 = x337 * x340;
       // loc("cirgen/components/bytes.cpp":48:7)
-      if (x341 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
+      if (x341 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
       // loc("cirgen/components/bytes.cpp":51:19)
       auto x342 = x339 + x93;
       // loc("cirgen/components/bytes.cpp":51:7)
       auto x343 = x337 * x342;
       // loc("cirgen/components/bytes.cpp":51:7)
-      if (x343 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
+      if (x343 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
       // loc("cirgen/components/bytes.cpp":54:25)
       auto x344 = x339 - x92;
       // loc("cirgen/components/bytes.cpp":54:7)
       auto x345 = x340 * x344;
       // loc("cirgen/components/bytes.cpp":54:7)
-      if (x345 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
+      if (x345 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
       {
         // loc("cirgen/components/bytes.cpp":34:20)
         auto x346 = x338 - x93;
@@ -1571,19 +1572,19 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/components/bytes.cpp":48:7)
       auto x356 = x352 * x355;
       // loc("cirgen/components/bytes.cpp":48:7)
-      if (x356 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
+      if (x356 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
       // loc("cirgen/components/bytes.cpp":51:19)
       auto x357 = x354 + x93;
       // loc("cirgen/components/bytes.cpp":51:7)
       auto x358 = x352 * x357;
       // loc("cirgen/components/bytes.cpp":51:7)
-      if (x358 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
+      if (x358 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
       // loc("cirgen/components/bytes.cpp":54:25)
       auto x359 = x354 - x92;
       // loc("cirgen/components/bytes.cpp":54:7)
       auto x360 = x355 * x359;
       // loc("cirgen/components/bytes.cpp":54:7)
-      if (x360 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
+      if (x360 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
       {
         // loc("cirgen/components/bytes.cpp":34:20)
         auto x361 = x353 - x93;
@@ -1639,19 +1640,19 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/components/bytes.cpp":48:7)
       auto x371 = x367 * x370;
       // loc("cirgen/components/bytes.cpp":48:7)
-      if (x371 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
+      if (x371 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
       // loc("cirgen/components/bytes.cpp":51:19)
       auto x372 = x369 + x93;
       // loc("cirgen/components/bytes.cpp":51:7)
       auto x373 = x367 * x372;
       // loc("cirgen/components/bytes.cpp":51:7)
-      if (x373 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
+      if (x373 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
       // loc("cirgen/components/bytes.cpp":54:25)
       auto x374 = x369 - x92;
       // loc("cirgen/components/bytes.cpp":54:7)
       auto x375 = x370 * x374;
       // loc("cirgen/components/bytes.cpp":54:7)
-      if (x375 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
+      if (x375 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
       {
         // loc("cirgen/components/bytes.cpp":34:20)
         auto x376 = x368 - x93;
@@ -1707,19 +1708,19 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/components/bytes.cpp":48:7)
       auto x386 = x382 * x385;
       // loc("cirgen/components/bytes.cpp":48:7)
-      if (x386 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
+      if (x386 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
       // loc("cirgen/components/bytes.cpp":51:19)
       auto x387 = x384 + x93;
       // loc("cirgen/components/bytes.cpp":51:7)
       auto x388 = x382 * x387;
       // loc("cirgen/components/bytes.cpp":51:7)
-      if (x388 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
+      if (x388 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
       // loc("cirgen/components/bytes.cpp":54:25)
       auto x389 = x384 - x92;
       // loc("cirgen/components/bytes.cpp":54:7)
       auto x390 = x385 * x389;
       // loc("cirgen/components/bytes.cpp":54:7)
-      if (x390 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
+      if (x390 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
       {
         // loc("cirgen/components/bytes.cpp":34:20)
         auto x391 = x383 - x93;
@@ -1775,19 +1776,19 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/components/bytes.cpp":48:7)
       auto x401 = x397 * x400;
       // loc("cirgen/components/bytes.cpp":48:7)
-      if (x401 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
+      if (x401 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
       // loc("cirgen/components/bytes.cpp":51:19)
       auto x402 = x399 + x93;
       // loc("cirgen/components/bytes.cpp":51:7)
       auto x403 = x397 * x402;
       // loc("cirgen/components/bytes.cpp":51:7)
-      if (x403 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
+      if (x403 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
       // loc("cirgen/components/bytes.cpp":54:25)
       auto x404 = x399 - x92;
       // loc("cirgen/components/bytes.cpp":54:7)
       auto x405 = x400 * x404;
       // loc("cirgen/components/bytes.cpp":54:7)
-      if (x405 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
+      if (x405 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
       {
         // loc("cirgen/components/bytes.cpp":34:20)
         auto x406 = x398 - x93;
@@ -1843,19 +1844,19 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/components/bytes.cpp":48:7)
       auto x416 = x412 * x415;
       // loc("cirgen/components/bytes.cpp":48:7)
-      if (x416 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
+      if (x416 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:48");
       // loc("cirgen/components/bytes.cpp":51:19)
       auto x417 = x414 + x93;
       // loc("cirgen/components/bytes.cpp":51:7)
       auto x418 = x412 * x417;
       // loc("cirgen/components/bytes.cpp":51:7)
-      if (x418 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
+      if (x418 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:51");
       // loc("cirgen/components/bytes.cpp":54:25)
       auto x419 = x414 - x92;
       // loc("cirgen/components/bytes.cpp":54:7)
       auto x420 = x415 * x419;
       // loc("cirgen/components/bytes.cpp":54:7)
-      if (x420 != 0) throw std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
+      if (x420 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/bytes.cpp:54");
     }
   }
   // loc("Top/Code/OneHot/hot[3](Reg)"("./cirgen/components/mux.h":49:25))
@@ -3205,7 +3206,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/body.cpp":23:7)
       auto x575 = x573 * x574;
       // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-      if (x575 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+      if (x575 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
     }
     // loc("cirgen/circuit/rv32im/body.cpp":63:16)
     auto x576 = x95 - x477;
@@ -3340,7 +3341,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/body.cpp":23:7)
       auto x613 = x611 * x612;
       // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-      if (x613 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+      if (x613 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
       if (x476 != 0) {
         // loc("Top/mux(Mux)/body(BodyStep)/OneHot/hot[1](Reg)"("./cirgen/compiler/edsl/edsl.h":116:61))
         auto x614 = args[2][101 * steps + ((cycle - 1) & mask)];
@@ -3446,7 +3447,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":68:42)
         auto x657 = x656 - x64;
         // loc("cirgen/circuit/rv32im/body.cpp":68:42)
-        if (x657 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:68");
+        if (x657 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:68");
         {
           host_args.at(0) = x88;
           host_args.at(1) = x94;
@@ -4590,7 +4591,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/components/onehot.h":40:8)
         auto x833 = x832 - x758;
         // loc("./cirgen/components/onehot.h":40:8)
-        if (x833 != 0) throw std::runtime_error("eqz failed at: ./cirgen/components/onehot.h:40");
+        if (x833 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/components/onehot.h:40");
       }
       // loc("cirgen/circuit/rv32im/body.cpp":144:20)
       auto x834 = x95 - x757;
@@ -4867,7 +4868,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/components/onehot.h":40:8)
         auto x910 = x909 - x755;
         // loc("./cirgen/components/onehot.h":40:8)
-        if (x910 != 0) throw std::runtime_error("eqz failed at: ./cirgen/components/onehot.h:40");
+        if (x910 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/components/onehot.h:40");
       }
     }
     // loc("Top/mux(Mux)/body(BodyStep)/OneHot/hot[0](Reg)"("./cirgen/components/mux.h":49:25))
@@ -5178,7 +5179,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/decode.cpp":30:6)
       auto x969 = x920 - x968;
       // loc("cirgen/circuit/rv32im/decode.cpp":30:6)
-      if (x969 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:30");
+      if (x969 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:30");
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/Decoder/Bit/bit(Reg)"("./cirgen/compiler/edsl/component.h":154:27))
       auto x970 = args[2][175 * steps + ((cycle - 0) & mask)];
       assert(x970 != Fp::invalid());
@@ -5213,7 +5214,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/decode.cpp":31:6)
       auto x983 = x919 - x982;
       // loc("cirgen/circuit/rv32im/decode.cpp":31:6)
-      if (x983 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:31");
+      if (x983 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:31");
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/Decoder/Bit/bit(Reg)"("./cirgen/compiler/edsl/component.h":154:27))
       auto x984 = args[2][177 * steps + ((cycle - 0) & mask)];
       assert(x984 != Fp::invalid());
@@ -5248,7 +5249,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/decode.cpp":32:6)
       auto x997 = x918 - x996;
       // loc("cirgen/circuit/rv32im/decode.cpp":32:6)
-      if (x997 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:32");
+      if (x997 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:32");
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/Decoder/Bit/bit(Reg)"("./cirgen/compiler/edsl/component.h":154:27))
       auto x998 = args[2][179 * steps + ((cycle - 0) & mask)];
       assert(x998 != Fp::invalid());
@@ -5262,7 +5263,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/decode.cpp":33:6)
       auto x1002 = x917 - x1001;
       // loc("cirgen/circuit/rv32im/decode.cpp":33:6)
-      if (x1002 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:33");
+      if (x1002 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:33");
       {
         host_args.at(0) = x917;
         host_args.at(1) = x918;
@@ -5398,7 +5399,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/components/onehot.h":40:8)
         auto x1038 = x1037 - x1003;
         // loc("./cirgen/components/onehot.h":40:8)
-        if (x1038 != 0) throw std::runtime_error("eqz failed at: ./cirgen/components/onehot.h:40");
+        if (x1038 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/components/onehot.h:40");
       }
       {
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/OneHot/hot[0](Reg)"("./cirgen/circuit/rv32im/rv32im.inl":38:68))
@@ -6247,7 +6248,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/components/u32.cpp":123:6)
       auto x1126 = x1098 - x1125;
       // loc("cirgen/components/u32.cpp":123:6)
-      if (x1126 != 0) throw std::runtime_error("eqz failed at: cirgen/components/u32.cpp:123");
+      if (x1126 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/u32.cpp:123");
       {
         // loc("cirgen/components/u32.cpp":120:18)
         auto x1127 = Fp(x1116.asUInt32() & x62.asUInt32());
@@ -6285,7 +6286,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/components/u32.cpp":123:6)
       auto x1136 = x1116 - x1135;
       // loc("cirgen/components/u32.cpp":123:6)
-      if (x1136 != 0) throw std::runtime_error("eqz failed at: cirgen/components/u32.cpp:123");
+      if (x1136 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/u32.cpp:123");
       // loc("cirgen/components/u32.cpp":34:5)
       {
         auto& reg = args[2][201 * steps + cycle];
@@ -6543,7 +6544,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/components/u32.cpp":123:6)
       auto x1203 = x1191 - x1202;
       // loc("cirgen/components/u32.cpp":123:6)
-      if (x1203 != 0) throw std::runtime_error("eqz failed at: cirgen/components/u32.cpp:123");
+      if (x1203 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/u32.cpp:123");
       // loc("cirgen/circuit/rv32im/compute.cpp":69:23)
       auto x1204 = x95 - x1131;
       // loc("cirgen/circuit/rv32im/compute.cpp":69:17)
@@ -6610,7 +6611,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       assert(x1221 != Fp::invalid());
       if (x1221 != 0) {
         // loc("cirgen/components/iszero.cpp":16:23)
-        if (x1218 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
+        if (x1218 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
       }
       // loc("cirgen/components/iszero.cpp":18:19)
       auto x1222 = x95 - x1221;
@@ -6623,7 +6624,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/components/iszero.cpp":18:26)
         auto x1225 = x1224 - x95;
         // loc("cirgen/components/iszero.cpp":18:26)
-        if (x1225 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
+        if (x1225 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
       }
       // loc("cirgen/components/u32.cpp":138:27)
       auto x1226 = x1191 * x90;
@@ -6656,7 +6657,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       assert(x1232 != Fp::invalid());
       if (x1232 != 0) {
         // loc("cirgen/components/iszero.cpp":16:23)
-        if (x1229 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
+        if (x1229 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
       }
       // loc("cirgen/components/iszero.cpp":18:19)
       auto x1233 = x95 - x1232;
@@ -6669,7 +6670,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/components/iszero.cpp":18:26)
         auto x1236 = x1235 - x95;
         // loc("cirgen/components/iszero.cpp":18:26)
-        if (x1236 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
+        if (x1236 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
       }
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/ALU/Reg"("./cirgen/compiler/edsl/component.h":154:27))
       auto x1237 = args[2][211 * steps + ((cycle - 0) & mask)];
@@ -6740,7 +6741,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       assert(x1246 != Fp::invalid());
       if (x1246 != 0) {
         // loc("cirgen/components/iszero.cpp":16:23)
-        if (x1243 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
+        if (x1243 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
       }
       // loc("cirgen/components/iszero.cpp":18:19)
       auto x1247 = x95 - x1246;
@@ -6753,7 +6754,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/components/iszero.cpp":18:26)
         auto x1250 = x1249 - x95;
         // loc("cirgen/components/iszero.cpp":18:26)
-        if (x1250 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
+        if (x1250 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
       }
       // loc("cirgen/circuit/rv32im/compute.cpp":161:13)
       auto x1251 = x754 + x78;
@@ -6764,11 +6765,11 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":38:68)
         auto x1253 = x1000 - x44;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":38:68)
-        if (x1253 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:38");
+        if (x1253 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:38");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":38:68)
-        if (x989 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:38");
+        if (x989 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:38");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":38:68)
-        if (x965 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:38");
+        if (x965 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:38");
         // loc("cirgen/components/u32.cpp":34:5)
         {
           auto& reg = args[2][189 * steps + cycle];
@@ -6926,7 +6927,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x1276 = x1274 * x1275;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x1276 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x1276 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/ComputeControl/Reg"("./cirgen/compiler/edsl/component.h":154:27))
         auto x1277 = args[2][198 * steps + ((cycle - 0) & mask)];
         assert(x1277 != Fp::invalid());
@@ -7085,13 +7086,13 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":39:68)
         auto x1284 = x1000 - x44;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":39:68)
-        if (x1284 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:39");
+        if (x1284 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:39");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":39:68)
-        if (x989 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:39");
+        if (x989 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:39");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":39:68)
         auto x1285 = x965 - x59;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":39:68)
-        if (x1285 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:39");
+        if (x1285 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:39");
         // loc("cirgen/components/u32.cpp":34:5)
         {
           auto& reg = args[2][189 * steps + cycle];
@@ -7249,7 +7250,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x1308 = x1306 * x1307;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x1308 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x1308 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/ComputeControl/Reg"("./cirgen/compiler/edsl/component.h":154:27))
         auto x1309 = args[2][198 * steps + ((cycle - 0) & mask)];
         assert(x1309 != Fp::invalid());
@@ -7408,13 +7409,13 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":40:69)
         auto x1316 = x1000 - x44;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":40:69)
-        if (x1316 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:40");
+        if (x1316 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:40");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":40:69)
         auto x1317 = x989 - x78;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":40:69)
-        if (x1317 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:40");
+        if (x1317 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:40");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":40:69)
-        if (x965 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:40");
+        if (x965 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:40");
         // loc("cirgen/components/u32.cpp":34:5)
         {
           auto& reg = args[2][189 * steps + cycle];
@@ -7572,7 +7573,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x1340 = x1338 * x1339;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x1340 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x1340 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/ComputeControl/Reg"("./cirgen/compiler/edsl/component.h":154:27))
         auto x1341 = args[2][198 * steps + ((cycle - 0) & mask)];
         assert(x1341 != Fp::invalid());
@@ -7731,13 +7732,13 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":41:69)
         auto x1348 = x1000 - x44;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":41:69)
-        if (x1348 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:41");
+        if (x1348 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:41");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":41:69)
         auto x1349 = x989 - x73;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":41:69)
-        if (x1349 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:41");
+        if (x1349 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:41");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":41:69)
-        if (x965 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:41");
+        if (x965 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:41");
         // loc("cirgen/components/u32.cpp":34:5)
         {
           auto& reg = args[2][189 * steps + cycle];
@@ -7895,7 +7896,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x1372 = x1370 * x1371;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x1372 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x1372 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/ComputeControl/Reg"("./cirgen/compiler/edsl/component.h":154:27))
         auto x1373 = args[2][198 * steps + ((cycle - 0) & mask)];
         assert(x1373 != Fp::invalid());
@@ -8054,13 +8055,13 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":42:69)
         auto x1380 = x1000 - x44;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":42:69)
-        if (x1380 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:42");
+        if (x1380 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:42");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":42:69)
         auto x1381 = x989 - x72;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":42:69)
-        if (x1381 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:42");
+        if (x1381 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:42");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":42:69)
-        if (x965 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:42");
+        if (x965 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:42");
         // loc("cirgen/components/u32.cpp":34:5)
         {
           auto& reg = args[2][189 * steps + cycle];
@@ -8218,7 +8219,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x1404 = x1402 * x1403;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x1404 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x1404 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/ComputeControl/Reg"("./cirgen/compiler/edsl/component.h":154:27))
         auto x1405 = args[2][198 * steps + ((cycle - 0) & mask)];
         assert(x1405 != Fp::invalid());
@@ -8377,13 +8378,13 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":43:68)
         auto x1412 = x1000 - x44;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":43:68)
-        if (x1412 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:43");
+        if (x1412 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:43");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":43:68)
         auto x1413 = x989 - x92;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":43:68)
-        if (x1413 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:43");
+        if (x1413 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:43");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":43:68)
-        if (x965 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:43");
+        if (x965 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:43");
         // loc("cirgen/components/u32.cpp":34:5)
         {
           auto& reg = args[2][189 * steps + cycle];
@@ -8541,7 +8542,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x1436 = x1434 * x1435;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x1436 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x1436 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/ComputeControl/Reg"("./cirgen/compiler/edsl/component.h":154:27))
         auto x1437 = args[2][198 * steps + ((cycle - 0) & mask)];
         assert(x1437 != Fp::invalid());
@@ -8700,13 +8701,13 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":44:68)
         auto x1444 = x1000 - x44;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":44:68)
-        if (x1444 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:44");
+        if (x1444 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:44");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":44:68)
         auto x1445 = x989 - x77;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":44:68)
-        if (x1445 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:44");
+        if (x1445 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:44");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":44:68)
-        if (x965 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:44");
+        if (x965 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:44");
         // loc("cirgen/components/u32.cpp":34:5)
         {
           auto& reg = args[2][189 * steps + cycle];
@@ -8864,7 +8865,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x1468 = x1466 * x1467;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x1468 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x1468 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/ComputeControl/Reg"("./cirgen/compiler/edsl/component.h":154:27))
         auto x1469 = args[2][198 * steps + ((cycle - 0) & mask)];
         assert(x1469 != Fp::invalid());
@@ -9023,9 +9024,9 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":45:68)
         auto x1476 = x1000 - x43;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":45:68)
-        if (x1476 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:45");
+        if (x1476 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:45");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":45:68)
-        if (x989 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:45");
+        if (x989 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:45");
         // loc("cirgen/circuit/rv32im/decode.cpp":70:7)
         auto x1477 = x960 * x62;
         // loc("cirgen/circuit/rv32im/decode.cpp":70:21)
@@ -9201,7 +9202,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x1508 = x1506 * x1507;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x1508 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x1508 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/0(ComputeWrap)/ComputeCycle/ComputeControl/Reg"("./cirgen/compiler/edsl/component.h":154:27))
         auto x1509 = args[2][198 * steps + ((cycle - 0) & mask)];
         assert(x1509 != Fp::invalid());
@@ -9662,7 +9663,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/decode.cpp":30:6)
       auto x1573 = x1524 - x1572;
       // loc("cirgen/circuit/rv32im/decode.cpp":30:6)
-      if (x1573 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:30");
+      if (x1573 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:30");
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/Decoder/Bit/bit(Reg)"("./cirgen/compiler/edsl/component.h":154:27))
       auto x1574 = args[2][175 * steps + ((cycle - 0) & mask)];
       assert(x1574 != Fp::invalid());
@@ -9697,7 +9698,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/decode.cpp":31:6)
       auto x1587 = x1523 - x1586;
       // loc("cirgen/circuit/rv32im/decode.cpp":31:6)
-      if (x1587 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:31");
+      if (x1587 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:31");
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/Decoder/Bit/bit(Reg)"("./cirgen/compiler/edsl/component.h":154:27))
       auto x1588 = args[2][177 * steps + ((cycle - 0) & mask)];
       assert(x1588 != Fp::invalid());
@@ -9732,7 +9733,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/decode.cpp":32:6)
       auto x1601 = x1522 - x1600;
       // loc("cirgen/circuit/rv32im/decode.cpp":32:6)
-      if (x1601 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:32");
+      if (x1601 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:32");
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/Decoder/Bit/bit(Reg)"("./cirgen/compiler/edsl/component.h":154:27))
       auto x1602 = args[2][179 * steps + ((cycle - 0) & mask)];
       assert(x1602 != Fp::invalid());
@@ -9746,7 +9747,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/decode.cpp":33:6)
       auto x1606 = x1521 - x1605;
       // loc("cirgen/circuit/rv32im/decode.cpp":33:6)
-      if (x1606 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:33");
+      if (x1606 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:33");
       {
         host_args.at(0) = x1521;
         host_args.at(1) = x1522;
@@ -9882,7 +9883,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/components/onehot.h":40:8)
         auto x1642 = x1641 - x1607;
         // loc("./cirgen/components/onehot.h":40:8)
-        if (x1642 != 0) throw std::runtime_error("eqz failed at: ./cirgen/components/onehot.h:40");
+        if (x1642 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/components/onehot.h:40");
       }
       {
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/OneHot/hot[0](Reg)"("./cirgen/circuit/rv32im/rv32im.inl":46:69))
@@ -10903,7 +10904,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/components/u32.cpp":123:6)
       auto x1816 = x1788 - x1815;
       // loc("cirgen/components/u32.cpp":123:6)
-      if (x1816 != 0) throw std::runtime_error("eqz failed at: cirgen/components/u32.cpp:123");
+      if (x1816 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/u32.cpp:123");
       {
         // loc("cirgen/components/u32.cpp":120:18)
         auto x1817 = Fp(x1806.asUInt32() & x62.asUInt32());
@@ -10941,7 +10942,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/components/u32.cpp":123:6)
       auto x1826 = x1806 - x1825;
       // loc("cirgen/components/u32.cpp":123:6)
-      if (x1826 != 0) throw std::runtime_error("eqz failed at: cirgen/components/u32.cpp:123");
+      if (x1826 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/u32.cpp:123");
       // loc("cirgen/components/u32.cpp":34:5)
       {
         auto& reg = args[2][201 * steps + cycle];
@@ -11199,7 +11200,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/components/u32.cpp":123:6)
       auto x1893 = x1881 - x1892;
       // loc("cirgen/components/u32.cpp":123:6)
-      if (x1893 != 0) throw std::runtime_error("eqz failed at: cirgen/components/u32.cpp:123");
+      if (x1893 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/u32.cpp:123");
       // loc("cirgen/circuit/rv32im/compute.cpp":69:23)
       auto x1894 = x95 - x1821;
       // loc("cirgen/circuit/rv32im/compute.cpp":69:17)
@@ -11266,7 +11267,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       assert(x1911 != Fp::invalid());
       if (x1911 != 0) {
         // loc("cirgen/components/iszero.cpp":16:23)
-        if (x1908 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
+        if (x1908 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
       }
       // loc("cirgen/components/iszero.cpp":18:19)
       auto x1912 = x95 - x1911;
@@ -11279,7 +11280,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/components/iszero.cpp":18:26)
         auto x1915 = x1914 - x95;
         // loc("cirgen/components/iszero.cpp":18:26)
-        if (x1915 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
+        if (x1915 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
       }
       // loc("cirgen/components/u32.cpp":138:27)
       auto x1916 = x1881 * x90;
@@ -11312,7 +11313,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       assert(x1922 != Fp::invalid());
       if (x1922 != 0) {
         // loc("cirgen/components/iszero.cpp":16:23)
-        if (x1919 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
+        if (x1919 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
       }
       // loc("cirgen/components/iszero.cpp":18:19)
       auto x1923 = x95 - x1922;
@@ -11325,7 +11326,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/components/iszero.cpp":18:26)
         auto x1926 = x1925 - x95;
         // loc("cirgen/components/iszero.cpp":18:26)
-        if (x1926 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
+        if (x1926 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
       }
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/ALU/Reg"("./cirgen/compiler/edsl/component.h":154:27))
       auto x1927 = args[2][211 * steps + ((cycle - 0) & mask)];
@@ -11396,7 +11397,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       assert(x1936 != Fp::invalid());
       if (x1936 != 0) {
         // loc("cirgen/components/iszero.cpp":16:23)
-        if (x1933 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
+        if (x1933 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
       }
       // loc("cirgen/components/iszero.cpp":18:19)
       auto x1937 = x95 - x1936;
@@ -11409,7 +11410,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/components/iszero.cpp":18:26)
         auto x1940 = x1939 - x95;
         // loc("cirgen/components/iszero.cpp":18:26)
-        if (x1940 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
+        if (x1940 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
       }
       // loc("cirgen/circuit/rv32im/compute.cpp":161:13)
       auto x1941 = x754 + x78;
@@ -11456,11 +11457,11 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":46:69)
         auto x1961 = x1604 - x43;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":46:69)
-        if (x1961 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:46");
+        if (x1961 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:46");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":46:69)
         auto x1962 = x1593 - x78;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":46:69)
-        if (x1962 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:46");
+        if (x1962 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:46");
         // loc("cirgen/circuit/rv32im/decode.cpp":70:7)
         auto x1963 = x1564 * x62;
         // loc("cirgen/circuit/rv32im/decode.cpp":70:21)
@@ -11636,7 +11637,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x1994 = x1992 * x1993;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x1994 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x1994 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/ComputeControl/Reg"("./cirgen/compiler/edsl/component.h":154:27))
         auto x1995 = args[2][198 * steps + ((cycle - 0) & mask)];
         assert(x1995 != Fp::invalid());
@@ -11795,11 +11796,11 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":47:69)
         auto x2002 = x1604 - x43;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":47:69)
-        if (x2002 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:47");
+        if (x2002 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:47");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":47:69)
         auto x2003 = x1593 - x73;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":47:69)
-        if (x2003 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:47");
+        if (x2003 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:47");
         // loc("cirgen/circuit/rv32im/decode.cpp":70:7)
         auto x2004 = x1564 * x62;
         // loc("cirgen/circuit/rv32im/decode.cpp":70:21)
@@ -11975,7 +11976,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x2035 = x2033 * x2034;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x2035 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x2035 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/ComputeControl/Reg"("./cirgen/compiler/edsl/component.h":154:27))
         auto x2036 = args[2][198 * steps + ((cycle - 0) & mask)];
         assert(x2036 != Fp::invalid());
@@ -12134,11 +12135,11 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":48:69)
         auto x2043 = x1604 - x43;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":48:69)
-        if (x2043 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:48");
+        if (x2043 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:48");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":48:69)
         auto x2044 = x1593 - x72;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":48:69)
-        if (x2044 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:48");
+        if (x2044 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:48");
         // loc("cirgen/circuit/rv32im/decode.cpp":70:7)
         auto x2045 = x1564 * x62;
         // loc("cirgen/circuit/rv32im/decode.cpp":70:21)
@@ -12314,7 +12315,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x2076 = x2074 * x2075;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x2076 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x2076 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/ComputeControl/Reg"("./cirgen/compiler/edsl/component.h":154:27))
         auto x2077 = args[2][198 * steps + ((cycle - 0) & mask)];
         assert(x2077 != Fp::invalid());
@@ -12473,11 +12474,11 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":49:68)
         auto x2084 = x1604 - x43;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":49:68)
-        if (x2084 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:49");
+        if (x2084 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:49");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":49:68)
         auto x2085 = x1593 - x92;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":49:68)
-        if (x2085 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:49");
+        if (x2085 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:49");
         // loc("cirgen/circuit/rv32im/decode.cpp":70:7)
         auto x2086 = x1564 * x62;
         // loc("cirgen/circuit/rv32im/decode.cpp":70:21)
@@ -12653,7 +12654,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x2117 = x2115 * x2116;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x2117 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x2117 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/ComputeControl/Reg"("./cirgen/compiler/edsl/component.h":154:27))
         auto x2118 = args[2][198 * steps + ((cycle - 0) & mask)];
         assert(x2118 != Fp::invalid());
@@ -12812,11 +12813,11 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":50:68)
         auto x2125 = x1604 - x43;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":50:68)
-        if (x2125 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:50");
+        if (x2125 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:50");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":50:68)
         auto x2126 = x1593 - x77;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":50:68)
-        if (x2126 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:50");
+        if (x2126 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:50");
         // loc("cirgen/circuit/rv32im/decode.cpp":70:7)
         auto x2127 = x1564 * x62;
         // loc("cirgen/circuit/rv32im/decode.cpp":70:21)
@@ -12992,7 +12993,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x2158 = x2156 * x2157;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x2158 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x2158 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/ComputeControl/Reg"("./cirgen/compiler/edsl/component.h":154:27))
         auto x2159 = args[2][198 * steps + ((cycle - 0) & mask)];
         assert(x2159 != Fp::invalid());
@@ -13151,9 +13152,9 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":51:68)
         auto x2166 = x1604 - x41;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":51:68)
-        if (x2166 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:51");
+        if (x2166 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:51");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":51:68)
-        if (x1593 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:51");
+        if (x1593 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:51");
         // loc("cirgen/circuit/rv32im/decode.cpp":88:7)
         auto x2167 = x1564 * x62;
         // loc("cirgen/circuit/rv32im/decode.cpp":88:21)
@@ -13335,7 +13336,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x2201 = x2199 * x2200;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x2201 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x2201 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/ComputeControl/Reg"("./cirgen/compiler/edsl/component.h":154:27))
         auto x2202 = args[2][198 * steps + ((cycle - 0) & mask)];
         assert(x2202 != Fp::invalid());
@@ -13496,11 +13497,11 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":52:68)
         auto x2210 = x1604 - x41;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":52:68)
-        if (x2210 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:52");
+        if (x2210 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:52");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":52:68)
         auto x2211 = x1593 - x95;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":52:68)
-        if (x2211 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:52");
+        if (x2211 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:52");
         // loc("cirgen/circuit/rv32im/decode.cpp":88:7)
         auto x2212 = x1564 * x62;
         // loc("cirgen/circuit/rv32im/decode.cpp":88:21)
@@ -13682,7 +13683,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x2246 = x2244 * x2245;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x2246 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x2246 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/ComputeControl/Reg"("./cirgen/compiler/edsl/component.h":154:27))
         auto x2247 = args[2][198 * steps + ((cycle - 0) & mask)];
         assert(x2247 != Fp::invalid());
@@ -13843,11 +13844,11 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":53:68)
         auto x2255 = x1604 - x41;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":53:68)
-        if (x2255 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:53");
+        if (x2255 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:53");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":53:68)
         auto x2256 = x1593 - x78;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":53:68)
-        if (x2256 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:53");
+        if (x2256 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:53");
         // loc("cirgen/circuit/rv32im/decode.cpp":88:7)
         auto x2257 = x1564 * x62;
         // loc("cirgen/circuit/rv32im/decode.cpp":88:21)
@@ -14029,7 +14030,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x2291 = x2289 * x2290;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x2291 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x2291 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/1(ComputeWrap)/ComputeCycle/ComputeControl/Reg"("./cirgen/compiler/edsl/component.h":154:27))
         auto x2292 = args[2][198 * steps + ((cycle - 0) & mask)];
         assert(x2292 != Fp::invalid());
@@ -14492,7 +14493,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/decode.cpp":30:6)
       auto x2357 = x2308 - x2356;
       // loc("cirgen/circuit/rv32im/decode.cpp":30:6)
-      if (x2357 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:30");
+      if (x2357 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:30");
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/Decoder/Bit/bit(Reg)"("./cirgen/compiler/edsl/component.h":154:27))
       auto x2358 = args[2][175 * steps + ((cycle - 0) & mask)];
       assert(x2358 != Fp::invalid());
@@ -14527,7 +14528,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/decode.cpp":31:6)
       auto x2371 = x2307 - x2370;
       // loc("cirgen/circuit/rv32im/decode.cpp":31:6)
-      if (x2371 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:31");
+      if (x2371 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:31");
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/Decoder/Bit/bit(Reg)"("./cirgen/compiler/edsl/component.h":154:27))
       auto x2372 = args[2][177 * steps + ((cycle - 0) & mask)];
       assert(x2372 != Fp::invalid());
@@ -14562,7 +14563,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/decode.cpp":32:6)
       auto x2385 = x2306 - x2384;
       // loc("cirgen/circuit/rv32im/decode.cpp":32:6)
-      if (x2385 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:32");
+      if (x2385 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:32");
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/Decoder/Bit/bit(Reg)"("./cirgen/compiler/edsl/component.h":154:27))
       auto x2386 = args[2][179 * steps + ((cycle - 0) & mask)];
       assert(x2386 != Fp::invalid());
@@ -14576,7 +14577,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/decode.cpp":33:6)
       auto x2390 = x2305 - x2389;
       // loc("cirgen/circuit/rv32im/decode.cpp":33:6)
-      if (x2390 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:33");
+      if (x2390 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:33");
       {
         host_args.at(0) = x2305;
         host_args.at(1) = x2306;
@@ -14712,7 +14713,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/components/onehot.h":40:8)
         auto x2426 = x2425 - x2391;
         // loc("./cirgen/components/onehot.h":40:8)
-        if (x2426 != 0) throw std::runtime_error("eqz failed at: ./cirgen/components/onehot.h:40");
+        if (x2426 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/components/onehot.h:40");
       }
       {
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/OneHot/hot[0](Reg)"("./cirgen/circuit/rv32im/rv32im.inl":54:68))
@@ -15612,7 +15613,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/components/u32.cpp":123:6)
       auto x2571 = x2543 - x2570;
       // loc("cirgen/components/u32.cpp":123:6)
-      if (x2571 != 0) throw std::runtime_error("eqz failed at: cirgen/components/u32.cpp:123");
+      if (x2571 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/u32.cpp:123");
       {
         // loc("cirgen/components/u32.cpp":120:18)
         auto x2572 = Fp(x2561.asUInt32() & x62.asUInt32());
@@ -15650,7 +15651,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/components/u32.cpp":123:6)
       auto x2581 = x2561 - x2580;
       // loc("cirgen/components/u32.cpp":123:6)
-      if (x2581 != 0) throw std::runtime_error("eqz failed at: cirgen/components/u32.cpp:123");
+      if (x2581 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/u32.cpp:123");
       // loc("cirgen/components/u32.cpp":34:5)
       {
         auto& reg = args[2][201 * steps + cycle];
@@ -15908,7 +15909,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/components/u32.cpp":123:6)
       auto x2648 = x2636 - x2647;
       // loc("cirgen/components/u32.cpp":123:6)
-      if (x2648 != 0) throw std::runtime_error("eqz failed at: cirgen/components/u32.cpp:123");
+      if (x2648 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/u32.cpp:123");
       // loc("cirgen/circuit/rv32im/compute.cpp":69:23)
       auto x2649 = x95 - x2576;
       // loc("cirgen/circuit/rv32im/compute.cpp":69:17)
@@ -15975,7 +15976,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       assert(x2666 != Fp::invalid());
       if (x2666 != 0) {
         // loc("cirgen/components/iszero.cpp":16:23)
-        if (x2663 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
+        if (x2663 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
       }
       // loc("cirgen/components/iszero.cpp":18:19)
       auto x2667 = x95 - x2666;
@@ -15988,7 +15989,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/components/iszero.cpp":18:26)
         auto x2670 = x2669 - x95;
         // loc("cirgen/components/iszero.cpp":18:26)
-        if (x2670 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
+        if (x2670 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
       }
       // loc("cirgen/components/u32.cpp":138:27)
       auto x2671 = x2636 * x90;
@@ -16021,7 +16022,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       assert(x2677 != Fp::invalid());
       if (x2677 != 0) {
         // loc("cirgen/components/iszero.cpp":16:23)
-        if (x2674 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
+        if (x2674 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
       }
       // loc("cirgen/components/iszero.cpp":18:19)
       auto x2678 = x95 - x2677;
@@ -16034,7 +16035,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/components/iszero.cpp":18:26)
         auto x2681 = x2680 - x95;
         // loc("cirgen/components/iszero.cpp":18:26)
-        if (x2681 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
+        if (x2681 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
       }
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/ALU/Reg"("./cirgen/compiler/edsl/component.h":154:27))
       auto x2682 = args[2][211 * steps + ((cycle - 0) & mask)];
@@ -16105,7 +16106,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       assert(x2691 != Fp::invalid());
       if (x2691 != 0) {
         // loc("cirgen/components/iszero.cpp":16:23)
-        if (x2688 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
+        if (x2688 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
       }
       // loc("cirgen/components/iszero.cpp":18:19)
       auto x2692 = x95 - x2691;
@@ -16118,7 +16119,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/components/iszero.cpp":18:26)
         auto x2695 = x2694 - x95;
         // loc("cirgen/components/iszero.cpp":18:26)
-        if (x2695 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
+        if (x2695 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
       }
       // loc("cirgen/circuit/rv32im/compute.cpp":161:13)
       auto x2696 = x754 + x78;
@@ -16175,11 +16176,11 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":54:68)
         auto x2721 = x2388 - x41;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":54:68)
-        if (x2721 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:54");
+        if (x2721 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:54");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":54:68)
         auto x2722 = x2377 - x74;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":54:68)
-        if (x2722 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:54");
+        if (x2722 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:54");
         // loc("cirgen/circuit/rv32im/decode.cpp":88:7)
         auto x2723 = x2348 * x62;
         // loc("cirgen/circuit/rv32im/decode.cpp":88:21)
@@ -16361,7 +16362,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x2757 = x2755 * x2756;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x2757 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x2757 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/ComputeControl/Reg"("./cirgen/compiler/edsl/component.h":154:27))
         auto x2758 = args[2][198 * steps + ((cycle - 0) & mask)];
         assert(x2758 != Fp::invalid());
@@ -16522,11 +16523,11 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":55:68)
         auto x2766 = x2388 - x41;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":55:68)
-        if (x2766 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:55");
+        if (x2766 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:55");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":55:68)
         auto x2767 = x2377 - x73;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":55:68)
-        if (x2767 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:55");
+        if (x2767 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:55");
         // loc("cirgen/circuit/rv32im/decode.cpp":88:7)
         auto x2768 = x2348 * x62;
         // loc("cirgen/circuit/rv32im/decode.cpp":88:21)
@@ -16708,7 +16709,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x2802 = x2800 * x2801;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x2802 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x2802 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/ComputeControl/Reg"("./cirgen/compiler/edsl/component.h":154:27))
         auto x2803 = args[2][198 * steps + ((cycle - 0) & mask)];
         assert(x2803 != Fp::invalid());
@@ -16869,11 +16870,11 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":56:68)
         auto x2811 = x2388 - x41;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":56:68)
-        if (x2811 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:56");
+        if (x2811 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:56");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":56:68)
         auto x2812 = x2377 - x72;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":56:68)
-        if (x2812 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:56");
+        if (x2812 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:56");
         // loc("cirgen/circuit/rv32im/decode.cpp":88:7)
         auto x2813 = x2348 * x62;
         // loc("cirgen/circuit/rv32im/decode.cpp":88:21)
@@ -17055,7 +17056,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x2847 = x2845 * x2846;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x2847 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x2847 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/ComputeControl/Reg"("./cirgen/compiler/edsl/component.h":154:27))
         auto x2848 = args[2][198 * steps + ((cycle - 0) & mask)];
         assert(x2848 != Fp::invalid());
@@ -17216,7 +17217,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":57:68)
         auto x2856 = x2388 - x40;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":57:68)
-        if (x2856 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:57");
+        if (x2856 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:57");
         // loc("cirgen/circuit/rv32im/decode.cpp":106:7)
         auto x2857 = x2348 * x62;
         // loc("cirgen/circuit/rv32im/decode.cpp":106:21)
@@ -17402,7 +17403,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x2893 = x2891 * x2892;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x2893 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x2893 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/ComputeControl/Reg"("./cirgen/compiler/edsl/component.h":154:27))
         auto x2894 = args[2][198 * steps + ((cycle - 0) & mask)];
         assert(x2894 != Fp::invalid());
@@ -17561,9 +17562,9 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":58:68)
         auto x2901 = x2388 - x39;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":58:68)
-        if (x2901 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:58");
+        if (x2901 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:58");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":58:68)
-        if (x2377 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:58");
+        if (x2377 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:58");
         // loc("cirgen/circuit/rv32im/decode.cpp":70:7)
         auto x2902 = x2348 * x62;
         // loc("cirgen/circuit/rv32im/decode.cpp":70:21)
@@ -17739,7 +17740,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x2933 = x2931 * x2932;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x2933 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x2933 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/ComputeControl/Reg"("./cirgen/compiler/edsl/component.h":154:27))
         auto x2934 = args[2][198 * steps + ((cycle - 0) & mask)];
         assert(x2934 != Fp::invalid());
@@ -17898,7 +17899,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":59:68)
         auto x2941 = x2388 - x38;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":59:68)
-        if (x2941 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:59");
+        if (x2941 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:59");
         // loc("cirgen/components/u32.cpp":34:5)
         {
           auto& reg = args[2][189 * steps + cycle];
@@ -18056,7 +18057,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x2964 = x2962 * x2963;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x2964 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x2964 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/ComputeControl/Reg"("./cirgen/compiler/edsl/component.h":154:27))
         auto x2965 = args[2][198 * steps + ((cycle - 0) & mask)];
         assert(x2965 != Fp::invalid());
@@ -18215,7 +18216,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":60:68)
         auto x2972 = x2388 - x37;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":60:68)
-        if (x2972 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:60");
+        if (x2972 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:60");
         // loc("cirgen/components/u32.cpp":34:5)
         {
           auto& reg = args[2][189 * steps + cycle];
@@ -18373,7 +18374,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x2995 = x2993 * x2994;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x2995 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x2995 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/2(ComputeWrap)/ComputeCycle/ComputeControl/Reg"("./cirgen/compiler/edsl/component.h":154:27))
         auto x2996 = args[2][198 * steps + ((cycle - 0) & mask)];
         assert(x2996 != Fp::invalid());
@@ -18834,7 +18835,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/decode.cpp":30:6)
       auto x3060 = x3011 - x3059;
       // loc("cirgen/circuit/rv32im/decode.cpp":30:6)
-      if (x3060 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:30");
+      if (x3060 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:30");
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/Decoder/Bit/bit(Reg)"("./cirgen/compiler/edsl/component.h":154:27))
       auto x3061 = args[2][191 * steps + ((cycle - 0) & mask)];
       assert(x3061 != Fp::invalid());
@@ -18869,7 +18870,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/decode.cpp":31:6)
       auto x3074 = x3010 - x3073;
       // loc("cirgen/circuit/rv32im/decode.cpp":31:6)
-      if (x3074 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:31");
+      if (x3074 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:31");
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/Decoder/Bit/bit(Reg)"("./cirgen/compiler/edsl/component.h":154:27))
       auto x3075 = args[2][193 * steps + ((cycle - 0) & mask)];
       assert(x3075 != Fp::invalid());
@@ -18904,7 +18905,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/decode.cpp":32:6)
       auto x3088 = x3009 - x3087;
       // loc("cirgen/circuit/rv32im/decode.cpp":32:6)
-      if (x3088 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:32");
+      if (x3088 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:32");
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/Decoder/Bit/bit(Reg)"("./cirgen/compiler/edsl/component.h":154:27))
       auto x3089 = args[2][195 * steps + ((cycle - 0) & mask)];
       assert(x3089 != Fp::invalid());
@@ -18918,7 +18919,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/decode.cpp":33:6)
       auto x3093 = x3008 - x3092;
       // loc("cirgen/circuit/rv32im/decode.cpp":33:6)
-      if (x3093 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:33");
+      if (x3093 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:33");
       {
         host_args.at(0) = x3008;
         host_args.at(1) = x3009;
@@ -19054,7 +19055,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/components/onehot.h":40:8)
         auto x3129 = x3128 - x3094;
         // loc("./cirgen/components/onehot.h":40:8)
-        if (x3129 != 0) throw std::runtime_error("eqz failed at: ./cirgen/components/onehot.h:40");
+        if (x3129 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/components/onehot.h:40");
       }
       {
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/OneHot/hot[0](Reg)"("./cirgen/circuit/rv32im/rv32im.inl":76:46))
@@ -19711,7 +19712,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       assert(x3266 != Fp::invalid());
       if (x3266 != 0) {
         // loc("cirgen/components/iszero.cpp":16:23)
-        if (x3263 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
+        if (x3263 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
       }
       // loc("cirgen/components/iszero.cpp":18:19)
       auto x3267 = x95 - x3266;
@@ -19724,7 +19725,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/components/iszero.cpp":18:26)
         auto x3270 = x3269 - x95;
         // loc("cirgen/components/iszero.cpp":18:26)
-        if (x3270 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
+        if (x3270 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
       }
       {
         // loc("cirgen/circuit/rv32im/memio.cpp":47:17)
@@ -19791,7 +19792,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/components/onehot.h":40:8)
         auto x3287 = x3286 - x3272;
         // loc("./cirgen/components/onehot.h":40:8)
-        if (x3287 != 0) throw std::runtime_error("eqz failed at: ./cirgen/components/onehot.h:40");
+        if (x3287 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/components/onehot.h:40");
         // loc("cirgen/circuit/rv32im/memio.cpp":49:20)
         auto x3288 = Fp(x3271.asUInt32() & x90.asUInt32());
         // loc("cirgen/circuit/rv32im/memio.cpp":49:19)
@@ -19927,7 +19928,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/memio.cpp":65:6)
       auto x3319 = x3316 - x3318;
       // loc("cirgen/circuit/rv32im/memio.cpp":65:6)
-      if (x3319 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/memio.cpp:65");
+      if (x3319 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/memio.cpp:65");
       // loc("cirgen/circuit/rv32im/memio.cpp":67:6)
       auto x3320 = x3241 + x3256;
       // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
@@ -19959,7 +19960,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/memio.cpp":67:6)
       auto x3332 = x3320 - x3331;
       // loc("cirgen/circuit/rv32im/memio.cpp":67:6)
-      if (x3332 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/memio.cpp:67");
+      if (x3332 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/memio.cpp:67");
       // loc("cirgen/circuit/rv32im/memio.cpp":69:6)
       auto x3333 = x3242 + x3257;
       // loc("cirgen/circuit/rv32im/memio.cpp":69:6)
@@ -19977,7 +19978,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/memio.cpp":69:6)
       auto x3339 = x3334 - x3338;
       // loc("cirgen/circuit/rv32im/memio.cpp":69:6)
-      if (x3339 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/memio.cpp:69");
+      if (x3339 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/memio.cpp:69");
       // loc("cirgen/circuit/rv32im/memio.cpp":71:6)
       auto x3340 = x3243 + x3258;
       // loc("cirgen/circuit/rv32im/memio.cpp":71:6)
@@ -19995,7 +19996,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/memio.cpp":71:6)
       auto x3346 = x3341 - x3345;
       // loc("cirgen/circuit/rv32im/memio.cpp":71:6)
-      if (x3346 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/memio.cpp:71");
+      if (x3346 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/memio.cpp:71");
       // loc("cirgen/circuit/rv32im/memio.cpp":73:6)
       auto x3347 = x3244 + x3259;
       // loc("cirgen/circuit/rv32im/memio.cpp":73:6)
@@ -20020,7 +20021,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/memio.cpp":73:6)
       auto x3356 = x3348 - x3355;
       // loc("cirgen/circuit/rv32im/memio.cpp":73:6)
-      if (x3356 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/memio.cpp:73");
+      if (x3356 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/memio.cpp:73");
       // loc("cirgen/circuit/rv32im/memio.cpp":76:15)
       auto x3357 = x95 - x3351;
       // loc("cirgen/circuit/rv32im/memio.cpp":76:7)
@@ -20030,7 +20031,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/memio.cpp":76:7)
       auto x3360 = x3358 * x3359;
       // loc("cirgen/circuit/rv32im/memio.cpp":76:7)
-      if (x3360 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/memio.cpp:76");
+      if (x3360 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/memio.cpp:76");
       // loc("cirgen/circuit/rv32im/memio.cpp":79:14)
       auto x3361 = x3351 * x79;
       // loc("cirgen/circuit/rv32im/memio.cpp":79:41)
@@ -20254,7 +20255,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/body.cpp":23:7)
       auto x3400 = x3398 * x3399;
       // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-      if (x3400 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+      if (x3400 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
       // loc("cirgen/circuit/rv32im/memio.cpp":93:3)
       {
         auto& reg = args[2][99 * steps + cycle];
@@ -20272,7 +20273,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
           // loc("./cirgen/circuit/rv32im/rv32im.inl":76:46)
           auto x3403 = x3402 - x95;
           // loc("./cirgen/circuit/rv32im/rv32im.inl":76:46)
-          if (x3403 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:76");
+          if (x3403 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:76");
         }
         if (x94 != 0) {
           // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/OneHot/hot[0](Reg)"("./cirgen/circuit/rv32im/rv32im.inl":76:46))
@@ -20283,7 +20284,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
           // loc("./cirgen/circuit/rv32im/rv32im.inl":76:46)
           auto x3406 = x3405 - x95;
           // loc("./cirgen/circuit/rv32im/rv32im.inl":76:46)
-          if (x3406 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:76");
+          if (x3406 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:76");
         }
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/OneHot/hot[0](Reg)"("./cirgen/circuit/rv32im/rv32im.inl":76:46))
         auto x3407 = args[2][211 * steps + ((cycle - 0) & mask)];
@@ -20369,7 +20370,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":76:46)
         auto x3419 = x3417 * x3418;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":76:46)
-        if (x3419 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:76");
+        if (x3419 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:76");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x3420 = args[2][29 * steps + ((cycle - 0) & mask)];
         assert(x3420 != Fp::invalid());
@@ -20385,7 +20386,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":76:46)
         auto x3425 = x3420 - x3424;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":76:46)
-        if (x3425 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:76");
+        if (x3425 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:76");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":76:46)
         auto x3426 = x3417 * x91;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":76:46)
@@ -20582,9 +20583,9 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":76:46)
         auto x3443 = x3091 - x77;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":76:46)
-        if (x3443 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:76");
+        if (x3443 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:76");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":76:46)
-        if (x3080 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:76");
+        if (x3080 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:76");
         // loc("cirgen/circuit/rv32im/decode.cpp":70:7)
         auto x3444 = x3051 * x62;
         // loc("cirgen/circuit/rv32im/decode.cpp":70:21)
@@ -20639,7 +20640,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
           // loc("./cirgen/circuit/rv32im/rv32im.inl":77:46)
           auto x3455 = x3454 - x95;
           // loc("./cirgen/circuit/rv32im/rv32im.inl":77:46)
-          if (x3455 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:77");
+          if (x3455 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:77");
         }
         if (x95 != 0) {
           // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/OneHot/hot[0](Reg)"("./cirgen/circuit/rv32im/rv32im.inl":77:46))
@@ -20650,7 +20651,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
           // loc("./cirgen/circuit/rv32im/rv32im.inl":77:46)
           auto x3458 = x3457 - x95;
           // loc("./cirgen/circuit/rv32im/rv32im.inl":77:46)
-          if (x3458 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:77");
+          if (x3458 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:77");
         }
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/OneHot/hot[0](Reg)"("./cirgen/circuit/rv32im/rv32im.inl":77:46))
         auto x3459 = args[2][211 * steps + ((cycle - 0) & mask)];
@@ -20712,7 +20713,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":77:46)
         auto x3469 = x3467 * x3468;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":77:46)
-        if (x3469 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:77");
+        if (x3469 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:77");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x3470 = args[2][29 * steps + ((cycle - 0) & mask)];
         assert(x3470 != Fp::invalid());
@@ -20728,7 +20729,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":77:46)
         auto x3475 = x3470 - x3474;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":77:46)
-        if (x3475 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:77");
+        if (x3475 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:77");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":77:46)
         auto x3476 = x3467 * x91;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":77:46)
@@ -20923,11 +20924,11 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":77:46)
         auto x3492 = x3091 - x77;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":77:46)
-        if (x3492 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:77");
+        if (x3492 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:77");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":77:46)
         auto x3493 = x3080 - x95;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":77:46)
-        if (x3493 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:77");
+        if (x3493 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:77");
         // loc("cirgen/circuit/rv32im/decode.cpp":70:7)
         auto x3494 = x3051 * x62;
         // loc("cirgen/circuit/rv32im/decode.cpp":70:21)
@@ -20982,7 +20983,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
           // loc("./cirgen/circuit/rv32im/rv32im.inl":78:46)
           auto x3505 = x3504 - x95;
           // loc("./cirgen/circuit/rv32im/rv32im.inl":78:46)
-          if (x3505 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:78");
+          if (x3505 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:78");
         }
         if (x94 != 0) {
           // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/OneHot/hot[0](Reg)"("./cirgen/circuit/rv32im/rv32im.inl":78:46))
@@ -20993,7 +20994,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
           // loc("./cirgen/circuit/rv32im/rv32im.inl":78:46)
           auto x3508 = x3507 - x95;
           // loc("./cirgen/circuit/rv32im/rv32im.inl":78:46)
-          if (x3508 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:78");
+          if (x3508 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:78");
         }
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/OneHot/hot[0](Reg)"("./cirgen/circuit/rv32im/rv32im.inl":78:46))
         auto x3509 = args[2][211 * steps + ((cycle - 0) & mask)];
@@ -21043,7 +21044,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":78:46)
         auto x3518 = x3516 * x3517;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":78:46)
-        if (x3518 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:78");
+        if (x3518 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:78");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x3519 = args[2][29 * steps + ((cycle - 0) & mask)];
         assert(x3519 != Fp::invalid());
@@ -21059,7 +21060,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":78:46)
         auto x3524 = x3519 - x3523;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":78:46)
-        if (x3524 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:78");
+        if (x3524 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:78");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":78:46)
         auto x3525 = x3509 * x3373;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":78:46)
@@ -21248,11 +21249,11 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":78:46)
         auto x3538 = x3091 - x77;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":78:46)
-        if (x3538 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:78");
+        if (x3538 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:78");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":78:46)
         auto x3539 = x3080 - x92;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":78:46)
-        if (x3539 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:78");
+        if (x3539 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:78");
         // loc("cirgen/circuit/rv32im/decode.cpp":70:7)
         auto x3540 = x3051 * x62;
         // loc("cirgen/circuit/rv32im/decode.cpp":70:21)
@@ -21307,7 +21308,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
           // loc("./cirgen/circuit/rv32im/rv32im.inl":79:46)
           auto x3551 = x3550 - x95;
           // loc("./cirgen/circuit/rv32im/rv32im.inl":79:46)
-          if (x3551 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:79");
+          if (x3551 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:79");
         }
         if (x94 != 0) {
           // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/OneHot/hot[0](Reg)"("./cirgen/circuit/rv32im/rv32im.inl":79:46))
@@ -21318,7 +21319,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
           // loc("./cirgen/circuit/rv32im/rv32im.inl":79:46)
           auto x3554 = x3553 - x95;
           // loc("./cirgen/circuit/rv32im/rv32im.inl":79:46)
-          if (x3554 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:79");
+          if (x3554 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:79");
         }
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/OneHot/hot[0](Reg)"("./cirgen/circuit/rv32im/rv32im.inl":79:46))
         auto x3555 = args[2][211 * steps + ((cycle - 0) & mask)];
@@ -21404,7 +21405,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":79:46)
         auto x3567 = x3565 * x3566;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":79:46)
-        if (x3567 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:79");
+        if (x3567 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:79");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x3568 = args[2][29 * steps + ((cycle - 0) & mask)];
         assert(x3568 != Fp::invalid());
@@ -21420,7 +21421,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":79:46)
         auto x3573 = x3568 - x3572;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":79:46)
-        if (x3573 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:79");
+        if (x3573 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:79");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":79:46)
         auto x3574 = x3555 * x3373;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":79:46)
@@ -21615,11 +21616,11 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":79:46)
         auto x3590 = x3091 - x77;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":79:46)
-        if (x3590 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:79");
+        if (x3590 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:79");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":79:46)
         auto x3591 = x3080 - x78;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":79:46)
-        if (x3591 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:79");
+        if (x3591 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:79");
         // loc("cirgen/circuit/rv32im/decode.cpp":70:7)
         auto x3592 = x3051 * x62;
         // loc("cirgen/circuit/rv32im/decode.cpp":70:21)
@@ -21674,7 +21675,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
           // loc("./cirgen/circuit/rv32im/rv32im.inl":80:46)
           auto x3603 = x3602 - x95;
           // loc("./cirgen/circuit/rv32im/rv32im.inl":80:46)
-          if (x3603 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:80");
+          if (x3603 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:80");
         }
         if (x95 != 0) {
           // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/OneHot/hot[0](Reg)"("./cirgen/circuit/rv32im/rv32im.inl":80:46))
@@ -21685,7 +21686,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
           // loc("./cirgen/circuit/rv32im/rv32im.inl":80:46)
           auto x3606 = x3605 - x95;
           // loc("./cirgen/circuit/rv32im/rv32im.inl":80:46)
-          if (x3606 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:80");
+          if (x3606 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:80");
         }
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/OneHot/hot[0](Reg)"("./cirgen/circuit/rv32im/rv32im.inl":80:46))
         auto x3607 = args[2][211 * steps + ((cycle - 0) & mask)];
@@ -21747,7 +21748,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":80:46)
         auto x3617 = x3615 * x3616;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":80:46)
-        if (x3617 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:80");
+        if (x3617 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:80");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x3618 = args[2][29 * steps + ((cycle - 0) & mask)];
         assert(x3618 != Fp::invalid());
@@ -21763,7 +21764,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":80:46)
         auto x3623 = x3618 - x3622;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":80:46)
-        if (x3623 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:80");
+        if (x3623 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:80");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":80:46)
         auto x3624 = x3607 * x3373;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":80:46)
@@ -21956,11 +21957,11 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":80:46)
         auto x3639 = x3091 - x77;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":80:46)
-        if (x3639 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:80");
+        if (x3639 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:80");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":80:46)
         auto x3640 = x3080 - x74;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":80:46)
-        if (x3640 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:80");
+        if (x3640 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:80");
         // loc("cirgen/circuit/rv32im/decode.cpp":70:7)
         auto x3641 = x3051 * x62;
         // loc("cirgen/circuit/rv32im/decode.cpp":70:21)
@@ -22015,7 +22016,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
           // loc("./cirgen/circuit/rv32im/rv32im.inl":81:46)
           auto x3652 = x3651 - x95;
           // loc("./cirgen/circuit/rv32im/rv32im.inl":81:46)
-          if (x3652 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:81");
+          if (x3652 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:81");
         }
         if (x94 != 0) {
           // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/OneHot/hot[0](Reg)"("./cirgen/circuit/rv32im/rv32im.inl":81:46))
@@ -22026,7 +22027,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
           // loc("./cirgen/circuit/rv32im/rv32im.inl":81:46)
           auto x3655 = x3654 - x95;
           // loc("./cirgen/circuit/rv32im/rv32im.inl":81:46)
-          if (x3655 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:81");
+          if (x3655 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:81");
         }
         // loc("cirgen/components/bytes.cpp":101:3)
         {
@@ -22176,9 +22177,9 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":81:46)
         auto x3677 = x3091 - x34;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":81:46)
-        if (x3677 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:81");
+        if (x3677 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:81");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":81:46)
-        if (x3080 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:81");
+        if (x3080 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:81");
         // loc("cirgen/circuit/rv32im/decode.cpp":79:7)
         auto x3678 = x3051 * x62;
         // loc("cirgen/circuit/rv32im/decode.cpp":79:21)
@@ -22233,7 +22234,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
           // loc("./cirgen/circuit/rv32im/rv32im.inl":82:46)
           auto x3689 = x3688 - x95;
           // loc("./cirgen/circuit/rv32im/rv32im.inl":82:46)
-          if (x3689 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:82");
+          if (x3689 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:82");
         }
         if (x95 != 0) {
           // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/OneHot/hot[0](Reg)"("./cirgen/circuit/rv32im/rv32im.inl":82:46))
@@ -22244,7 +22245,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
           // loc("./cirgen/circuit/rv32im/rv32im.inl":82:46)
           auto x3692 = x3691 - x95;
           // loc("./cirgen/circuit/rv32im/rv32im.inl":82:46)
-          if (x3692 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:82");
+          if (x3692 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:82");
         }
         // loc("cirgen/components/bytes.cpp":101:3)
         {
@@ -22390,11 +22391,11 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":82:46)
         auto x3712 = x3091 - x34;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":82:46)
-        if (x3712 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:82");
+        if (x3712 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:82");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":82:46)
         auto x3713 = x3080 - x95;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":82:46)
-        if (x3713 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:82");
+        if (x3713 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:82");
         // loc("cirgen/circuit/rv32im/decode.cpp":79:7)
         auto x3714 = x3051 * x62;
         // loc("cirgen/circuit/rv32im/decode.cpp":79:21)
@@ -22449,7 +22450,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
           // loc("./cirgen/circuit/rv32im/rv32im.inl":83:46)
           auto x3725 = x3724 - x95;
           // loc("./cirgen/circuit/rv32im/rv32im.inl":83:46)
-          if (x3725 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:83");
+          if (x3725 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:83");
         }
         if (x94 != 0) {
           // loc("Top/mux(Mux)/body(BodyStep)/Mux/3(MemIOCycle)/OneHot/hot[0](Reg)"("./cirgen/circuit/rv32im/rv32im.inl":83:46))
@@ -22460,7 +22461,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
           // loc("./cirgen/circuit/rv32im/rv32im.inl":83:46)
           auto x3728 = x3727 - x95;
           // loc("./cirgen/circuit/rv32im/rv32im.inl":83:46)
-          if (x3728 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:83");
+          if (x3728 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:83");
         }
         // loc("cirgen/components/bytes.cpp":101:3)
         {
@@ -22604,11 +22605,11 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":83:46)
         auto x3747 = x3091 - x34;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":83:46)
-        if (x3747 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:83");
+        if (x3747 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:83");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":83:46)
         auto x3748 = x3080 - x92;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":83:46)
-        if (x3748 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:83");
+        if (x3748 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:83");
         // loc("cirgen/circuit/rv32im/decode.cpp":79:7)
         auto x3749 = x3051 * x62;
         // loc("cirgen/circuit/rv32im/decode.cpp":79:21)
@@ -22961,7 +22962,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/decode.cpp":30:6)
       auto x3816 = x3767 - x3815;
       // loc("cirgen/circuit/rv32im/decode.cpp":30:6)
-      if (x3816 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:30");
+      if (x3816 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:30");
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/Decoder/Bit/bit(Reg)"("./cirgen/compiler/edsl/component.h":154:27))
       auto x3817 = args[2][175 * steps + ((cycle - 0) & mask)];
       assert(x3817 != Fp::invalid());
@@ -22996,7 +22997,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/decode.cpp":31:6)
       auto x3830 = x3766 - x3829;
       // loc("cirgen/circuit/rv32im/decode.cpp":31:6)
-      if (x3830 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:31");
+      if (x3830 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:31");
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/Decoder/Bit/bit(Reg)"("./cirgen/compiler/edsl/component.h":154:27))
       auto x3831 = args[2][177 * steps + ((cycle - 0) & mask)];
       assert(x3831 != Fp::invalid());
@@ -23031,7 +23032,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/decode.cpp":32:6)
       auto x3844 = x3765 - x3843;
       // loc("cirgen/circuit/rv32im/decode.cpp":32:6)
-      if (x3844 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:32");
+      if (x3844 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:32");
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/Decoder/Bit/bit(Reg)"("./cirgen/compiler/edsl/component.h":154:27))
       auto x3845 = args[2][179 * steps + ((cycle - 0) & mask)];
       assert(x3845 != Fp::invalid());
@@ -23045,7 +23046,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/decode.cpp":33:6)
       auto x3849 = x3764 - x3848;
       // loc("cirgen/circuit/rv32im/decode.cpp":33:6)
-      if (x3849 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:33");
+      if (x3849 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:33");
       {
         host_args.at(0) = x3764;
         host_args.at(1) = x3765;
@@ -23181,7 +23182,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/components/onehot.h":40:8)
         auto x3885 = x3884 - x3850;
         // loc("./cirgen/components/onehot.h":40:8)
-        if (x3885 != 0) throw std::runtime_error("eqz failed at: ./cirgen/components/onehot.h:40");
+        if (x3885 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/components/onehot.h:40");
       }
       host_args.at(0) = x94;
       host_args.at(1) = x94;
@@ -23613,7 +23614,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/components/u32.cpp":195:6)
         auto x3978 = x3977 - x3930;
         // loc("cirgen/components/u32.cpp":195:6)
-        if (x3978 != 0) throw std::runtime_error("eqz failed at: cirgen/components/u32.cpp:195");
+        if (x3978 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/u32.cpp:195");
       }
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/Twit/Reg"("./cirgen/compiler/edsl/component.h":154:27))
       auto x3979 = args[2][83 * steps + ((cycle - 0) & mask)];
@@ -23663,7 +23664,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/multiply.cpp":67:6)
       auto x3998 = x3925 - x3997;
       // loc("cirgen/circuit/rv32im/multiply.cpp":67:6)
-      if (x3998 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/multiply.cpp:67");
+      if (x3998 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/multiply.cpp:67");
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/4(MultiplyCycle)/U32Po2/U32Reg/byte[0](Reg)"("./cirgen/compiler/edsl/component.h":154:27))
       auto x3999 = args[2][195 * steps + ((cycle - 0) & mask)];
       assert(x3999 != Fp::invalid());
@@ -23739,7 +23740,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/components/u32.cpp":123:6)
       auto x4025 = x3906 - x4024;
       // loc("cirgen/components/u32.cpp":123:6)
-      if (x4025 != 0) throw std::runtime_error("eqz failed at: cirgen/components/u32.cpp:123");
+      if (x4025 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/u32.cpp:123");
       {
         // loc("cirgen/components/u32.cpp":120:18)
         auto x4026 = Fp(x4015.asUInt32() & x62.asUInt32());
@@ -23777,7 +23778,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/components/u32.cpp":123:6)
       auto x4035 = x4015 - x4034;
       // loc("cirgen/components/u32.cpp":123:6)
-      if (x4035 != 0) throw std::runtime_error("eqz failed at: cirgen/components/u32.cpp:123");
+      if (x4035 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/u32.cpp:123");
       // loc("cirgen/components/u32.cpp":213:13)
       auto x4036 = x3886 * x4030;
       // loc("cirgen/components/u32.cpp":213:3)
@@ -24167,7 +24168,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       assert(x4151 != Fp::invalid());
       if (x4151 != 0) {
         // loc("cirgen/components/iszero.cpp":16:23)
-        if (x4148 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
+        if (x4148 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
       }
       // loc("cirgen/components/iszero.cpp":18:19)
       auto x4152 = x95 - x4151;
@@ -24180,7 +24181,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/components/iszero.cpp":18:26)
         auto x4155 = x4154 - x95;
         // loc("cirgen/components/iszero.cpp":18:26)
-        if (x4155 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
+        if (x4155 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
       }
       // loc("cirgen/circuit/rv32im/multiply.cpp":78:17)
       auto x4156 = x754 + x78;
@@ -24281,7 +24282,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/body.cpp":23:7)
       auto x4179 = x4177 * x4178;
       // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-      if (x4179 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+      if (x4179 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
       // loc("cirgen/circuit/rv32im/multiply.cpp":79:3)
       {
         auto& reg = args[2][99 * steps + cycle];
@@ -24527,79 +24528,79 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":101:49)
         auto x4194 = x3847 - x44;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":101:49)
-        if (x4194 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:101");
+        if (x4194 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:101");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":101:49)
-        if (x3836 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:101");
+        if (x3836 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:101");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":101:49)
         auto x4195 = x3812 - x95;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":101:49)
-        if (x4195 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:101");
+        if (x4195 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:101");
       }
       if (x3886 != 0) {
         // loc("./cirgen/circuit/rv32im/rv32im.inl":102:49)
         auto x4196 = x3847 - x44;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":102:49)
-        if (x4196 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:102");
+        if (x4196 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:102");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":102:49)
         auto x4197 = x3836 - x95;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":102:49)
-        if (x4197 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:102");
+        if (x4197 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:102");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":102:49)
         auto x4198 = x3812 - x95;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":102:49)
-        if (x4198 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:102");
+        if (x4198 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:102");
       }
       if (x3887 != 0) {
         // loc("./cirgen/circuit/rv32im/rv32im.inl":103:49)
         auto x4199 = x3847 - x44;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":103:49)
-        if (x4199 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:103");
+        if (x4199 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:103");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":103:49)
         auto x4200 = x3836 - x92;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":103:49)
-        if (x4200 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:103");
+        if (x4200 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:103");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":103:49)
         auto x4201 = x3812 - x95;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":103:49)
-        if (x4201 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:103");
+        if (x4201 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:103");
       }
       if (x3889 != 0) {
         // loc("./cirgen/circuit/rv32im/rv32im.inl":104:49)
         auto x4202 = x3847 - x44;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":104:49)
-        if (x4202 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:104");
+        if (x4202 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:104");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":104:49)
         auto x4203 = x3836 - x77;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":104:49)
-        if (x4203 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:104");
+        if (x4203 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:104");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":104:49)
         auto x4204 = x3812 - x95;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":104:49)
-        if (x4204 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:104");
+        if (x4204 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:104");
       }
       if (x3891 != 0) {
         // loc("./cirgen/circuit/rv32im/rv32im.inl":105:49)
         auto x4205 = x3847 - x44;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":105:49)
-        if (x4205 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:105");
+        if (x4205 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:105");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":105:49)
         auto x4206 = x3836 - x95;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":105:49)
-        if (x4206 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:105");
+        if (x4206 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:105");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":105:49)
-        if (x3812 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:105");
+        if (x3812 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:105");
       }
       if (x3892 != 0) {
         // loc("./cirgen/circuit/rv32im/rv32im.inl":106:49)
         auto x4207 = x3847 - x43;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":106:49)
-        if (x4207 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:106");
+        if (x4207 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:106");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":106:49)
         auto x4208 = x3836 - x95;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":106:49)
-        if (x4208 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:106");
+        if (x4208 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:106");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":106:49)
-        if (x3812 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:106");
+        if (x3812 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:106");
       }
     }
     // loc("Top/mux(Mux)/body(BodyStep)/OneHot/hot[5](Reg)"("./cirgen/components/mux.h":49:25))
@@ -24910,7 +24911,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/decode.cpp":30:6)
       auto x4267 = x4218 - x4266;
       // loc("cirgen/circuit/rv32im/decode.cpp":30:6)
-      if (x4267 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:30");
+      if (x4267 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:30");
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/Decoder/Bit/bit(Reg)"("./cirgen/compiler/edsl/component.h":154:27))
       auto x4268 = args[2][175 * steps + ((cycle - 0) & mask)];
       assert(x4268 != Fp::invalid());
@@ -24945,7 +24946,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/decode.cpp":31:6)
       auto x4281 = x4217 - x4280;
       // loc("cirgen/circuit/rv32im/decode.cpp":31:6)
-      if (x4281 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:31");
+      if (x4281 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:31");
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/Decoder/Bit/bit(Reg)"("./cirgen/compiler/edsl/component.h":154:27))
       auto x4282 = args[2][177 * steps + ((cycle - 0) & mask)];
       assert(x4282 != Fp::invalid());
@@ -24980,7 +24981,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/decode.cpp":32:6)
       auto x4295 = x4216 - x4294;
       // loc("cirgen/circuit/rv32im/decode.cpp":32:6)
-      if (x4295 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:32");
+      if (x4295 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:32");
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/Decoder/Bit/bit(Reg)"("./cirgen/compiler/edsl/component.h":154:27))
       auto x4296 = args[2][179 * steps + ((cycle - 0) & mask)];
       assert(x4296 != Fp::invalid());
@@ -24994,7 +24995,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/decode.cpp":33:6)
       auto x4300 = x4215 - x4299;
       // loc("cirgen/circuit/rv32im/decode.cpp":33:6)
-      if (x4300 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:33");
+      if (x4300 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/decode.cpp:33");
       {
         host_args.at(0) = x4215;
         host_args.at(1) = x4216;
@@ -25130,7 +25131,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/components/onehot.h":40:8)
         auto x4336 = x4335 - x4301;
         // loc("./cirgen/components/onehot.h":40:8)
-        if (x4336 != 0) throw std::runtime_error("eqz failed at: ./cirgen/components/onehot.h:40");
+        if (x4336 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/components/onehot.h:40");
       }
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/OneHot/hot[0](Reg)"("./cirgen/circuit/rv32im/rv32im.inl":124:49))
       auto x4337 = args[2][181 * steps + ((cycle - 0) & mask)];
@@ -25598,7 +25599,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/components/u32.cpp":195:6)
         auto x4439 = x4438 - x4391;
         // loc("cirgen/components/u32.cpp":195:6)
-        if (x4439 != 0) throw std::runtime_error("eqz failed at: cirgen/components/u32.cpp:195");
+        if (x4439 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/u32.cpp:195");
       }
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/Twit/Reg"("./cirgen/compiler/edsl/component.h":154:27))
       auto x4440 = args[2][83 * steps + ((cycle - 0) & mask)];
@@ -25648,7 +25649,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/divide.cpp":69:6)
       auto x4459 = x4386 - x4458;
       // loc("cirgen/circuit/rv32im/divide.cpp":69:6)
-      if (x4459 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/divide.cpp:69");
+      if (x4459 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/divide.cpp:69");
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/U32Po2/U32Reg/byte[0](Reg)"("./cirgen/compiler/edsl/component.h":154:27))
       auto x4460 = args[2][195 * steps + ((cycle - 0) & mask)];
       assert(x4460 != Fp::invalid());
@@ -25877,7 +25878,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       assert(x4508 != Fp::invalid());
       if (x4508 != 0) {
         // loc("cirgen/components/iszero.cpp":16:23)
-        if (x4505 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
+        if (x4505 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
       }
       // loc("cirgen/components/iszero.cpp":18:19)
       auto x4509 = x95 - x4508;
@@ -25890,7 +25891,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/components/iszero.cpp":18:26)
         auto x4512 = x4511 - x95;
         // loc("cirgen/components/iszero.cpp":18:26)
-        if (x4512 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
+        if (x4512 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
       }
       // loc("cirgen/circuit/rv32im/divide.cpp":94:37)
       auto x4513 = x4341 * x4509;
@@ -26223,7 +26224,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/body.cpp":23:7)
       auto x4549 = x4547 * x4548;
       // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-      if (x4549 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+      if (x4549 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
       // loc("cirgen/circuit/rv32im/divide.cpp":106:3)
       {
         auto& reg = args[2][99 * steps + cycle];
@@ -26234,15 +26235,15 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":124:49)
         auto x4550 = x4298 - x44;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":124:49)
-        if (x4550 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:124");
+        if (x4550 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:124");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":124:49)
         auto x4551 = x4287 - x78;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":124:49)
-        if (x4551 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:124");
+        if (x4551 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:124");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":124:49)
         auto x4552 = x4263 - x95;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":124:49)
-        if (x4552 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:124");
+        if (x4552 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:124");
       }
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/5(DivideCycle)/OneHot/hot[1](Reg)"("./cirgen/circuit/rv32im/rv32im.inl":125:49))
       auto x4553 = args[2][182 * steps + ((cycle - 0) & mask)];
@@ -26251,95 +26252,95 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/circuit/rv32im/rv32im.inl":125:49)
         auto x4554 = x4298 - x44;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":125:49)
-        if (x4554 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:125");
+        if (x4554 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:125");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":125:49)
         auto x4555 = x4287 - x74;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":125:49)
-        if (x4555 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:125");
+        if (x4555 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:125");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":125:49)
         auto x4556 = x4263 - x95;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":125:49)
-        if (x4556 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:125");
+        if (x4556 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:125");
       }
       if (x4338 != 0) {
         // loc("./cirgen/circuit/rv32im/rv32im.inl":126:49)
         auto x4557 = x4298 - x44;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":126:49)
-        if (x4557 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:126");
+        if (x4557 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:126");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":126:49)
         auto x4558 = x4287 - x73;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":126:49)
-        if (x4558 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:126");
+        if (x4558 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:126");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":126:49)
         auto x4559 = x4263 - x95;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":126:49)
-        if (x4559 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:126");
+        if (x4559 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:126");
       }
       if (x4340 != 0) {
         // loc("./cirgen/circuit/rv32im/rv32im.inl":127:49)
         auto x4560 = x4298 - x44;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":127:49)
-        if (x4560 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:127");
+        if (x4560 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:127");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":127:49)
         auto x4561 = x4287 - x72;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":127:49)
-        if (x4561 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:127");
+        if (x4561 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:127");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":127:49)
         auto x4562 = x4263 - x95;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":127:49)
-        if (x4562 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:127");
+        if (x4562 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:127");
       }
       if (x4342 != 0) {
         // loc("./cirgen/circuit/rv32im/rv32im.inl":128:49)
         auto x4563 = x4298 - x44;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":128:49)
-        if (x4563 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:128");
+        if (x4563 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:128");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":128:49)
         auto x4564 = x4287 - x74;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":128:49)
-        if (x4564 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:128");
+        if (x4564 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:128");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":128:49)
-        if (x4263 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:128");
+        if (x4263 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:128");
       }
       if (x4343 != 0) {
         // loc("./cirgen/circuit/rv32im/rv32im.inl":129:49)
         auto x4565 = x4298 - x44;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":129:49)
-        if (x4565 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:129");
+        if (x4565 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:129");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":129:49)
         auto x4566 = x4287 - x74;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":129:49)
-        if (x4566 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:129");
+        if (x4566 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:129");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":129:49)
         auto x4567 = x4263 - x59;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":129:49)
-        if (x4567 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:129");
+        if (x4567 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:129");
       }
       if (x4346 != 0) {
         // loc("./cirgen/circuit/rv32im/rv32im.inl":130:49)
         auto x4568 = x4298 - x43;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":130:49)
-        if (x4568 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:130");
+        if (x4568 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:130");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":130:49)
         auto x4569 = x4287 - x74;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":130:49)
-        if (x4569 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:130");
+        if (x4569 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:130");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":130:49)
-        if (x4263 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:130");
+        if (x4263 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:130");
       }
       if (x4348 != 0) {
         // loc("./cirgen/circuit/rv32im/rv32im.inl":131:49)
         auto x4570 = x4298 - x43;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":131:49)
-        if (x4570 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:131");
+        if (x4570 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:131");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":131:49)
         auto x4571 = x4287 - x74;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":131:49)
-        if (x4571 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:131");
+        if (x4571 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:131");
         // loc("./cirgen/circuit/rv32im/rv32im.inl":131:49)
         auto x4572 = x4263 - x59;
         // loc("./cirgen/circuit/rv32im/rv32im.inl":131:49)
-        if (x4572 != 0) throw std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:131");
+        if (x4572 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/circuit/rv32im/rv32im.inl:131");
       }
     }
     // loc("Top/mux(Mux)/body(BodyStep)/OneHot/hot[6](Reg)"("./cirgen/components/mux.h":49:25))
@@ -27630,51 +27631,51 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/compute.cpp":231:3)
       auto x4970 = x4574 - x4766;
       // loc("cirgen/circuit/rv32im/compute.cpp":231:3)
-      if (x4970 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/compute.cpp:231");
+      if (x4970 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/compute.cpp:231");
       // loc("cirgen/circuit/rv32im/compute.cpp":231:3)
       auto x4971 = x4575 - x4832;
       // loc("cirgen/circuit/rv32im/compute.cpp":231:3)
-      if (x4971 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/compute.cpp:231");
+      if (x4971 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/compute.cpp:231");
       // loc("cirgen/circuit/rv32im/compute.cpp":231:3)
       auto x4972 = x4576 - x4898;
       // loc("cirgen/circuit/rv32im/compute.cpp":231:3)
-      if (x4972 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/compute.cpp:231");
+      if (x4972 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/compute.cpp:231");
       // loc("cirgen/circuit/rv32im/compute.cpp":231:3)
       auto x4973 = x4577 - x4964;
       // loc("cirgen/circuit/rv32im/compute.cpp":231:3)
-      if (x4973 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/compute.cpp:231");
+      if (x4973 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/compute.cpp:231");
       // loc("cirgen/circuit/rv32im/compute.cpp":232:3)
       auto x4974 = x4578 - x4768;
       // loc("cirgen/circuit/rv32im/compute.cpp":232:3)
-      if (x4974 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/compute.cpp:232");
+      if (x4974 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/compute.cpp:232");
       // loc("cirgen/circuit/rv32im/compute.cpp":232:3)
       auto x4975 = x4579 - x4834;
       // loc("cirgen/circuit/rv32im/compute.cpp":232:3)
-      if (x4975 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/compute.cpp:232");
+      if (x4975 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/compute.cpp:232");
       // loc("cirgen/circuit/rv32im/compute.cpp":232:3)
       auto x4976 = x4580 - x4900;
       // loc("cirgen/circuit/rv32im/compute.cpp":232:3)
-      if (x4976 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/compute.cpp:232");
+      if (x4976 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/compute.cpp:232");
       // loc("cirgen/circuit/rv32im/compute.cpp":232:3)
       auto x4977 = x4581 - x4966;
       // loc("cirgen/circuit/rv32im/compute.cpp":232:3)
-      if (x4977 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/compute.cpp:232");
+      if (x4977 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/compute.cpp:232");
       // loc("cirgen/circuit/rv32im/compute.cpp":233:3)
       auto x4978 = x4582 - x4771;
       // loc("cirgen/circuit/rv32im/compute.cpp":233:3)
-      if (x4978 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/compute.cpp:233");
+      if (x4978 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/compute.cpp:233");
       // loc("cirgen/circuit/rv32im/compute.cpp":233:3)
       auto x4979 = x4583 - x4837;
       // loc("cirgen/circuit/rv32im/compute.cpp":233:3)
-      if (x4979 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/compute.cpp:233");
+      if (x4979 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/compute.cpp:233");
       // loc("cirgen/circuit/rv32im/compute.cpp":233:3)
       auto x4980 = x4584 - x4903;
       // loc("cirgen/circuit/rv32im/compute.cpp":233:3)
-      if (x4980 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/compute.cpp:233");
+      if (x4980 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/compute.cpp:233");
       // loc("cirgen/circuit/rv32im/compute.cpp":233:3)
       auto x4981 = x4585 - x4969;
       // loc("cirgen/circuit/rv32im/compute.cpp":233:3)
-      if (x4981 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/compute.cpp:233");
+      if (x4981 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/compute.cpp:233");
       // loc("cirgen/circuit/rv32im/body.cpp":14:23)
       auto x4982 = x754 + x78;
       {
@@ -27772,7 +27773,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/body.cpp":23:7)
       auto x5004 = x5002 * x5003;
       // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-      if (x5004 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+      if (x5004 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
       // loc("cirgen/circuit/rv32im/compute.cpp":236:3)
       {
         auto& reg = args[2][99 * steps + cycle];
@@ -27875,7 +27876,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/components/u32.cpp":123:6)
       auto x5033 = x5009 - x5032;
       // loc("cirgen/components/u32.cpp":123:6)
-      if (x5033 != 0) throw std::runtime_error("eqz failed at: cirgen/components/u32.cpp:123");
+      if (x5033 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/u32.cpp:123");
       {
         // loc("cirgen/components/u32.cpp":120:18)
         auto x5034 = Fp(x5013.asUInt32() & x62.asUInt32());
@@ -27913,7 +27914,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/components/u32.cpp":123:6)
       auto x5043 = x5013 - x5042;
       // loc("cirgen/components/u32.cpp":123:6)
-      if (x5043 != 0) throw std::runtime_error("eqz failed at: cirgen/components/u32.cpp:123");
+      if (x5043 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/u32.cpp:123");
       // loc("cirgen/circuit/rv32im/divide.cpp":139:17)
       auto x5044 = x5022 * x5028;
       // loc("cirgen/circuit/rv32im/divide.cpp":139:3)
@@ -28247,7 +28248,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       assert(x5136 != Fp::invalid());
       if (x5136 != 0) {
         // loc("cirgen/components/iszero.cpp":16:23)
-        if (x5133 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
+        if (x5133 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
       }
       // loc("cirgen/components/iszero.cpp":18:19)
       auto x5137 = x95 - x5136;
@@ -28260,7 +28261,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/components/iszero.cpp":18:26)
         auto x5140 = x5139 - x95;
         // loc("cirgen/components/iszero.cpp":18:26)
-        if (x5140 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
+        if (x5140 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
       }
       // loc("cirgen/components/u32.cpp":138:27)
       auto x5141 = x5129 * x90;
@@ -28293,7 +28294,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       assert(x5147 != Fp::invalid());
       if (x5147 != 0) {
         // loc("cirgen/components/iszero.cpp":16:23)
-        if (x5144 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
+        if (x5144 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
       }
       // loc("cirgen/components/iszero.cpp":18:19)
       auto x5148 = x95 - x5147;
@@ -28306,7 +28307,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/components/iszero.cpp":18:26)
         auto x5151 = x5150 - x95;
         // loc("cirgen/components/iszero.cpp":18:26)
-        if (x5151 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
+        if (x5151 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
       }
       // loc("cirgen/circuit/rv32im/divide.cpp":149:16)
       auto x5152 = x5048 + x5090;
@@ -28799,27 +28800,27 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/components/u32.cpp":266:7)
       auto x5293 = x5185 * x5129;
       // loc("cirgen/components/u32.cpp":266:7)
-      if (x5293 != 0) throw std::runtime_error("eqz failed at: cirgen/components/u32.cpp:266");
+      if (x5293 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/u32.cpp:266");
       // loc("cirgen/components/u32.cpp":267:7)
       auto x5294 = x5193 * x5125;
       // loc("cirgen/components/u32.cpp":267:7)
-      if (x5294 != 0) throw std::runtime_error("eqz failed at: cirgen/components/u32.cpp:267");
+      if (x5294 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/u32.cpp:267");
       // loc("cirgen/components/u32.cpp":268:7)
       auto x5295 = x5197 * x5117;
       // loc("cirgen/components/u32.cpp":268:7)
-      if (x5295 != 0) throw std::runtime_error("eqz failed at: cirgen/components/u32.cpp:268");
+      if (x5295 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/u32.cpp:268");
       // loc("cirgen/components/u32.cpp":269:7)
       auto x5296 = x5193 * x5129;
       // loc("cirgen/components/u32.cpp":269:7)
-      if (x5296 != 0) throw std::runtime_error("eqz failed at: cirgen/components/u32.cpp:269");
+      if (x5296 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/u32.cpp:269");
       // loc("cirgen/components/u32.cpp":270:7)
       auto x5297 = x5197 * x5125;
       // loc("cirgen/components/u32.cpp":270:7)
-      if (x5297 != 0) throw std::runtime_error("eqz failed at: cirgen/components/u32.cpp:270");
+      if (x5297 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/u32.cpp:270");
       // loc("cirgen/components/u32.cpp":271:7)
       auto x5298 = x5197 * x5129;
       // loc("cirgen/components/u32.cpp":271:7)
-      if (x5298 != 0) throw std::runtime_error("eqz failed at: cirgen/components/u32.cpp:271");
+      if (x5298 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/u32.cpp:271");
       // loc("cirgen/components/u32.cpp":273:15)
       auto x5299 = x5193 * x5113;
       // loc("cirgen/components/u32.cpp":273:45)
@@ -28892,24 +28893,24 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/divide.cpp":161:3)
       auto x5322 = x5279 - x5071;
       // loc("cirgen/circuit/rv32im/divide.cpp":161:3)
-      if (x5322 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/divide.cpp:161");
+      if (x5322 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/divide.cpp:161");
       // loc("cirgen/circuit/rv32im/divide.cpp":161:3)
       auto x5323 = x5283 - x5075;
       // loc("cirgen/circuit/rv32im/divide.cpp":161:3)
-      if (x5323 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/divide.cpp:161");
+      if (x5323 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/divide.cpp:161");
       // loc("cirgen/circuit/rv32im/divide.cpp":161:3)
       auto x5324 = x5317 - x5083;
       // loc("cirgen/circuit/rv32im/divide.cpp":161:3)
-      if (x5324 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/divide.cpp:161");
+      if (x5324 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/divide.cpp:161");
       // loc("cirgen/circuit/rv32im/divide.cpp":161:3)
       auto x5325 = x5320 - x5087;
       // loc("cirgen/circuit/rv32im/divide.cpp":161:3)
-      if (x5325 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/divide.cpp:161");
+      if (x5325 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/divide.cpp:161");
       if (x5148 != 0) {
         // loc("cirgen/circuit/rv32im/divide.cpp":162:36)
         auto x5326 = x5321 - x95;
         // loc("cirgen/circuit/rv32im/divide.cpp":162:36)
-        if (x5326 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/divide.cpp:162");
+        if (x5326 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/divide.cpp:162");
       }
       // loc("cirgen/circuit/rv32im/body.cpp":14:23)
       auto x5327 = x754 + x78;
@@ -29008,7 +29009,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/body.cpp":23:7)
       auto x5349 = x5347 * x5348;
       // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-      if (x5349 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+      if (x5349 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
       // loc("cirgen/circuit/rv32im/divide.cpp":164:3)
       {
         auto& reg = args[2][99 * steps + cycle];
@@ -29112,13 +29113,13 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/ecall.cpp":134:6)
       auto x5360 = x5356 - x29;
       // loc("cirgen/circuit/rv32im/ecall.cpp":134:6)
-      if (x5360 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:134");
+      if (x5360 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:134");
       // loc("cirgen/circuit/rv32im/ecall.cpp":135:7)
-      if (x5357 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:135");
+      if (x5357 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:135");
       // loc("cirgen/circuit/rv32im/ecall.cpp":136:7)
-      if (x5358 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:136");
+      if (x5358 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:136");
       // loc("cirgen/circuit/rv32im/ecall.cpp":137:7)
-      if (x5359 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:137");
+      if (x5359 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:137");
       {
         host_args.at(0) = x28;
         host_args.at(1) = x95;
@@ -29283,7 +29284,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("./cirgen/components/onehot.h":40:8)
       auto x5388 = x5387 - x5365;
       // loc("./cirgen/components/onehot.h":40:8)
-      if (x5388 != 0) throw std::runtime_error("eqz failed at: ./cirgen/components/onehot.h:40");
+      if (x5388 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/components/onehot.h:40");
       {
         // loc("cirgen/circuit/rv32im/ecall.cpp":144:47)
         auto x5389 = (x5387 == 0) ? Fp(1) : Fp(0);
@@ -29490,7 +29491,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x5422 = x5420 * x5421;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x5422 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x5422 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("cirgen/circuit/rv32im/ecall.cpp":19:3)
         {
           auto& reg = args[2][99 * steps + cycle];
@@ -29801,7 +29802,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/components/onehot.h":40:8)
         auto x5473 = x5472 - x5427;
         // loc("./cirgen/components/onehot.h":40:8)
-        if (x5473 != 0) throw std::runtime_error("eqz failed at: ./cirgen/components/onehot.h:40");
+        if (x5473 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/components/onehot.h:40");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/Mux/1(ECallOutput)/OneHot/hot[0](Reg)"("cirgen/circuit/rv32im/ecall.cpp":36:24))
         auto x5474 = args[2][192 * steps + ((cycle - 0) & mask)];
         assert(x5474 != Fp::invalid());
@@ -30032,7 +30033,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x5498 = x5496 * x5497;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x5498 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x5498 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("cirgen/circuit/rv32im/ecall.cpp":43:3)
         {
           auto& reg = args[2][99 * steps + cycle];
@@ -30304,7 +30305,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/ecall.cpp":85:6)
         auto x5540 = x5533 - x5539;
         // loc("cirgen/circuit/rv32im/ecall.cpp":85:6)
-        if (x5540 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:85");
+        if (x5540 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:85");
         // loc("cirgen/circuit/rv32im/ecall.cpp":89:31)
         auto x5541 = x5503 * x76;
         {
@@ -30325,7 +30326,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/components/bytes.cpp":97:10)
         auto x5545 = x5544 * x89;
         // loc("cirgen/circuit/rv32im/ecall.cpp":89:7)
-        if (x5545 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:89");
+        if (x5545 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:89");
         {
           // loc("cirgen/components/bytes.cpp":96:21)
           auto x5546 = Fp(x5541.asUInt32() & x91.asUInt32());
@@ -30344,7 +30345,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/components/bytes.cpp":97:10)
         auto x5549 = x5548 * x89;
         // loc("cirgen/circuit/rv32im/ecall.cpp":90:7)
-        if (x5549 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:90");
+        if (x5549 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:90");
         {
           host_args.at(0) = x5533;
           host(ctx, "syscallInit", "", host_args.data(), 1, host_outs.data(), 0);
@@ -30446,7 +30447,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x5572 = x5570 * x5571;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x5572 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x5572 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("cirgen/circuit/rv32im/ecall.cpp":95:3)
         {
           auto& reg = args[2][99 * steps + cycle];
@@ -30816,7 +30817,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x5620 = x5618 * x5619;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x5620 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x5620 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("cirgen/circuit/rv32im/ecall.cpp":110:3)
         {
           auto& reg = args[2][99 * steps + cycle];
@@ -31009,7 +31010,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x5651 = x5649 * x5650;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x5651 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x5651 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("cirgen/circuit/rv32im/ecall.cpp":122:3)
         {
           auto& reg = args[2][99 * steps + cycle];
@@ -31096,7 +31097,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       assert(x5664 != Fp::invalid());
       if (x5664 != 0) {
         // loc("cirgen/components/iszero.cpp":16:23)
-        if (x5661 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
+        if (x5661 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
       }
       // loc("cirgen/components/iszero.cpp":18:19)
       auto x5665 = x95 - x5664;
@@ -31109,7 +31110,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/components/iszero.cpp":18:26)
         auto x5668 = x5667 - x95;
         // loc("cirgen/components/iszero.cpp":18:26)
-        if (x5668 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
+        if (x5668 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
       }
       if (x5664 != 0) {
         // loc("cirgen/circuit/rv32im/sha.cpp":187:29)
@@ -31298,7 +31299,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/body.cpp":23:7)
       auto x5725 = x5723 * x5724;
       // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-      if (x5725 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+      if (x5725 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/9(ShaWrap)/ShaCycle/Bit/bit(Reg)"("./cirgen/compiler/edsl/component.h":154:27))
       auto x5726 = args[2][149 * steps + ((cycle - 0) & mask)];
       assert(x5726 != Fp::invalid());
@@ -32113,7 +32114,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       assert(x5844 != Fp::invalid());
       if (x5844 != 0) {
         // loc("cirgen/components/iszero.cpp":16:23)
-        if (x5841 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
+        if (x5841 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
       }
       // loc("cirgen/components/iszero.cpp":18:19)
       auto x5845 = x95 - x5844;
@@ -32126,7 +32127,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/components/iszero.cpp":18:26)
         auto x5848 = x5847 - x95;
         // loc("cirgen/components/iszero.cpp":18:26)
-        if (x5848 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
+        if (x5848 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
       }
       {
         // loc("./cirgen/components/bits.h":27:23)
@@ -32939,7 +32940,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/sha.cpp":124:7)
       auto x6069 = x6067 * x6068;
       // loc("cirgen/circuit/rv32im/sha.cpp":124:7)
-      if (x6069 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:124");
+      if (x6069 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:124");
       // loc("cirgen/circuit/rv32im/sha.cpp":125:32)
       auto x6070 = x5984 + x6063;
       {
@@ -33236,7 +33237,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/sha.cpp":128:7)
       auto x6155 = x6153 * x6154;
       // loc("cirgen/circuit/rv32im/sha.cpp":128:7)
-      if (x6155 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:128");
+      if (x6155 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:128");
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/9(ShaWrap)/ShaCycle/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./cirgen/compiler/edsl/component.h":154:27))
       auto x6156 = args[2][126 * steps + ((cycle - 0) & mask)];
       assert(x6156 != Fp::invalid());
@@ -33551,7 +33552,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/sha.cpp":124:7)
       auto x6248 = x6246 * x6247;
       // loc("cirgen/circuit/rv32im/sha.cpp":124:7)
-      if (x6248 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:124");
+      if (x6248 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:124");
       // loc("cirgen/circuit/rv32im/sha.cpp":125:32)
       auto x6249 = x6163 + x6242;
       {
@@ -33848,7 +33849,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/sha.cpp":128:7)
       auto x6334 = x6332 * x6333;
       // loc("cirgen/circuit/rv32im/sha.cpp":128:7)
-      if (x6334 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:128");
+      if (x6334 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:128");
     }
     // loc("Top/mux(Mux)/body(BodyStep)/OneHot/hot[10](Reg)"("./cirgen/components/mux.h":49:25))
     auto x6335 = args[2][110 * steps + ((cycle - 0) & mask)];
@@ -33949,7 +33950,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       assert(x6349 != Fp::invalid());
       if (x6349 != 0) {
         // loc("cirgen/components/iszero.cpp":16:23)
-        if (x6346 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
+        if (x6346 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
       }
       // loc("cirgen/components/iszero.cpp":18:19)
       auto x6350 = x95 - x6349;
@@ -33962,7 +33963,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/components/iszero.cpp":18:26)
         auto x6353 = x6352 - x95;
         // loc("cirgen/components/iszero.cpp":18:26)
-        if (x6353 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
+        if (x6353 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
       }
       if (x6349 != 0) {
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/10(ShaWrap)/ShaCycle/Bit/bit(Reg)"("./cirgen/compiler/edsl/component.h":154:27))
@@ -34163,7 +34164,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/body.cpp":23:7)
       auto x6411 = x6409 * x6410;
       // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-      if (x6411 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+      if (x6411 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/10(ShaWrap)/ShaCycle/Reg"("cirgen/circuit/rv32im/sha.cpp":290:40))
       auto x6412 = args[2][139 * steps + ((cycle - 1) & mask)];
       assert(x6412 != Fp::invalid());
@@ -34253,7 +34254,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       assert(x6422 != Fp::invalid());
       if (x6422 != 0) {
         // loc("cirgen/components/iszero.cpp":16:23)
-        if (x6419 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
+        if (x6419 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
       }
       // loc("cirgen/components/iszero.cpp":18:19)
       auto x6423 = x95 - x6422;
@@ -34266,7 +34267,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/components/iszero.cpp":18:26)
         auto x6426 = x6425 - x95;
         // loc("cirgen/components/iszero.cpp":18:26)
-        if (x6426 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
+        if (x6426 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
       }
       // loc("./cirgen/components/bits.h":27:23)
       {
@@ -39097,7 +39098,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/sha.cpp":124:7)
       auto x8359 = x8357 * x8358;
       // loc("cirgen/circuit/rv32im/sha.cpp":124:7)
-      if (x8359 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:124");
+      if (x8359 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:124");
       // loc("cirgen/circuit/rv32im/sha.cpp":125:32)
       auto x8360 = x8274 + x8353;
       {
@@ -39394,7 +39395,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/sha.cpp":128:7)
       auto x8445 = x8443 * x8444;
       // loc("cirgen/circuit/rv32im/sha.cpp":128:7)
-      if (x8445 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:128");
+      if (x8445 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:128");
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/10(ShaWrap)/ShaCycle/Reg"("cirgen/circuit/rv32im/sha.cpp":140:11))
       auto x8446 = args[2][155 * steps + ((cycle - 0) & mask)];
       assert(x8446 != Fp::invalid());
@@ -39695,7 +39696,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/sha.cpp":124:7)
       auto x8532 = x8530 * x8531;
       // loc("cirgen/circuit/rv32im/sha.cpp":124:7)
-      if (x8532 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:124");
+      if (x8532 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:124");
       // loc("cirgen/circuit/rv32im/sha.cpp":125:32)
       auto x8533 = x8447 + x8526;
       {
@@ -39992,7 +39993,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/sha.cpp":128:7)
       auto x8618 = x8616 * x8617;
       // loc("cirgen/circuit/rv32im/sha.cpp":128:7)
-      if (x8618 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:128");
+      if (x8618 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:128");
     }
     // loc("Top/mux(Mux)/body(BodyStep)/OneHot/hot[11](Reg)"("./cirgen/components/mux.h":49:25))
     auto x8619 = args[2][111 * steps + ((cycle - 0) & mask)];
@@ -40115,7 +40116,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       assert(x8634 != Fp::invalid());
       if (x8634 != 0) {
         // loc("cirgen/components/iszero.cpp":16:23)
-        if (x8631 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
+        if (x8631 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
       }
       // loc("cirgen/components/iszero.cpp":18:19)
       auto x8635 = x95 - x8634;
@@ -40128,7 +40129,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/components/iszero.cpp":18:26)
         auto x8638 = x8637 - x95;
         // loc("cirgen/components/iszero.cpp":18:26)
-        if (x8638 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
+        if (x8638 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
       }
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/11(ShaWrap)/ShaCycle/Bit/bit(Reg)"("./cirgen/compiler/edsl/component.h":154:27))
       auto x8639 = args[2][149 * steps + ((cycle - 0) & mask)];
@@ -40223,7 +40224,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       assert(x8648 != Fp::invalid());
       if (x8648 != 0) {
         // loc("cirgen/components/iszero.cpp":16:23)
-        if (x8645 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
+        if (x8645 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
       }
       // loc("cirgen/components/iszero.cpp":18:19)
       auto x8649 = x95 - x8648;
@@ -40236,7 +40237,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/components/iszero.cpp":18:26)
         auto x8652 = x8651 - x95;
         // loc("cirgen/components/iszero.cpp":18:26)
-        if (x8652 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
+        if (x8652 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
       }
       // loc("cirgen/circuit/rv32im/body.cpp":14:23)
       auto x8653 = x754 + x78;
@@ -40335,7 +40336,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/body.cpp":23:7)
       auto x8675 = x8673 * x8674;
       // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-      if (x8675 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+      if (x8675 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
       host_args.at(0) = x68;
       host_args.at(1) = x8639;
       host_args.at(2) = x8631;
@@ -43937,7 +43938,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/sha.cpp":124:7)
         auto x10028 = x10026 * x10027;
         // loc("cirgen/circuit/rv32im/sha.cpp":124:7)
-        if (x10028 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:124");
+        if (x10028 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:124");
         // loc("cirgen/circuit/rv32im/sha.cpp":125:32)
         auto x10029 = x9943 + x10022;
         {
@@ -44234,7 +44235,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/sha.cpp":128:7)
         auto x10114 = x10112 * x10113;
         // loc("cirgen/circuit/rv32im/sha.cpp":128:7)
-        if (x10114 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:128");
+        if (x10114 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:128");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/11(ShaWrap)/ShaCycle/Bit/bit(Reg)"("./cirgen/compiler/edsl/component.h":154:27))
         auto x10115 = args[2][191 * steps + ((cycle - 4) & mask)];
         assert(x10115 != Fp::invalid());
@@ -44965,7 +44966,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/sha.cpp":124:7)
         auto x10385 = x10383 * x10384;
         // loc("cirgen/circuit/rv32im/sha.cpp":124:7)
-        if (x10385 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:124");
+        if (x10385 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:124");
         // loc("cirgen/circuit/rv32im/sha.cpp":125:32)
         auto x10386 = x10300 + x10379;
         {
@@ -45262,7 +45263,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/sha.cpp":128:7)
         auto x10471 = x10469 * x10470;
         // loc("cirgen/circuit/rv32im/sha.cpp":128:7)
-        if (x10471 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:128");
+        if (x10471 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:128");
       }
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/11(ShaWrap)/ShaCycle/Bit/bit(Reg)"("./cirgen/compiler/edsl/component.h":154:27))
       auto x10472 = args[2][151 * steps + ((cycle - 0) & mask)];
@@ -45927,7 +45928,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
           // loc("cirgen/circuit/rv32im/sha.cpp":410:10)
           auto x10686 = x10679 - x10685;
           // loc("cirgen/circuit/rv32im/sha.cpp":410:10)
-          if (x10686 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:410");
+          if (x10686 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:410");
           // loc("./cirgen/components/u32.h":25:12)
           auto x10687 = x10491 * x90;
           // loc("./cirgen/components/u32.h":24:12)
@@ -45955,7 +45956,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
           // loc("cirgen/circuit/rv32im/sha.cpp":411:10)
           auto x10699 = x10692 - x10698;
           // loc("cirgen/circuit/rv32im/sha.cpp":411:10)
-          if (x10699 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:411");
+          if (x10699 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:411");
         }
         if (x10473 != 0) {
           // loc("Top/mux(Mux)/body(BodyStep)/Mux/11(ShaWrap)/ShaCycle/Reg"("./cirgen/compiler/edsl/edsl.h":116:61))
@@ -50708,7 +50709,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/sha.cpp":124:7)
         auto x12696 = x12694 * x12695;
         // loc("cirgen/circuit/rv32im/sha.cpp":124:7)
-        if (x12696 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:124");
+        if (x12696 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:124");
         // loc("cirgen/circuit/rv32im/sha.cpp":125:32)
         auto x12697 = x12611 + x12690;
         {
@@ -51005,7 +51006,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/sha.cpp":128:7)
         auto x12782 = x12780 * x12781;
         // loc("cirgen/circuit/rv32im/sha.cpp":128:7)
-        if (x12782 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:128");
+        if (x12782 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:128");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/11(ShaWrap)/ShaCycle/Reg"("cirgen/circuit/rv32im/sha.cpp":140:11))
         auto x12783 = args[2][155 * steps + ((cycle - 0) & mask)];
         assert(x12783 != Fp::invalid());
@@ -51306,7 +51307,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/sha.cpp":124:7)
         auto x12869 = x12867 * x12868;
         // loc("cirgen/circuit/rv32im/sha.cpp":124:7)
-        if (x12869 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:124");
+        if (x12869 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:124");
         // loc("cirgen/circuit/rv32im/sha.cpp":125:32)
         auto x12870 = x12784 + x12863;
         {
@@ -51603,7 +51604,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/sha.cpp":128:7)
         auto x12955 = x12953 * x12954;
         // loc("cirgen/circuit/rv32im/sha.cpp":128:7)
-        if (x12955 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:128");
+        if (x12955 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/sha.cpp:128");
       }
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/11(ShaWrap)/ShaCycle/Bit/bit(Reg)"("./cirgen/compiler/edsl/component.h":154:27))
       auto x12956 = args[2][150 * steps + ((cycle - 0) & mask)];
@@ -51796,7 +51797,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/body.cpp":23:7)
       auto x12989 = x12987 * x12988;
       // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-      if (x12989 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+      if (x12989 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
       host_args.at(0) = x754;
       host(ctx, "log", "  PageFault: PC = %10x", host_args.data(), 1, host_outs.data(), 0);
       {
@@ -51852,7 +51853,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       assert(x12997 != Fp::invalid());
       if (x12997 != 0) {
         // loc("cirgen/components/iszero.cpp":16:23)
-        if (x12994 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
+        if (x12994 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
       }
       // loc("cirgen/components/iszero.cpp":18:19)
       auto x12998 = x95 - x12997;
@@ -51865,7 +51866,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/components/iszero.cpp":18:26)
         auto x13001 = x13000 - x95;
         // loc("cirgen/components/iszero.cpp":18:26)
-        if (x13001 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
+        if (x13001 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
       }
       if (x12997 != 0) {
         // loc("cirgen/circuit/rv32im/page_fault.cpp":85:5)
@@ -52209,7 +52210,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       assert(x13066 != Fp::invalid());
       if (x13066 != 0) {
         // loc("cirgen/components/iszero.cpp":16:23)
-        if (x13063 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
+        if (x13063 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:16");
       }
       // loc("cirgen/components/iszero.cpp":18:19)
       auto x13067 = x95 - x13066;
@@ -52222,7 +52223,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/components/iszero.cpp":18:26)
         auto x13070 = x13069 - x95;
         // loc("cirgen/components/iszero.cpp":18:26)
-        if (x13070 != 0) throw std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
+        if (x13070 != 0) abort();std::runtime_error("eqz failed at: cirgen/components/iszero.cpp:18");
       }
       if (x13041 != 0) {
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/Mux/2(ECallSoftware)/Twit/Reg"("./cirgen/compiler/edsl/component.h":154:27))
@@ -52309,7 +52310,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/components/onehot.h":40:8)
         auto x13093 = x13092 - x13073;
         // loc("./cirgen/components/onehot.h":40:8)
-        if (x13093 != 0) throw std::runtime_error("eqz failed at: ./cirgen/components/onehot.h:40");
+        if (x13093 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/components/onehot.h:40");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/Reg"("./cirgen/compiler/edsl/edsl.h":116:61))
         auto x13094 = args[2][172 * steps + ((cycle - 0) & mask)];
         assert(x13094 != Fp::invalid());
@@ -52400,7 +52401,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/components/onehot.h":40:8)
         auto x13116 = x13115 - x13096;
         // loc("./cirgen/components/onehot.h":40:8)
-        if (x13116 != 0) throw std::runtime_error("eqz failed at: ./cirgen/components/onehot.h:40");
+        if (x13116 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/components/onehot.h:40");
       }
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/OneHot/hot[0](Reg)"("cirgen/circuit/rv32im/ecall.cpp":191:24))
       auto x13117 = args[2][173 * steps + ((cycle - 0) & mask)];
@@ -52597,28 +52598,28 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/ecall.cpp":200:8)
         auto x13135 = x13134 - x740;
         // loc("cirgen/circuit/rv32im/ecall.cpp":200:8)
-        if (x13135 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:200");
+        if (x13135 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:200");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("cirgen/components/ram.cpp":179:10))
         auto x13136 = args[2][124 * steps + ((cycle - 0) & mask)];
         assert(x13136 != Fp::invalid());
         // loc("cirgen/circuit/rv32im/ecall.cpp":201:8)
         auto x13137 = x13136 - x740;
         // loc("cirgen/circuit/rv32im/ecall.cpp":201:8)
-        if (x13137 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:201");
+        if (x13137 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:201");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("cirgen/components/ram.cpp":175:10))
         auto x13138 = args[2][116 * steps + ((cycle - 0) & mask)];
         assert(x13138 != Fp::invalid());
         // loc("cirgen/circuit/rv32im/ecall.cpp":203:8)
         auto x13139 = x13138 - x27;
         // loc("cirgen/circuit/rv32im/ecall.cpp":203:8)
-        if (x13139 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:203");
+        if (x13139 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:203");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("cirgen/components/ram.cpp":175:10))
         auto x13140 = args[2][123 * steps + ((cycle - 0) & mask)];
         assert(x13140 != Fp::invalid());
         // loc("cirgen/circuit/rv32im/ecall.cpp":204:8)
         auto x13141 = x13140 - x26;
         // loc("cirgen/circuit/rv32im/ecall.cpp":204:8)
-        if (x13141 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:204");
+        if (x13141 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:204");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./cirgen/compiler/edsl/component.h":154:27))
         auto x13142 = args[2][119 * steps + ((cycle - 0) & mask)];
         assert(x13142 != Fp::invalid());
@@ -52835,7 +52836,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x13173 = x13171 * x13172;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x13173 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x13173 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("cirgen/circuit/rv32im/ecall.cpp":212:5)
         {
           auto& reg = args[2][99 * steps + cycle];
@@ -52943,7 +52944,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x13197 = x13195 * x13196;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x13197 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x13197 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("cirgen/circuit/rv32im/ecall.cpp":216:5)
         {
           auto& reg = args[2][99 * steps + cycle];
@@ -53079,14 +53080,14 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/ecall.cpp":238:10)
         auto x13215 = x13214 - x740;
         // loc("cirgen/circuit/rv32im/ecall.cpp":238:10)
-        if (x13215 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:238");
+        if (x13215 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:238");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("cirgen/components/ram.cpp":175:10))
         auto x13216 = args[2][116 * steps + ((cycle - 0) & mask)];
         assert(x13216 != Fp::invalid());
         // loc("cirgen/circuit/rv32im/ecall.cpp":239:10)
         auto x13217 = x13216 - x13204;
         // loc("cirgen/circuit/rv32im/ecall.cpp":239:10)
-        if (x13217 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:239");
+        if (x13217 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:239");
       }
       if (x13202 != 0) {
         // loc("cirgen/components/ram.cpp":43:3)
@@ -53248,14 +53249,14 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/ecall.cpp":238:10)
         auto x13231 = x13230 - x740;
         // loc("cirgen/circuit/rv32im/ecall.cpp":238:10)
-        if (x13231 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:238");
+        if (x13231 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:238");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("cirgen/components/ram.cpp":175:10))
         auto x13232 = args[2][123 * steps + ((cycle - 0) & mask)];
         assert(x13232 != Fp::invalid());
         // loc("cirgen/circuit/rv32im/ecall.cpp":239:10)
         auto x13233 = x13232 - x13220;
         // loc("cirgen/circuit/rv32im/ecall.cpp":239:10)
-        if (x13233 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:239");
+        if (x13233 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:239");
       }
       if (x13200 != 0) {
         // loc("cirgen/components/ram.cpp":43:3)
@@ -53419,14 +53420,14 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/ecall.cpp":238:10)
         auto x13248 = x13247 - x740;
         // loc("cirgen/circuit/rv32im/ecall.cpp":238:10)
-        if (x13248 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:238");
+        if (x13248 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:238");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("cirgen/components/ram.cpp":175:10))
         auto x13249 = args[2][130 * steps + ((cycle - 0) & mask)];
         assert(x13249 != Fp::invalid());
         // loc("cirgen/circuit/rv32im/ecall.cpp":239:10)
         auto x13250 = x13249 - x13237;
         // loc("cirgen/circuit/rv32im/ecall.cpp":239:10)
-        if (x13250 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:239");
+        if (x13250 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:239");
       }
       if (x13198 != 0) {
         // loc("cirgen/components/ram.cpp":43:3)
@@ -53588,14 +53589,14 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/ecall.cpp":238:10)
         auto x13264 = x13263 - x740;
         // loc("cirgen/circuit/rv32im/ecall.cpp":238:10)
-        if (x13264 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:238");
+        if (x13264 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:238");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/13(ECallCopyInCycle)/RamBody/PlonkBody/RamPlonkElement/Reg"("cirgen/components/ram.cpp":175:10))
         auto x13265 = args[2][137 * steps + ((cycle - 0) & mask)];
         assert(x13265 != Fp::invalid());
         // loc("cirgen/circuit/rv32im/ecall.cpp":239:10)
         auto x13266 = x13265 - x13253;
         // loc("cirgen/circuit/rv32im/ecall.cpp":239:10)
-        if (x13266 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:239");
+        if (x13266 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/ecall.cpp:239");
       }
       if (x94 != 0) {
         // loc("cirgen/components/ram.cpp":43:3)
@@ -53713,7 +53714,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/components/onehot.h":46:13)
         auto x13278 = x13275 + x13277;
         // loc("./cirgen/components/onehot.h":40:8)
-        if (x13278 != 0) throw std::runtime_error("eqz failed at: ./cirgen/components/onehot.h:40");
+        if (x13278 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/components/onehot.h:40");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./cirgen/compiler/edsl/component.h":154:27))
         auto x13279 = args[2][133 * steps + ((cycle - 1) & mask)];
         assert(x13279 != Fp::invalid());
@@ -53739,7 +53740,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/components/u32.h":24:12)
         auto x13288 = x13286 + x13287;
         // loc("cirgen/circuit/rv32im/bigint.cpp":189:9)
-        if (x13288 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:189");
+        if (x13288 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:189");
       }
       // loc("cirgen/circuit/rv32im/bigint.cpp":191:22)
       auto x13289 = x95 - x13268;
@@ -53868,7 +53869,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("./cirgen/components/onehot.h":40:8)
         auto x13326 = x13325 - x13306;
         // loc("./cirgen/components/onehot.h":40:8)
-        if (x13326 != 0) throw std::runtime_error("eqz failed at: ./cirgen/components/onehot.h:40");
+        if (x13326 != 0) abort();std::runtime_error("eqz failed at: ./cirgen/components/onehot.h:40");
       }
       // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/OneHot/hot[2](Reg)"("cirgen/circuit/rv32im/bigint.cpp":195:19))
       auto x13327 = args[2][174 * steps + ((cycle - 0) & mask)];
@@ -68971,7 +68972,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x18802 = x18799 - x18801;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x18802 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x18802 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x18803 = args[2][20 * steps + ((cycle - 5) & mask)];
         assert(x18803 != Fp::invalid());
@@ -68999,7 +69000,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x18813 = x18810 - x18812;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x18813 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x18813 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x18814 = args[2][22 * steps + ((cycle - 5) & mask)];
         assert(x18814 != Fp::invalid());
@@ -69027,7 +69028,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x18824 = x18821 - x18823;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x18824 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x18824 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x18825 = args[2][24 * steps + ((cycle - 5) & mask)];
         assert(x18825 != Fp::invalid());
@@ -69055,7 +69056,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x18835 = x18832 - x18834;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x18835 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x18835 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x18836 = args[2][26 * steps + ((cycle - 5) & mask)];
         assert(x18836 != Fp::invalid());
@@ -69083,7 +69084,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x18846 = x18843 - x18845;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x18846 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x18846 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x18847 = args[2][28 * steps + ((cycle - 5) & mask)];
         assert(x18847 != Fp::invalid());
@@ -69111,7 +69112,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x18857 = x18854 - x18856;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x18857 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x18857 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x18858 = args[2][30 * steps + ((cycle - 5) & mask)];
         assert(x18858 != Fp::invalid());
@@ -69139,7 +69140,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x18868 = x18865 - x18867;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x18868 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x18868 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x18869 = args[2][32 * steps + ((cycle - 5) & mask)];
         assert(x18869 != Fp::invalid());
@@ -69167,7 +69168,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x18879 = x18876 - x18878;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x18879 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x18879 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x18880 = args[2][18 * steps + ((cycle - 4) & mask)];
         assert(x18880 != Fp::invalid());
@@ -69195,7 +69196,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x18890 = x18887 - x18889;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x18890 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x18890 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x18891 = args[2][20 * steps + ((cycle - 4) & mask)];
         assert(x18891 != Fp::invalid());
@@ -69223,7 +69224,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x18901 = x18898 - x18900;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x18901 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x18901 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x18902 = args[2][22 * steps + ((cycle - 4) & mask)];
         assert(x18902 != Fp::invalid());
@@ -69251,7 +69252,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x18912 = x18909 - x18911;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x18912 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x18912 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x18913 = args[2][24 * steps + ((cycle - 4) & mask)];
         assert(x18913 != Fp::invalid());
@@ -69279,7 +69280,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x18923 = x18920 - x18922;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x18923 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x18923 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x18924 = args[2][26 * steps + ((cycle - 4) & mask)];
         assert(x18924 != Fp::invalid());
@@ -69307,7 +69308,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x18934 = x18931 - x18933;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x18934 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x18934 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x18935 = args[2][28 * steps + ((cycle - 4) & mask)];
         assert(x18935 != Fp::invalid());
@@ -69335,7 +69336,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x18945 = x18942 - x18944;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x18945 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x18945 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x18946 = args[2][30 * steps + ((cycle - 4) & mask)];
         assert(x18946 != Fp::invalid());
@@ -69363,7 +69364,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x18956 = x18953 - x18955;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x18956 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x18956 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x18957 = args[2][32 * steps + ((cycle - 4) & mask)];
         assert(x18957 != Fp::invalid());
@@ -69391,7 +69392,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x18967 = x18964 - x18966;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x18967 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x18967 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x18968 = args[2][18 * steps + ((cycle - 3) & mask)];
         assert(x18968 != Fp::invalid());
@@ -69419,7 +69420,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x18978 = x18975 - x18977;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x18978 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x18978 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x18979 = args[2][20 * steps + ((cycle - 3) & mask)];
         assert(x18979 != Fp::invalid());
@@ -69447,7 +69448,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x18989 = x18986 - x18988;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x18989 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x18989 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x18990 = args[2][22 * steps + ((cycle - 3) & mask)];
         assert(x18990 != Fp::invalid());
@@ -69475,7 +69476,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19000 = x18997 - x18999;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19000 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19000 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x19001 = args[2][24 * steps + ((cycle - 3) & mask)];
         assert(x19001 != Fp::invalid());
@@ -69503,7 +69504,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19011 = x19008 - x19010;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19011 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19011 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x19012 = args[2][26 * steps + ((cycle - 3) & mask)];
         assert(x19012 != Fp::invalid());
@@ -69531,7 +69532,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19022 = x19019 - x19021;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19022 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19022 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x19023 = args[2][28 * steps + ((cycle - 3) & mask)];
         assert(x19023 != Fp::invalid());
@@ -69559,7 +69560,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19033 = x19030 - x19032;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19033 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19033 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x19034 = args[2][30 * steps + ((cycle - 3) & mask)];
         assert(x19034 != Fp::invalid());
@@ -69587,7 +69588,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19044 = x19041 - x19043;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19044 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19044 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x19045 = args[2][32 * steps + ((cycle - 3) & mask)];
         assert(x19045 != Fp::invalid());
@@ -69615,7 +69616,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19055 = x19052 - x19054;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19055 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19055 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x19056 = args[2][18 * steps + ((cycle - 2) & mask)];
         assert(x19056 != Fp::invalid());
@@ -69643,7 +69644,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19066 = x19063 - x19065;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19066 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19066 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x19067 = args[2][20 * steps + ((cycle - 2) & mask)];
         assert(x19067 != Fp::invalid());
@@ -69671,7 +69672,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19077 = x19074 - x19076;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19077 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19077 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x19078 = args[2][22 * steps + ((cycle - 2) & mask)];
         assert(x19078 != Fp::invalid());
@@ -69699,7 +69700,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19088 = x19085 - x19087;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19088 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19088 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x19089 = args[2][24 * steps + ((cycle - 2) & mask)];
         assert(x19089 != Fp::invalid());
@@ -69727,7 +69728,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19099 = x19096 - x19098;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19099 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19099 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x19100 = args[2][26 * steps + ((cycle - 2) & mask)];
         assert(x19100 != Fp::invalid());
@@ -69755,7 +69756,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19110 = x19107 - x19109;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19110 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19110 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x19111 = args[2][28 * steps + ((cycle - 2) & mask)];
         assert(x19111 != Fp::invalid());
@@ -69783,7 +69784,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19121 = x19118 - x19120;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19121 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19121 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x19122 = args[2][30 * steps + ((cycle - 2) & mask)];
         assert(x19122 != Fp::invalid());
@@ -69811,7 +69812,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19132 = x19129 - x19131;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19132 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19132 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/BytesBody/PlonkBody/BytesPlonkElement/Reg"("cirgen/components/bytes.cpp":92:10))
         auto x19133 = args[2][32 * steps + ((cycle - 2) & mask)];
         assert(x19133 != Fp::invalid());
@@ -69839,7 +69840,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19143 = x19140 - x19142;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19143 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19143 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("cirgen/circuit/rv32im/bigint.cpp":415:64))
         auto x19144 = args[2][212 * steps + ((cycle - 5) & mask)];
         assert(x19144 != Fp::invalid());
@@ -69853,7 +69854,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19148 = x19146 - x19147;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19148 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19148 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("cirgen/circuit/rv32im/bigint.cpp":415:64))
         auto x19149 = args[2][213 * steps + ((cycle - 5) & mask)];
         assert(x19149 != Fp::invalid());
@@ -69867,7 +69868,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19153 = x19151 - x19152;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19153 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19153 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("cirgen/circuit/rv32im/bigint.cpp":415:64))
         auto x19154 = args[2][214 * steps + ((cycle - 5) & mask)];
         assert(x19154 != Fp::invalid());
@@ -69881,7 +69882,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19158 = x19156 - x19157;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19158 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19158 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("cirgen/circuit/rv32im/bigint.cpp":415:64))
         auto x19159 = args[2][215 * steps + ((cycle - 5) & mask)];
         assert(x19159 != Fp::invalid());
@@ -69895,7 +69896,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19163 = x19161 - x19162;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19163 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19163 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("cirgen/circuit/rv32im/bigint.cpp":415:64))
         auto x19164 = args[2][216 * steps + ((cycle - 5) & mask)];
         assert(x19164 != Fp::invalid());
@@ -69909,7 +69910,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19168 = x19166 - x19167;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19168 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19168 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("cirgen/circuit/rv32im/bigint.cpp":415:64))
         auto x19169 = args[2][217 * steps + ((cycle - 5) & mask)];
         assert(x19169 != Fp::invalid());
@@ -69923,7 +69924,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19173 = x19171 - x19172;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19173 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19173 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("cirgen/circuit/rv32im/bigint.cpp":415:64))
         auto x19174 = args[2][218 * steps + ((cycle - 5) & mask)];
         assert(x19174 != Fp::invalid());
@@ -69937,7 +69938,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19178 = x19176 - x19177;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19178 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19178 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("cirgen/circuit/rv32im/bigint.cpp":415:64))
         auto x19179 = args[2][219 * steps + ((cycle - 5) & mask)];
         assert(x19179 != Fp::invalid());
@@ -69951,7 +69952,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19183 = x19181 - x19182;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19183 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19183 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("cirgen/circuit/rv32im/bigint.cpp":415:64))
         auto x19184 = args[2][212 * steps + ((cycle - 4) & mask)];
         assert(x19184 != Fp::invalid());
@@ -69965,7 +69966,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19188 = x19186 - x19187;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19188 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19188 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("cirgen/circuit/rv32im/bigint.cpp":415:64))
         auto x19189 = args[2][213 * steps + ((cycle - 4) & mask)];
         assert(x19189 != Fp::invalid());
@@ -69979,7 +69980,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19193 = x19191 - x19192;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19193 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19193 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("cirgen/circuit/rv32im/bigint.cpp":415:64))
         auto x19194 = args[2][214 * steps + ((cycle - 4) & mask)];
         assert(x19194 != Fp::invalid());
@@ -69993,7 +69994,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19198 = x19196 - x19197;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19198 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19198 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("cirgen/circuit/rv32im/bigint.cpp":415:64))
         auto x19199 = args[2][215 * steps + ((cycle - 4) & mask)];
         assert(x19199 != Fp::invalid());
@@ -70007,7 +70008,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19203 = x19201 - x19202;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19203 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19203 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("cirgen/circuit/rv32im/bigint.cpp":415:64))
         auto x19204 = args[2][216 * steps + ((cycle - 4) & mask)];
         assert(x19204 != Fp::invalid());
@@ -70021,7 +70022,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19208 = x19206 - x19207;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19208 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19208 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("cirgen/circuit/rv32im/bigint.cpp":415:64))
         auto x19209 = args[2][217 * steps + ((cycle - 4) & mask)];
         assert(x19209 != Fp::invalid());
@@ -70035,7 +70036,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19213 = x19211 - x19212;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19213 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19213 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("cirgen/circuit/rv32im/bigint.cpp":415:64))
         auto x19214 = args[2][218 * steps + ((cycle - 4) & mask)];
         assert(x19214 != Fp::invalid());
@@ -70049,7 +70050,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19218 = x19216 - x19217;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19218 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19218 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("cirgen/circuit/rv32im/bigint.cpp":415:64))
         auto x19219 = args[2][219 * steps + ((cycle - 4) & mask)];
         assert(x19219 != Fp::invalid());
@@ -70063,7 +70064,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19223 = x19221 - x19222;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19223 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19223 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("cirgen/circuit/rv32im/bigint.cpp":415:64))
         auto x19224 = args[2][212 * steps + ((cycle - 3) & mask)];
         assert(x19224 != Fp::invalid());
@@ -70077,7 +70078,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19228 = x19226 - x19227;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19228 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19228 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("cirgen/circuit/rv32im/bigint.cpp":415:64))
         auto x19229 = args[2][213 * steps + ((cycle - 3) & mask)];
         assert(x19229 != Fp::invalid());
@@ -70091,7 +70092,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19233 = x19231 - x19232;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19233 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19233 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("cirgen/circuit/rv32im/bigint.cpp":415:64))
         auto x19234 = args[2][214 * steps + ((cycle - 3) & mask)];
         assert(x19234 != Fp::invalid());
@@ -70105,7 +70106,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19238 = x19236 - x19237;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19238 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19238 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("cirgen/circuit/rv32im/bigint.cpp":415:64))
         auto x19239 = args[2][215 * steps + ((cycle - 3) & mask)];
         assert(x19239 != Fp::invalid());
@@ -70119,7 +70120,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19243 = x19241 - x19242;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19243 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19243 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("cirgen/circuit/rv32im/bigint.cpp":415:64))
         auto x19244 = args[2][216 * steps + ((cycle - 3) & mask)];
         assert(x19244 != Fp::invalid());
@@ -70133,7 +70134,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19248 = x19246 - x19247;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19248 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19248 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("cirgen/circuit/rv32im/bigint.cpp":415:64))
         auto x19249 = args[2][217 * steps + ((cycle - 3) & mask)];
         assert(x19249 != Fp::invalid());
@@ -70147,7 +70148,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19253 = x19251 - x19252;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19253 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19253 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("cirgen/circuit/rv32im/bigint.cpp":415:64))
         auto x19254 = args[2][218 * steps + ((cycle - 3) & mask)];
         assert(x19254 != Fp::invalid());
@@ -70161,7 +70162,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19258 = x19256 - x19257;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19258 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19258 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("cirgen/circuit/rv32im/bigint.cpp":415:64))
         auto x19259 = args[2][219 * steps + ((cycle - 3) & mask)];
         assert(x19259 != Fp::invalid());
@@ -70175,7 +70176,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19263 = x19261 - x19262;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19263 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19263 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("cirgen/circuit/rv32im/bigint.cpp":415:64))
         auto x19264 = args[2][212 * steps + ((cycle - 2) & mask)];
         assert(x19264 != Fp::invalid());
@@ -70189,7 +70190,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19268 = x19266 - x19267;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19268 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19268 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("cirgen/circuit/rv32im/bigint.cpp":415:64))
         auto x19269 = args[2][213 * steps + ((cycle - 2) & mask)];
         assert(x19269 != Fp::invalid());
@@ -70203,7 +70204,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19273 = x19271 - x19272;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19273 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19273 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("cirgen/circuit/rv32im/bigint.cpp":415:64))
         auto x19274 = args[2][214 * steps + ((cycle - 2) & mask)];
         assert(x19274 != Fp::invalid());
@@ -70217,7 +70218,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19278 = x19276 - x19277;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19278 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19278 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("cirgen/circuit/rv32im/bigint.cpp":415:64))
         auto x19279 = args[2][215 * steps + ((cycle - 2) & mask)];
         assert(x19279 != Fp::invalid());
@@ -70231,7 +70232,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19283 = x19281 - x19282;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19283 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19283 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("cirgen/circuit/rv32im/bigint.cpp":415:64))
         auto x19284 = args[2][216 * steps + ((cycle - 2) & mask)];
         assert(x19284 != Fp::invalid());
@@ -70245,7 +70246,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19288 = x19286 - x19287;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19288 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19288 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("cirgen/circuit/rv32im/bigint.cpp":415:64))
         auto x19289 = args[2][217 * steps + ((cycle - 2) & mask)];
         assert(x19289 != Fp::invalid());
@@ -70259,14 +70260,14 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19293 = x19291 - x19292;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19293 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19293 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("cirgen/circuit/rv32im/bigint.cpp":425:66))
         auto x19294 = args[2][210 * steps + ((cycle - 0) & mask)];
         assert(x19294 != Fp::invalid());
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
         auto x19295 = x19294 + x19289;
         // loc("cirgen/circuit/rv32im/bigint.cpp":428:10)
-        if (x19295 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
+        if (x19295 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/bigint.cpp:428");
       }
       if (x13328 != 0) {
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/14(BigIntCycle)/Reg"("./cirgen/compiler/edsl/edsl.h":116:61))
@@ -70835,7 +70836,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x19382 = x19380 * x19381;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x19382 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x19382 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("cirgen/circuit/rv32im/bigint.cpp":455:5)
         {
           auto& reg = args[2][99 * steps + cycle];
@@ -70943,7 +70944,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
         auto x19406 = x19404 * x19405;
         // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-        if (x19406 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+        if (x19406 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
         // loc("cirgen/circuit/rv32im/bigint.cpp":459:5)
         {
           auto& reg = args[2][99 * steps + cycle];
@@ -70980,7 +70981,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
         // loc("cirgen/circuit/rv32im/body.cpp":101:8)
         auto x19412 = x95 - x19411;
         // loc("cirgen/circuit/rv32im/body.cpp":101:8)
-        if (x19412 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:101");
+        if (x19412 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:101");
         // loc("Top/mux(Mux)/body(BodyStep)/Mux/8(ECallCycle)/RamBody/PlonkBody/RamPlonkElement/U32Reg/byte[0](Reg)"("./cirgen/compiler/edsl/component.h":154:27))
         auto x19413 = args[2][133 * steps + ((cycle - 1) & mask)];
         assert(x19413 != Fp::invalid());
@@ -71122,7 +71123,7 @@ Fp step_exec(void* ctx, HostBridge host, size_t steps, size_t cycle, Fp** args) 
       // loc("cirgen/circuit/rv32im/body.cpp":23:7)
       auto x19439 = x19437 * x19438;
       // loc("cirgen/circuit/rv32im/body.cpp":23:7)
-      if (x19439 != 0) throw std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
+      if (x19439 != 0) abort();std::runtime_error("eqz failed at: cirgen/circuit/rv32im/body.cpp:23");
       // loc("cirgen/circuit/rv32im/body.cpp":123:3)
       {
         auto& reg = args[2][99 * steps + cycle];

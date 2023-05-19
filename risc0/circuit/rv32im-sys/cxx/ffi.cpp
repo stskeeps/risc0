@@ -18,6 +18,7 @@
 
 #include <cstdint>
 #include <stdexcept>
+#include <cstdlib>
 
 using namespace risc0;
 
@@ -43,7 +44,7 @@ void bridgeCallback(void* ctx,
                     size_t outs_len) {
   BridgeContext* bridgeCtx = reinterpret_cast<BridgeContext*>(ctx);
   if (!bridgeCtx->callback(bridgeCtx->ctx, name, extra, args_ptr, args_len, outs_ptr, outs_len)) {
-    throw std::runtime_error("Host callback failure");
+    abort();
   }
 }
 
@@ -120,6 +121,6 @@ extern "C" uint32_t risc0_circuit_rv32im_step_verify_mem(risc0_error* err,
 #pragma clang diagnostic ignored "-Wreturn-type-c-linkage"
 #endif
 
-extern "C" Fp4 risc0_circuit_rv32im_poly_fp(size_t cycle, size_t steps, Fp4* poly_mix, Fp** args) {
+extern "C" Fp4 risc0_circuit_rv32im_poly_fp(size_t cycle, size_t steps, Fp4* poly_mix, Fp** args, size_t /*args_len*/) {
   return circuit::rv32im::poly_fp(cycle, steps, poly_mix, args);
 }
