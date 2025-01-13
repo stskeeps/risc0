@@ -1,13 +1,13 @@
 [workspace]
 resolver = "2"
 members = [
-  "bonsai/sdk",
+  #"bonsai/sdk",
   "risc0/bigint2",
   "risc0/bigint2/methods",
   "risc0/binfmt",
   "risc0/build",
   "risc0/build_kernel",
-  "risc0/cargo-risczero",
+  #"risc0/cargo-risczero",
   "risc0/circuit/recursion",
   "risc0/circuit/recursion-sys",
   "risc0/circuit/rv32im",
@@ -22,10 +22,10 @@ members = [
   "risc0/zkvm/methods",
   "risc0/zkvm/platform",
   "risc0/zkvm/receipts",
-  "rzup",
+  #"rzup",
   "tools/hotbench",
   "website/doc-test/main",
-  "xtask",
+  #"xtask",
 ]
 exclude = ["tools/crates-validator"]
 
@@ -64,5 +64,14 @@ lto = true
 [profile.dev]
 opt-level = 3
 
-[profile.release]
-lto = true
+#[profile.release]
+#lto = true
+
+[patch.crates-io]
+libc = { git = "https://github.com/wasix-org/libc", branch = "wasix-0.2.155" }
+
+#Downgrade deps so that they depend on libc 0.2.147 or lower 
+getrandom = { git = "https://github.com/rust-random/getrandom", rev = "v0.2.10"}
+rand_core = { git = "https://github.com/rust-random/rand", rev="rand_core-0.6.3"}
+jobserver = { git = "https://github.com/rust-lang/jobserver-rs", rev = "0.1.30"}
+cpufeatures = { git = "https://github.com/RustCrypto/utils", rev = "cpufeatures-v0.2.8"}

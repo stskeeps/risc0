@@ -392,6 +392,7 @@ where
         check *= (F::ExtElem::from_subfield(&three) * z).pow(size) - F::ExtElem::ONE;
         // tracing::debug!("Check = {check:?}");
         if check != result {
+            tracing::info!("in zkp verify InvalidProof");
             return Err(VerificationError::InvalidProof);
         }
 

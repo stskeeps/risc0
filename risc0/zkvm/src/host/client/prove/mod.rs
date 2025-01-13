@@ -364,6 +364,8 @@ impl ProverOpts {
 /// * [ExternalProver] otherwise.
 pub fn default_prover() -> Rc<dyn Prover> {
     let explicit = std::env::var("RISC0_PROVER").unwrap_or_default();
+    println!("explicit is {:?}", explicit);
+
     if !explicit.is_empty() {
         return match explicit.to_lowercase().as_str() {
             #[cfg(feature = "bonsai")]
@@ -386,10 +388,13 @@ pub fn default_prover() -> Rc<dyn Prover> {
     }
 
     if cfg!(feature = "prove") {
+        println!("in feature prove");
+
         #[cfg(feature = "prove")]
         return Rc::new(self::local::LocalProver::new("local"));
     }
 
+    println!("in ipc");
     Rc::new(ExternalProver::new("ipc", get_r0vm_path().unwrap()))
 }
 

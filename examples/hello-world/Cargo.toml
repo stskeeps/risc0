@@ -6,6 +6,10 @@ edition = "2021"
 [dependencies]
 hello-world-methods = { path = "methods" }
 risc0-zkvm = { path = "../../risc0/zkvm" }
+risc0-circuit-recursion = { path = "../../risc0/circuit/recursion" }
+risc0-circuit-recursion-sys = { path = "../../risc0/circuit/recursion-sys" }
+risc0-circuit-rv32im = { path = "../../risc0/circuit/rv32im" }
+risc0-circuit-rv32im-sys = { path = "../../risc0/circuit/rv32im-sys" }
 tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 
 [features]

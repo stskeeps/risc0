@@ -181,6 +181,7 @@ impl<'a> MerkleTreeVerifier<'a> {
         if *present_hash == *cur {
             Ok(out)
         } else {
+            tracing::info!("will return VerificationError::InvalidProof");
             Err(VerificationError::InvalidProof)
         }
     }

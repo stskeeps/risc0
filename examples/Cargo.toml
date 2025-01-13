@@ -1,39 +1,40 @@
 [workspace]
 resolver = "2"
 members = [
-  "bevy",
-  "browser-verify",
-  "c-guest/host",
-  "c-guest/platform",
-  "c-kzg",
-  "chess",
-  "chess/core",
-  "composition",
-  "digital-signature",
-  "digital-signature/core",
-  "ecdsa",
-  "groth16-verifier",
+  #"bevy",
+  #"browser-verify",
+  #"c-guest/host",
+  #"c-guest/platform",
+  #"c-kzg",
+  #"cert-verification",
+  #"chess",
+  #"chess/core",
+  #"composition",
+  #"digital-signature",
+  #"digital-signature/core",
+  #"ecdsa",
+  #"groth16-verifier",
   "hello-world",
-  "json",
-  "json/core",
-  "jwt-validator",
-  "jwt-validator/core",
-  "password-checker",
-  "password-checker/core",
-  "profiling",
-  "prorata",
-  "prorata/core",
-  "prover",
-  "sha",
-  "smartcore-ml",
-  "voting-machine",
-  "voting-machine/core",
-  "waldo",
-  "waldo/core",
-  "wasm",
-  "wordle",
-  "wordle/core",
-  "xgboost",
+  #"json",
+  #"json/core",
+  #"jwt-validator",
+  #"jwt-validator/core",
+  #"password-checker",
+  #"password-checker/core",
+  #"profiling",
+  #"prorata",
+  #"prorata/core",
+  #"prover",
+  #"sha",
+  #"smartcore-ml",
+  #"voting-machine",
+  #"voting-machine/core",
+  #"waldo",
+  #"waldo/core",
+  #"wasm",
+  #"wordle",
+  #"wordle/core",
+  #"xgboost",
 ]
 
 # Always optimize; otherwise tests take excessively long.
@@ -41,5 +42,13 @@ members = [
 opt-level = 3
 
 [profile.release]
-debug = 1
-lto = true
+#debug = 1
+#lto = true
+
+[patch.crates-io]
+libc = { git = "https://github.com/wasix-org/libc", branch = "wasix-0.2.155" }
+#Downgrade deps so that they depend on libc 0.2.147 or lower 
+getrandom = { git = "https://github.com/rust-random/getrandom", rev = "v0.2.10"}
+rand_core = { git = "https://github.com/rust-random/rand", rev="rand_core-0.6.3"}
+jobserver = { git = "https://github.com/rust-lang/jobserver-rs", rev = "0.1.30"}
+cpufeatures = { git = "https://github.com/RustCrypto/utils", rev = "cpufeatures-v0.2.8"}

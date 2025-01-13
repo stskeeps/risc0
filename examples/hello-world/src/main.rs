@@ -1,3 +1,4 @@
+#![allow(unused_imports)]
 // Copyright 2024 RISC Zero, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,6 +15,10 @@
 
 use hello_world::multiply;
 use hello_world_methods::MULTIPLY_ID;
+extern crate risc0_circuit_recursion;
+extern crate risc0_circuit_recursion_sys;
+extern crate risc0_circuit_rv32im;
+extern crate risc0_circuit_rv32im_sys;
 
 fn main() {
     tracing_subscriber::fmt()
@@ -21,12 +26,12 @@ fn main() {
         .init();
 
     // Pick two numbers
-    let (receipt, _) = multiply(17, 23);
+    let (_receipt, _) = multiply(17, 23);
 
     // Here is where one would send 'receipt' over the network...
 
     // Verify receipt, panic if it's wrong
-    receipt.verify(MULTIPLY_ID).expect(
-        "Code you have proven should successfully verify; did you specify the correct image ID?",
-    );
+    // receipt.verify(MULTIPLY_ID).expect(
+    //     "Code you have proven should successfully verify; did you specify the correct image ID?",
+    // );
 }

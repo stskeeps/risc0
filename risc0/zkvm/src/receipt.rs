@@ -406,6 +406,7 @@ impl InnerReceipt {
 #[derive(Clone, Debug, Serialize, Deserialize, BorshSerialize, BorshDeserialize)]
 #[cfg_attr(test, derive(PartialEq))]
 #[non_exhaustive]
+
 pub struct FakeReceipt<Claim>
 where
     Claim: risc0_binfmt::Digestible + Debug + Clone + Serialize,
@@ -435,6 +436,7 @@ where
         if crate::is_dev_mode() {
             return Ok(());
         }
+        tracing::info!("will return VerificationError::InvalidProof");
         Err(VerificationError::InvalidProof)
     }
 

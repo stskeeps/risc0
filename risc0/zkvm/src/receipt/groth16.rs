@@ -20,8 +20,10 @@ use borsh::{BorshDeserialize, BorshSerialize};
 use risc0_binfmt::{tagged_struct, Digestible};
 use risc0_circuit_recursion::control_id::{ALLOWED_CONTROL_ROOT, BN254_IDENTITY_CONTROL_ID};
 use risc0_groth16::{fr_from_hex_string, split_digest, Seal, Verifier, VerifyingKey};
-use risc0_zkp::core::hash::sha::Sha256;
-use risc0_zkp::{core::digest::Digest, verify::VerificationError};
+use risc0_zkp::{
+    core::{digest::Digest, hash::sha::Sha256},
+    verify::VerificationError,
+};
 use serde::{Deserialize, Serialize};
 
 // Make succinct receipt available through this `receipt` module.
@@ -92,6 +94,8 @@ where
         id_bn554.as_mut_bytes().reverse();
         let id_bn254_fr = fr_from_hex_string(&hex::encode(id_bn554))
             .map_err(|_| VerificationError::ReceiptFormatError)?;
+        tracing::info!("will return VerificationError::InvalidProof in groth16");
+
         Verifier::new(
             &Seal::from_vec(&self.seal).map_err(|_| VerificationError::ReceiptFormatError)?,
             &[a0, a1, c0, c1, id_bn254_fr],

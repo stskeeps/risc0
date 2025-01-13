@@ -17,6 +17,10 @@ use json_methods::SEARCH_JSON_ELF;
 use risc0_zkvm::{default_prover, ExecutorEnv};
 
 fn main() {
+    tracing_subscriber::fmt()
+        .with_env_filter(tracing_subscriber::EnvFilter::from_default_env())
+        .init();
+    
     let data = include_str!("../res/example.json");
     let outputs = search_json(data);
     println!();

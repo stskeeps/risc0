@@ -28,7 +28,15 @@ fn main() {
     if a == 1 || b == 1 {
         panic!("Trivial factors")
     }
+
+    let mut sum = 0;
+    for i in 0..20000000 {
+        sum += i * a * b
+    }
+
+
     // Compute the product while being careful with integer overflow
     let product = a.checked_mul(b).expect("Integer overflow");
     env::commit(&product);
+    env::commit(&sum);
 }

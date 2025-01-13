@@ -36,7 +36,7 @@ fn download_zkr() {
         str::FromStr,
     };
 
-    use downloader::{verify, Download, DownloadSummary, Downloader};
+    //use downloader::{verify, Download, DownloadSummary, Downloader};
     use sha2::{Digest, Sha256};
 
     const FILENAME: &str = "recursion_zkr.zip";
@@ -73,20 +73,20 @@ fn download_zkr() {
         return;
     }
 
-    let mut downloader = Downloader::builder()
-        .download_folder(out_dir)
-        .build()
-        .unwrap();
-    let url = format!("https://risc0-artifacts.s3.us-west-2.amazonaws.com/zkr/{SHA256_HASH}.zip");
-    eprintln!("Downloading {url}");
-    let dl = Download::new(&url)
-        .file_name(&PathBuf::from_str(FILENAME).unwrap())
-        .verify(verify::with_digest::<Sha256>(
-            hex::decode(SHA256_HASH).unwrap(),
-        ));
-    let results = downloader.download(&[dl]).unwrap();
-    for result in results {
-        let summary: DownloadSummary = result.unwrap();
-        eprintln!("{summary}");
-    }
+    // let mut downloader = Downloader::builder()
+    //     .download_folder(out_dir)
+    //     .build()
+    //     .unwrap();
+    // let url = format!("https://risc0-artifacts.s3.us-west-2.amazonaws.com/zkr/{SHA256_HASH}.zip");
+    // eprintln!("Downloading {url}");
+    // let dl = Download::new(&url)
+    //     .file_name(&PathBuf::from_str(FILENAME).unwrap())
+    //     .verify(verify::with_digest::<Sha256>(
+    //         hex::decode(SHA256_HASH).unwrap(),
+    //     ));
+    // let results = downloader.download(&[dl]).unwrap();
+    // for result in results {
+    //     let summary: DownloadSummary = result.unwrap();
+    //     eprintln!("{summary}");
+    // }
 }

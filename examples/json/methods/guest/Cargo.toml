@@ -6,7 +6,9 @@ edition = "2021"
 [workspace]
 
 [dependencies]
-json = "0.12"
+jzon = { path = "/home/default2/Desktop/jzon-rs"}
+serde_json = { version = "1.0", default-features = false, features = ["alloc"] }
+simd-json = { version = "*", default-features = false }
 json-core = { path = "../../core" }
 risc0-zkvm = { path = "../../../../risc0/zkvm", default-features = false, features = [
   "std",

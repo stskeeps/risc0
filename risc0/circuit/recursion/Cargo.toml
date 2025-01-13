@@ -43,10 +43,10 @@ tracing-forest = "0.1"
 tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 
 [build-dependencies]
-downloader = { version = "0.2", default-features = false, features = [
-  "rustls-tls",
-  "verify",
-], optional = true }
+#downloader = { version = "0.2", default-features = false, features = [
+#  "rustls-tls",
+#  "verify",
+#], optional = true }
 hex = "0.4"
 sha2 = { version = "0.10", optional = true }
 
@@ -63,7 +63,7 @@ default = ["prove", "test"]
 metal = ["prove"]
 prove = [
   "dep:cfg-if",
-  "dep:downloader",
+  #"dep:downloader",
   "dep:lazy-regex",
   "dep:rand",
   "dep:rayon",

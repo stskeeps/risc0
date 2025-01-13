@@ -78,6 +78,7 @@ impl CompositeReceipt {
         // Verify each segment and its chaining to the next.
         let mut expected_pre_state_digest = None;
         for receipt in receipts {
+            tracing::info!("will receipt.verify_integrity_with_context");
             receipt.verify_integrity_with_context(ctx)?;
             tracing::debug!("claim: {:#?}", receipt.claim);
             if let Some(id) = expected_pre_state_digest {

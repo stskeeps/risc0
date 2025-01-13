@@ -428,8 +428,10 @@ impl Hasher {
 }
 
 fn maybe_sccache(inner: &str) -> Command {
-    let sccache = which::which("sccache");
-    if let Ok(sccache) = sccache {
+    //let sccache = which::which("sccache");
+    let sccache = Some("/usr/bin/sccache");
+
+    if let Some(sccache) = sccache {
         let mut cmd = Command::new(sccache);
         cmd.arg(inner);
         cmd.env("SCCACHE_IDLE_TIMEOUT", "0");

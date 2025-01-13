@@ -37,6 +37,7 @@ pub fn multiply(a: u64, b: u64) -> (Receipt, u64) {
     let prover = default_prover();
 
     // Produce a receipt by proving the specified ELF binary.
+    println!("in here");
     let receipt = prover.prove(env, MULTIPLY_ELF).unwrap().receipt;
 
     // Extract journal of receipt (i.e. output c, where c = a * b)

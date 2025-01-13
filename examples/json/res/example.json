@@ -1,12 +1,94 @@
-{
-    "boolean_field": true,
-    "critical_data": 47,
-    "obj_field": {
-        "string_subfield": "hello world",
-        "array_subfield": [
-            "more",
-            "example",
-            "text"
-        ]
+[
+  {
+    "_id": "678664b8b46d1c776a204f89",
+    "index": 0,
+    "friends": [
+      {
+        "id": 0,
+        "name": "Darlene Key"
+      },
+      {
+        "id": 1,
+        "name": "Burris Young"
+      },
+      {
+        "id": 2,
+        "name": "Cherry Myers"
+      }
+    ],
+    "another nest": {
+        "guid": "717f3616-a621-4fd9-a25a-bdbddb93ce5e",
+        "isActive": false,
+        "balance": "$1,767.50",
+        "picture": "http://placehold.it/32x32",
+        "age": 24,
+        "eyeColor": "brown",
+        "name": "Aurora Baldwin",
+        "gender": "female",
+        "company": "FRANSCENE",
+        "email": "aurorabaldwin@franscene.com",
+        "phone": "+1 (986) 501-3859",
+        "address": "944 Brevoort Place, Haena, Northern Mariana Islands, 6575",
+        "about": "Lorem esse qui tempor nostrud officia in officia. Nisi aute officia anim sunt. Minim deserunt irure consectetur amet irure nostrud est deserunt consectetur eiusmod aliqua id in aliquip. Deserunt adipisicing voluptate velit quis tempor tempor dolor qui est duis et voluptate labore labore. Culpa ea voluptate consectetur tempor irure nulla.\r\n",
+        "registered": "2015-11-01T08:14:57 -00:00",
+        "latitude": -71.483759,
+        "longitude": -63.202158,
+        "favoriteFruit": "apple"
+      },
+    "guid": "717f3616-a621-4fd9-a25a-bdbddb93ce5e",
+    "isActive": false,
+    "balance": "$1,767.50",
+    "picture": "http://placehold.it/32x32",
+    "age": 24,
+    "eyeColor": "brown",
+    "name": "Aurora Baldwin",
+    "gender": "female",
+    "company": "FRANSCENE",
+    "email": "aurorabaldwin@franscene.com",
+    "phone": "+1 (986) 501-3859",
+    "address": "944 Brevoort Place, Haena, Northern Mariana Islands, 6575",
+    "about": "Lorem esse qui tempor nostrud officia in officia. Nisi aute officia anim sunt. Minim deserunt irure consectetur amet irure nostrud est deserunt consectetur eiusmod aliqua id in aliquip. Deserunt adipisicing voluptate velit quis tempor tempor dolor qui est duis et voluptate labore labore. Culpa ea voluptate consectetur tempor irure nulla.\r\n",
+    "registered": "2015-11-01T08:14:57 -00:00",
+    "latitude": -71.483759,
+    "longitude": -63.202158,
+    "favoriteFruit": "apple",
+    "nested": {
+      "guid": "717f3616-a621-4fd9-a25a-bdbddb93ce5e",
+      "isActive": false,
+      "balance": "$1,767.50",
+      "picture": "http://placehold.it/32x32",
+      "age": 24,
+      "eyeColor": "brown",
+      "name": "Aurora Baldwin",
+      "gender": "female",
+      "company": "FRANSCENE",
+      "email": "aurorabaldwin@franscene.com",
+      "phone": "+1 (986) 501-3859",
+      "address": "944 Brevoort Place, Haena, Northern Mariana Islands, 6575",
+      "about": "Lorem esse qui tempor nostrud officia in officia. Nisi aute officia anim sunt. Minim deserunt irure consectetur amet irure nostrud est deserunt consectetur eiusmod aliqua id in aliquip. Deserunt adipisicing voluptate velit quis tempor tempor dolor qui est duis et voluptate labore labore. Culpa ea voluptate consectetur tempor irure nulla.\r\n",
+      "registered": "2015-11-01T08:14:57 -00:00",
+      "latitude": -71.483759,
+      "longitude": -63.202158,
+      "favoriteFruit": "apple",
+      "another nest": {
+        "guid": "717f3616-a621-4fd9-a25a-bdbddb93ce5e",
+        "isActive": false,
+        "balance": "$1,767.50",
+        "picture": "http://placehold.it/32x32",
+        "age": 24,
+        "eyeColor": "brown",
+        "name": "Aurora Baldwin",
+        "gender": "female",
+        "company": "FRANSCENE",
+        "email": "aurorabaldwin@franscene.com",
+        "phone": "+1 (986) 501-3859",
+        "address": "944 Brevoort Place, Haena, Northern Mariana Islands, 6575",
+        "about": "Lorem esse qui tempor nostrud officia in officia. Nisi aute officia anim sunt. Minim deserunt irure consectetur amet irure nostrud est deserunt consectetur eiusmod aliqua id in aliquip. Deserunt adipisicing voluptate velit quis tempor tempor dolor qui est duis et voluptate labore labore. Culpa ea voluptate consectetur tempor irure nulla.\r\n",
+        "registered": "2015-11-01T08:14:57 -00:00",
+        "latitude": -71.483759,
+        "longitude": -63.202158,
+        "favoriteFruit": "apple"
+      }
     }
-}
+  }
+]
