@@ -1,3 +1,79 @@
+This is a fork of risc0 modified to compile the prover to WASM.
+
+Below are the steps to compile the hello-world example into a wasm binary on Ubuntu 20:
+
+Prerequisites:
+- install wasmer  (as per https://github.com/wasmerio/wasmer?tab=readme-ov-file#install-wasmer)
+- install deps:
+
+```
+sudo apt install lld clang
+```
+
+From within the root dir of this repo run:
+
+```
+ROOT_DIR=`pwd`
+cargo install cargo-wasix
+```
+
+// Download the artifact which the build script can't fetch since it's not wasm-compatible.
+
+```
+curl https://risc0-artifacts.s3.us-west-2.amazonaws.com/zkr/ffc503386276f809137161f18d2f3ddcba3bb4b2d8b5d893b2c5d94b35afaf47.zip -o recursion_zkr.zip
+```
+
+// Each of the kernels needs to be built separately. Later they will be linked 
+// thanks to the use of "extern crate ..." in hello-world's main.rs
+// RUSTFLAGS="" is used to prevent cargo wasix from using the unstable +atomics flag
+
+```
+cargo update	
+cd risc0/circuit/recursion 
+RUSTFLAGS="" RECURSION_SRC_PATH=$ROOT_DIR/recursion_zkr.zip RISC0_SKIP_BUILD_KERNELS=true cargo wasix build --release -j16
+cd ../recursion-sys 
+RUSTFLAGS="" RECURSION_SRC_PATH=$ROOT_DIR/recursion_zkr.zip RISC0_SKIP_BUILD_KERNELS=true cargo wasix build --release -j16
+cd ../rv32im 
+RUSTFLAGS="" RECURSION_SRC_PATH=$ROOT_DIR/recursion_zkr.zip RISC0_SKIP_BUILD_KERNELS=true cargo wasix build --release -j16
+cd ../rv32im-sys 
+RUSTFLAGS="" RECURSION_SRC_PATH=$ROOT_DIR/recursion_zkr.zip RISC0_SKIP_BUILD_KERNELS=true cargo wasix build --release -j16
+```
+
+// Build the hello-world program (The final Optimizing step may take a few minutes)
+
+```
+cargo update
+cd $ROOT_DIR/examples/hello-world && RUSTFLAGS="" RECURSION_SRC_PATH=$ROOT_DIR/recursion_zkr.zip RISC0_SKIP_BUILD_KERNELS=true cargo wasix build --release -j16
+```
+
+// The resulting wasm file cannot be run since it contains unresolved risc0 imports. We will 
+// remove the imports using a patched version of wasm-opt.
+
+```
+cd $ROOT_DIR
+git clone https://github.com/themighty1/binaryen
+cd binaryen
+git submodule init
+git submodule update
+cmake . && make wasm-opt -j16
+cd $ROOT_DIR
+
+./binaryen/bin/wasm-opt --remove-imports $ROOT_DIR/examples/target/wasm32-wasmer-wasi/release/hello-world.wasi.wasm -o hello-world.wasm
+```
+// Run the binary. 
+// The proof generation will succeed but the proof will not pass a self-check since it
+// is apparently corrupted.
+
+```
+wasmer hello-world.wasm
+```
+
+// Note, you can pass env vars to the wasm binary like you would pass to a native binary:
+wasmer --env RUST_LOG=debug --env RAYON_NUM_THREADS=1 hello-world.wasm
+
+--------------------------THE ORIGINAL README below ------------------------------
+
+
 > [!IMPORTANT]
 > `main` is the development branch.
 > When building applications or running examples, use the [latest release](https://github.com/risc0/risc0/releases) instead.
