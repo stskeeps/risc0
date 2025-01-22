@@ -42,8 +42,9 @@ RUSTFLAGS="" RECURSION_SRC_PATH=$ROOT_DIR/recursion_zkr.zip RISC0_SKIP_BUILD_KER
 // Build the hello-world program (The final Optimizing step may take a few minutes)
 
 ```
+cd $ROOT_DIR/examples/hello-world
 cargo update
-cd $ROOT_DIR/examples/hello-world && RUSTFLAGS="" RECURSION_SRC_PATH=$ROOT_DIR/recursion_zkr.zip RISC0_SKIP_BUILD_KERNELS=true cargo wasix build --release -j16
+RUSTFLAGS="" RECURSION_SRC_PATH=$ROOT_DIR/recursion_zkr.zip RISC0_SKIP_BUILD_KERNELS=true cargo wasix build --release -j16
 ```
 
 // The resulting wasm file cannot be run since it contains unresolved risc0 imports. We will 
