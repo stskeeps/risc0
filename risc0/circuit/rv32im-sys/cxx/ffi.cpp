@@ -130,7 +130,7 @@ void inject_backs_ram(MachineContext* ctx, size_t steps, size_t cycle, Fp* data)
   if (cycle > 2 && kind) {
     size_t idx = ctx->ramIndex[cycle];
     if (idx == 0) {
-      throw std::runtime_error("inject_backs_ram: idx == 0");
+      abort(); std::runtime_error("inject_backs_ram: idx == 0");
     }
 
     const RamArgumentRow& back1 = ctx->ramRows[idx - 1];
@@ -262,8 +262,7 @@ const char* risc0_circuit_rv32im_cpu_witgen(uint32_t mode,
                                             uint32_t last_cycle,
                                             Fp* ctrl,
                                             Fp* io,
-                                            Fp* data) {
-  try {
+  //try {
     // printf("risc0_circuit_rv32im_cpu_witgen\n");
     MachineContext ctx(trace, steps);
 
@@ -315,9 +314,9 @@ const char* risc0_circuit_rv32im_cpu_witgen(uint32_t mode,
         });
       }
     }
-  } catch (const std::exception& err) {
-    return strdup(err.what());
-  }
+//  } catch (const std::exception& err) {
+//    return strdup(err.what());
+//  }
   return nullptr;
 }
 

@@ -43,7 +43,8 @@ static void bridgeCallback(void* ctx,
                            size_t outs_len) {
   BridgeContext* bridgeCtx = reinterpret_cast<BridgeContext*>(ctx);
   if (!bridgeCtx->callback(bridgeCtx->ctx, name, extra, args_ptr, args_len, outs_ptr, outs_len)) {
-    throw std::runtime_error("Host callback failure");
+    abort();
+    std::runtime_error("Host callback failure");
   }
 }
 

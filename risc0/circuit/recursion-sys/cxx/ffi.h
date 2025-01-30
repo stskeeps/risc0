@@ -37,13 +37,13 @@ extern "C" const char* risc0_circuit_recursion_string_ptr(risc0_string* str);
 extern "C" void risc0_circuit_recursion_string_free(risc0_string* str);
 
 template <typename T, typename F> T ffi_wrap(risc0_error* err, T val, F fn) {
-  try {
+  //try {
     err->msg = nullptr;
     return fn();
-  } catch (const std::exception& ex) {
-    err->msg = new risc0_string{ex.what()};
-    return val;
-  }
+  //} catch (const std::exception& ex) {
+  //  err->msg = new risc0_string{ex.what()};
+  //  return val;
+  //}
 }
 
 namespace risc0::circuit::recursion {

@@ -26,7 +26,7 @@
 #elif defined(__GNUC__)
 #pragma GCC diagnostic ignored "-Wunused-parameter"
 #endif
-
+#define throw abort();
 using namespace risc0;
 using namespace risc0::circuit::rv32im;
 

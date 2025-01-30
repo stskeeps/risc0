@@ -18,6 +18,7 @@
 #include <array>
 #include <stdexcept>
 #include <vector>
+#define throw abort();
 
 using namespace risc0;
 

@@ -20,7 +20,7 @@
 #include <array>
 #include <cassert>
 #include <stdexcept>
-
+#define throw abort();
 // clang-format off
 namespace risc0::circuit::recursion {
 
